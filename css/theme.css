@@ -1,0 +1,16 @@
+﻿.md-toolbar-tools{
+    height: 100px;
+    max-height: 100px;
+}
+.md-toolbar-tools> h2{
+    /*font-size:larger;*/
+}
+.gradients{
+    background:#f06;
+    background: linear-gradient(90deg,#506,#66092e);
+    /*linear-gradient(90deg,#506,#8f0039);*/
+    min-height:100%;
+}
+md-toolbar > md-tabs.md-default-theme > md-tabs-wrapper, md-toolbar > md-tabs > md-tabs-wrapper{
+    background-color:transparent;
+}
