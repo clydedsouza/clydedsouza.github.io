@@ -27,4 +27,14 @@
     };
 }])
 .controller('AboutController', ['$scope', function ($scope) {
+}])
+.controller('ProjectsController', ['$scope','$http', function ($scope,$http) {
+    $scope.projects = {};
+    //https://raw.githubusercontent.com/ngClyde/ngClyde.github.io/master/js/projects.json
+    $http.get("../api/projects.json")
+        .then(function (response) {
+            $scope.projects = response.data;
+        },
+        function (error) {
+        });
 }]);
