@@ -2,11 +2,35 @@
 .module('clyde', ['ngMaterial', 'ngRoute', 'ngAnimate'])
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
-    .when('/', { templateUrl: "views/about.html", controller:"AboutController" })
-    .when('/projects', { templateUrl: "views/projects.html", controller:"ProjectsController" })
+    .when('/', { templateUrl: "views/about.html", controller:"AboutController", title:"Clyde D'Souza", tabIndex:0 })
+    .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza", tabIndex:1 })
     .otherwise({ templateUrl: "views/not-found.html" });
 }])
-.controller('IndexController', ['$scope', '$window', function ($scope, $window) {
+.run(['$location', '$rootScope', function ($location, $rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        $rootScope.globalConfig = {
+            pageTitle: "",
+            tabIndex:0
+        };
+        $rootScope.globalConfig.pageTitle = current.$$route.title;
+        $rootScope.globalConfig.tabIndex = current.$$route.tabIndex;
+    });
+}])
+.controller("GlobalController", ['$rootScope', function ($rootScope) {
+    return $rootScope.$on('$routeChangeSuccess', (function () {
+        return function (event, current, previous) {
+            $rootScope.globalConfig = {
+                pageTitle: "",
+                tabIndex: 0
+            };
+            $rootScope.globalConfig.pageTitle = current.$$route.title;
+            $rootScope.globalConfig.tabIndex = current.$$route.tabIndex;
+            return $rootScope.globalConfig;
+        };
+    }));
+}])
+.controller('IndexController', ['$scope', '$window', '$rootScope', function ($scope, $window, $rootScope) {
+    $scope.localTabIndex = $rootScope.tabIndex;
     $scope.goTo = function (x) {
         if(x=="about"){
             $window.location = "#/";
@@ -25,10 +49,17 @@
             $window.location = "#/";
         }
     };
+    $scope.topDirections = ['left', 'up'];
+    $scope.bottomDirections = ['down', 'right'];
+    $scope.isOpen = false;
+    $scope.availableModes = ['md-fling', 'md-scale'];
+    $scope.selectedMode = 'md-fling';
+    $scope.availableDirections = ['up', 'down', 'left', 'right'];
+    $scope.selectedDirection = 'up';
 }])
-.controller('AboutController', ['$scope', function ($scope) {
+.controller('AboutController', ['$scope', '$rootScope', function ($scope, $rootScope) {
 }])
-.controller('ProjectsController', ['$scope','$http', function ($scope,$http) {
+.controller('ProjectsController', ['$scope', '$http', '$rootScope', function ($scope, $http, $rootScope) {
     $scope.projects = {};
     //https://raw.githubusercontent.com/ngClyde/ngClyde.github.io/master/js/projects.json
     $http.get("../api/projects.json")

@@ -1,6 +1,6 @@
-﻿<html lang="en">
+﻿<html lang="en" ng-app="clyde" ng-controller="GlobalController">
 <head>
-    <title>Clyde D'Souza</title>
+    <title ng-cloak ng-bind="globalConfig.pageTitle"></title>
     <meta name="viewport" content="initial-scale=1" />
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <!-- Angular Material style sheet -->
@@ -11,7 +11,7 @@
     <link href="css/theme.css" rel="stylesheet" />
     <script src="http://platform.twitter.com/widgets.js"></script>
 </head>
-<body ng-app="clyde" ng-cloak>
+<body ng-cloak>
     <div ng-controller="IndexController">
         <md-content class="">
             <md-toolbar class="md-primary gradients">
@@ -22,24 +22,27 @@
                     </h2>
                 </div>  
                 <div flex></div>
-                <md-tabs md-dynamic-height ng-cloak>
-                    <md-tab ng-click="goTo('about')">
-                        <md-icon class="material-icons">person</md-icon> About
-                    </md-tab>
-                    <md-tab ng-click="goTo('projects')">
-                        <md-icon class="material-icons">code</md-icon> Projects
-                    </md-tab>
-                </md-tabs>              
+                <md-tabs md-selected="globalConfig.tabIndex==0?0:1" md-dynamic-height ng-cloak>
+                        <md-tab ng-click="goTo('about')">
+                            <md-icon class="material-icons">person</md-icon> About
+                        </md-tab>
+                        <md-tab ng-click="goTo('projects')">
+                            <md-icon class="material-icons">code</md-icon> Projects
+                        </md-tab>
+                    </md-tabs>              
             </md-toolbar>
         </md-content>
         <div ng-view></div>
-        <div>
-            <!--<md-button>
-                <md-icon class="material-icons">person</md-icon>
+        <div layout="row" layout-align="center center"> 
+            <md-button href="http://www.twitter.com/ClydeDz" title="Follow Clyde D'Souza on Twitter" target="_blank" class="md-icon-button launch">
+                <md-icon class="ion-social-twitter"></md-icon>
             </md-button>
-            <md-button>
-                <md-icon class="material-icons">person</md-icon>
-            </md-button>-->
+            <md-button href="http://www.github.com/ClydeDz" title="Follow Clyde D'Souza on GitHub" target="_blank" class="md-icon-button launch">
+                <md-icon class="ion-social-github"></md-icon>
+            </md-button>
+        </div>
+        <div layout="row" layout-align="center center">
+            <p>Website crafted by Clyde D'Souza</p>
         </div>
     </div>
     <!-- Angular Material requires Angular.js Libraries -->

@@ -9,6 +9,7 @@
     "github": "https://github.com/ClydeDz/gitly",
     "languages": [ "HTML", "CSS", "JavaScript", "Angular JS", "Angular JS Material" ],
     "category": "Web App",
+    "icon": "images/gitly-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/gitly.png"
   },
   {
@@ -21,6 +22,7 @@
     "github": "https://github.com/ngClyde/",
     "languages": [ "Angular JS" ],
     "category": "Workshop",
+    "icon": "images/angular-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/ngClyde.png"
   },
   {
@@ -33,6 +35,7 @@
     "github": "https://github.com/ClydeDz/a1pd",
     "languages": [ "HTML", "CSS", "JavaScript", "Angular JS" ],
     "category": "Web App",
+    "icon": "images/a1pd-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/a1pd.png"
   },
   {
@@ -45,6 +48,7 @@
     "github": "https://github.com/ClydeDz/marcdown",
     "languages": [ "HTML", "CSS", "JavaScript", "Angular JS" ],
     "category": "Web App",
+    "icon": "images/marcdown-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/marcdown-snap.png"
   },
   {
@@ -57,6 +61,7 @@
     "github": "https://github.com/ClydeDz/clymate",
     "languages": [ "HTML", "CSS", "JavaScript", "jQuery" ],
     "category": "Web App",
+    "icon": "images/clymate-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/clymate.png"
   },
   {
@@ -69,6 +74,7 @@
     "github": "https://github.com/ClydeDz/bashell",
     "languages": [ "HTML", "CSS", "JavaScript", "jQuery" ],
     "category": "Web App",
+    "icon": "images/bashell-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/bashell.png"
   },
   {
@@ -81,6 +87,7 @@
     "github": "https://github.com/ClydeDz/clydedsouza-nandoso",
     "languages": [ "HTML", "CSS", "JavaScript", "C#", "MySql", "Asp.Net EF" ],
     "category": "Web App",
+    "icon": "images/nandoso-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/nandoso.png"
   },
   {
@@ -93,6 +100,7 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
+    "icon": "images/hdaakl-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/hdaakl-team.jpg"
   },
   {
@@ -105,6 +113,7 @@
     "github": "",
     "languages": [ "XAML", "C#" ],
     "category": "Windows Store App (PC)",
+    "icon": "images/kiwisports-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/kiwi-sports.png"
   },
   {
@@ -117,6 +126,7 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
+    "icon": "images/luckvenue-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/luckvenue-website.png"
   },
   {
@@ -129,18 +139,20 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
+    "icon": "images/wordpress-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/sflp-website.png"
   },
   {
     "title": "Project OMG",
     "date": "March 2013",
-    "description": "This was an interesting project as we put together an HTML-based game for our multimedia project. My primary responsibilities included conceptualising the game, creating graphics and developing the game. We used HTML, CSS, JavaScript and VML to develop this game. (In picture: Team members Sagar Lone and Biswajit Mishra and myself).<br/>Game can be viewed on request as it is not available online.",
+    "description": "This was an interesting project as we put together an HTML-based game for our multimedia project. My primary responsibilities included conceptualising the game, creating graphics and developing the game. We used HTML, CSS, JavaScript and VML to develop this game. (In picture: Team members Sagar Lone and Biswajit Mishra and myself).\n Game can be viewed on request as it is not available online.",
     "hasWebsite": false,
     "website": "",
     "onGithub": false,
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "VML" ],
     "category": "Game",
+    "icon": "images/omg-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/omg-team.jpg"
   },
   {
@@ -153,6 +165,7 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "Web App",
+    "icon": "images/inspira-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/inspira-html.jpg"
   },
   {
@@ -165,6 +178,7 @@
     "github": "",
     "languages": [ "Photoshop" ],
     "category": "Graphic Design",
+    "icon": "images/tulips-icon.jpe",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/tulips-collage.jpg"
   }
 ]

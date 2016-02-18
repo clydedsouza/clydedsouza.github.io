@@ -2,6 +2,9 @@
     <div class='md-padding body-bg' layout="row" layout-align="center start" layout-wrap>
         <md-card flex-xs="99" flex-gt-xs="33" ng-repeat="docs in projects">
             <md-card-header>
+                <md-card-avatar>
+                    <img ng-src="{{docs.icon}}" />
+                </md-card-avatar>
                 <md-card-header-text>
                     <span class="md-title">{{docs.title}}</span>
                     <span class="md-subhead">{{docs.date}}</span>
@@ -13,13 +16,12 @@
                 <div><p>Category: {{docs.category}}</p></div>
                 <div>
                     <p>Made using:</p>
-                    <md-chips ng-repeat="lang in docs.languages">
-                        <md-chip>{{lang}}</md-chip>
-                    </md-chips>
+                    <div ng-repeat="lang in docs.languages">
+                        <span class="cd-chip">{{lang}}</span>
+                    </div>
                 </div>
             </md-card-content>         
-            <md-card-actions layout="row" layout-align="end right" ng-show="docs.hasWebsite && docs.onGithub">
-                <md-divider />
+            <md-card-actions layout="row" layout-align="end right" ng-show="docs.hasWebsite || docs.onGithub">
                 <md-button ng-href="{{docs.url}}" class="md-icon-button" aria-label="Website" ng-show="{{docs.hasWebsite}}">
                     <md-icon class="material-icons">public</md-icon>
                 </md-button>
