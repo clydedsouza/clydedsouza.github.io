@@ -13,7 +13,7 @@
 </head>
 <body ng-cloak>
     <div ng-controller="IndexController">
-        <md-content class="">
+        <md-content>
             <md-toolbar class="md-primary gradients">
                 <div class="md-toolbar-tools">
                     <img src="images/clydedsouza-material-face.png" class="md-avatar user-avatar" height="70" width="70" />
@@ -33,17 +33,19 @@
             </md-toolbar>
         </md-content>
         <div ng-view></div>
-        <div layout="row" layout-align="center center"> 
-            <md-button href="http://www.twitter.com/ClydeDz" title="Follow Clyde D'Souza on Twitter" target="_blank" class="md-icon-button launch">
-                <md-icon class="ion-social-twitter"></md-icon>
-            </md-button>
-            <md-button href="http://www.github.com/ClydeDz" title="Follow Clyde D'Souza on GitHub" target="_blank" class="md-icon-button launch">
-                <md-icon class="ion-social-github"></md-icon>
-            </md-button>
-        </div>
-        <div layout="row" layout-align="center center">
-            <p>Website crafted by Clyde D'Souza</p>
-        </div>
+        <md-content>
+            <div layout="row" layout-align="center center">
+                <md-button href="http://www.twitter.com/ClydeDz" title="Follow Clyde D'Souza on Twitter" target="_blank" class="md-icon-button launch">
+                    <md-icon class="ion-social-twitter"></md-icon>
+                </md-button>
+                <md-button href="http://www.github.com/ClydeDz" title="Follow Clyde D'Souza on GitHub" target="_blank" class="md-icon-button launch">
+                    <md-icon class="ion-social-github"></md-icon>
+                </md-button>
+            </div>
+            <div layout="row" layout-align="center center">
+                <p>Website crafted by Clyde D'Souza</p>
+            </div>
+        </md-content>
     </div>
     <!-- Angular Material requires Angular.js Libraries -->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
