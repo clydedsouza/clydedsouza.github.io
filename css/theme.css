@@ -1,15 +1,24 @@
-﻿.md-toolbar-tools{
-    height: 100px;
-    max-height: 100px;
+﻿/*
+    teal    #009688
+    yellow  #ffeb3b
+*/
+.md-toolbar-tools{
+    min-height: 150px;
+    max-height: 180px;
 }
 .md-toolbar-tools> h2{
     /*font-size:larger;*/
 }
 .gradients{
-    background:#f06;
-    background: linear-gradient(90deg,#506,#66092e);
+    background: #009688;
+    background: linear-gradient(155deg,#009688,#10984B);
     /*linear-gradient(90deg,#506,#8f0039);*/
     /*min-height:100%;*/
+}
+.footer-block{
+    min-height:12px;
+    display:block;
+    width:100%;
 }
 md-toolbar > md-tabs.md-default-theme > md-tabs-wrapper, md-toolbar > md-tabs > md-tabs-wrapper{
     background-color:transparent;
@@ -38,3 +47,29 @@ body,.body-bg{
     font-family: Roboto,"Helvetica Neue",sans-serif;
     font-size: 16px;
 }
+
+.cd-content{
+    line-height: 1.5em;
+    text-align:justify;
+}
+.cd-card-yellow{
+    border-bottom: 1px solid #ffeb3b;
+}
+.cd-card-teal{
+    border-bottom: 1px solid #009688;
+}
+.cd-card-yellow .cd-card-avatar{
+    background-color:#009688;
+}
+.cd-card-teal .cd-card-avatar{
+    background-color:#ffeb3b;
+    color:#009688;
+}
+md-card-content .md-button{
+    display:inline;
+    margin:0;
+    padding:3px 6px;
+    line-height:inherit;
+}
+/*background-color: red;
+border-radius: 30px;*/

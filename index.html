@@ -20,8 +20,46 @@
                     <h2>                        
                         <span>Clyde D'Souza</span>
                     </h2>
+                    <span flex></span>
+                    <md-menu md-position-mode="target-right target">
+                        <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                            <md-tooltip md-direction="bottom">Share this site</md-tooltip>
+                            <md-icon class="ion-android-share"></md-icon>
+                        </md-button>
+                        <md-menu-content width="1">
+                            <md-menu-item>
+                                <md-button ng-click="share('tweet')">
+                                    <div layout="row">
+                                        <md-icon md-menu-origin style="margin: auto 5px auto 0;" class="ion-social-twitter"></md-icon>
+                                    </div>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="share('fb')">
+                                    <div layout="row">
+                                        <md-icon md-menu-origin style="margin: auto 5px auto 0;" class="ion-social-facebook"></md-icon>
+                                    </div>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="share('google')">
+                                    <div layout="row">
+                                        <md-icon md-menu-origin style="margin: auto 5px auto 0;" class="ion-social-googleplus"></md-icon>
+                                    </div>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="share('linkedin')">
+                                    <div layout="row">
+                                        <md-icon md-menu-origin style="margin: auto 5px auto 0;" class="ion-social-linkedin"></md-icon>
+                                    </div>
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
                 </div>  
                 <div flex></div>
+               
                 <md-tabs md-selected="globalConfig.tabIndex==0?0:1" md-dynamic-height ng-cloak>
                         <md-tab ng-click="goTo('about')">
                             <md-icon class="material-icons">person</md-icon> About
@@ -29,11 +67,11 @@
                         <md-tab ng-click="goTo('projects')">
                             <md-icon class="material-icons">code</md-icon> Projects
                         </md-tab>
-                    </md-tabs>              
+                 </md-tabs>                          
             </md-toolbar>
         </md-content>
         <div ng-view></div>
-        <md-content>
+        <md-content class="body-bg">
             <div layout="row" layout-align="center center">
                 <md-button href="http://www.twitter.com/ClydeDz" title="Follow Clyde D'Souza on Twitter" target="_blank" class="md-icon-button launch">
                     <md-icon class="ion-social-linkedin"></md-icon>
@@ -48,6 +86,7 @@
             <div layout="row" layout-align="center center">
                 <p>Website crafted by Clyde D'Souza</p>
             </div>
+            <div class="footer-block gradients"></div>
         </md-content>
     </div>
     <!-- Angular Material requires Angular.js Libraries -->
