@@ -1,19 +1,34 @@
-﻿<div md-swipe-left="onSwipeLeft('about')"  ng-cloak>
-    <div class='md-padding body-bg' layout="row" layout-align="center center" layout-wrap>
-        <md-card flex flex-gt-xs="80">
-            <md-card-content flex layout-padding style="text-align:justify">
-                <p>Hi. I am Clyde D'Souza. I live in Auckland, New Zealand but originally from Thane, Mumbai. I have completed my graduation in information technology from University of Mumbai and a postgraduate diploma in computer and information sciences from AUT University, Auckland, New Zealand and currently interning at Datacom. My aim is to gain practical knowledge in my field of study and excel in it with the help of my determination and motivation that keeps me going at my best.</p>
+﻿<div md-swipe-right="onSwipeRight('projects')" ng-cloak>
+    <div class='md-padding body-bg' layout="row" layout-align="center start" layout-wrap>
+        <md-card flex-xs="99" flex-gt-xs="33" ng-repeat="docs in projects">
+            <md-card-header>
+                <md-card-avatar>
+                    <img ng-src="{{docs.icon}}" />
+                </md-card-avatar>
+                <md-card-header-text>
+                    <span class="md-title">{{docs.title}}</span>
+                    <span class="md-subhead">{{docs.date}}</span>
+                </md-card-header-text>
+            </md-card-header>
+            <div layout="row" layout-align="center center"><img ng-src="{{docs.image}}" class="md-card-image" width="240" height="240"></div>
+            <md-card-content>
+                <div style="text-align:justify"><p>{{docs.description}}</p></div>
+                <div><p>Category: {{docs.category}}</p></div>
+                <div>
+                    <p>Made using:</p>
+                    <div ng-repeat="lang in docs.languages">
+                        <span class="cd-chip">{{lang}}</span>
+                    </div>
+                </div>
             </md-card-content>
-        </md-card>
-        <md-card flex flex-gt-xs="80">
-            <md-card-content flex layout-padding style="text-align:justify">
-                <p>Hi. I am Clyde D'Souza. I live in Auckland, New Zealand but originally from Thane, Mumbai. I have completed my graduation in information technology from University of Mumbai and a postgraduate diploma in computer and information sciences from AUT University, Auckland, New Zealand and currently interning at Datacom. My aim is to gain practical knowledge in my field of study and excel in it with the help of my determination and motivation that keeps me going at my best.</p>
-            </md-card-content>
-        </md-card>
-        <md-card flex flex-gt-xs="80">
-            <md-card-content flex layout-padding style="text-align:justify">
-                <p><md-button><md-icon class="material-icons">file_download</md-icon> Download my resume</md-button></p>
-            </md-card-content>
+            <md-card-actions layout="row" layout-align="end right" ng-show="docs.hasWebsite || docs.onGithub">
+                <md-button ng-href="{{docs.url}}" class="md-icon-button" aria-label="Website" ng-show="{{docs.hasWebsite}}">
+                    <md-icon class="material-icons">public</md-icon>
+                </md-button>
+                <md-button ng-href="{{docs.github}}" class="md-icon-button" aria-label="Website" ng-show="{{docs.onGithub}}">
+                    <md-icon class="ion-social-github"></md-icon>
+                </md-button>
+            </md-card-actions>
         </md-card>
     </div>
 </div>
