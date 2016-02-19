@@ -2,7 +2,7 @@
 .module('clyde', ['ngMaterial', 'ngRoute', 'ngAnimate'])
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
-    .when('/', { templateUrl: "views/about.html", controller:"AboutController", title:"Clyde D'Souza", tabIndex:0 })
+    .when('/', { templateUrl: "views/bout.html", controller:"AboutController", title:"Clyde D'Souza", tabIndex:0 })
     .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza", tabIndex:1 })
     .otherwise({ templateUrl: "views/not-found.html" });
 }])
