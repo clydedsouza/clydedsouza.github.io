@@ -1,10 +1,15 @@
-﻿angular
+﻿/*
+ * Author: Clyde D'Souza
+ * Email: clydedsouza@outlook.com
+**/
+
+angular
 .module('clyde', ['ngMaterial', 'ngRoute', 'ngAnimate'])
 .config(['$routeProvider', '$mdThemingProvider', function ($routeProvider, $mdThemingProvider) {
     $routeProvider
         .when('/', { templateUrl: "views/about.html", controller:"AboutController", title:"Clyde D'Souza", tabIndex:0 })
         .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza", tabIndex:1 })
-        .otherwise({ templateUrl: "views/not-found.html" });
+        .otherwise({ templateUrl: "views/about.html" });
     $mdThemingProvider.theme('default')
         .primaryPalette('teal')
         .accentPalette('yellow');
