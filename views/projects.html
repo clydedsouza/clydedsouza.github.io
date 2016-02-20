@@ -11,15 +11,16 @@
                 </md-card-header-text>
             </md-card-header>
             <div layout="row" layout-align="center center"><img ng-src="{{docs.image}}" class="md-card-image" width="240" height="240"></div>
-            <md-card-content>
-                <div style="text-align:justify"><p>{{docs.description}}</p></div>
-                <div><p>Category: {{docs.category}}</p></div>
-                <div>
-                    <p>Made using:</p>
-                    <div ng-repeat="lang in docs.languages">
-                        <span class="cd-chip">{{lang}}</span>
-                    </div>
+            <md-card-content class="cd-content"> 
+                <div  layout="row" layout-align="start start">
+                    <p><md-icon class="material-icons">label</md-icon> {{docs.category}}</p>
                 </div>
+                <p>{{docs.description}}</p>                
+                <p>Made using:
+                <div ng-repeat="lang in docs.languages">
+                    <span class="cd-chip">{{lang}}</span>
+                </div>
+                </p>
             </md-card-content>         
             <md-card-actions layout="row" layout-align="end right" ng-show="docs.hasWebsite || docs.onGithub">
                 <md-button ng-href="{{docs.website}}" class="md-icon-button" aria-label="Website" ng-show="{{docs.hasWebsite}}">

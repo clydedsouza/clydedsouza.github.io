@@ -1,6 +1,7 @@
-﻿<div md-swipe-right="onSwipeRight('projects')" ng-cloak ng-controller="ProjectsController">
-    <div class='md-padding body-bg' layout="row" layout-align="center start" layout-wrap>
-        <md-card flex-xs="99" flex-gt-xs="80">
+﻿<div md-swipe-left="onSwipeLeft('about')" class="body-bg" ng-cloak>
+    <br />
+    <div layout-xs="column" layout-gt-xs="row" layout-align="center start">
+        <md-card flex-xs="99" flex-gt-xs="40" class="cd-card-teal">
             <md-card-header>
                 <md-card-avatar>
                     <img src="../images/clydedsouza.jpg" class="md-user-avatar" />
@@ -10,25 +11,107 @@
                     <span class="md-subhead">clydedsouza@outlook.com</span>
                 </md-card-header-text>
             </md-card-header>
-            <md-card-actions layout="row" layout-align="start center">
-                <md-card-icon-actions>
-                    <md-button href="http://www.twitter.com/ClydeDz" title="Follow Clyde D'Souza on Twitter" target="_blank" class="md-icon-button launch">
+            <md-card-content class="md-padding cd-content">
+                <p>My aim is to gain experience and expertise in my field of study and excel in it with the help of my determination and motivation that keeps me going at my best.</p>
+            </md-card-content>
+            <md-card-actions layout="row">
+                <md-card-icon-actions  layout-align="end end">
+                    <md-button aria-label="Share on twitter" href="mailto:clydedsouza@outlook.com?Subject=Hi%20Clyde%21&amp;Body=Greetings%20Clyde,%20%0D%0DI%20want%20to%20get%20in%20touch%20with%20you.%0D%0DThanks,%20%0D%0DSent%20from%20http%3A%2F%2Fclydedsouza.github.io" title="Follow Clyde D'Souza on Twitter" target="_blank" class="md-icon-button launch">
+                        <md-icon class="material-icons">email</md-icon>
+                    </md-button>
+                    <md-button aria-label="Share on twitter" href="http://www.twitter.com/ClydeDz" title="Follow Clyde D'Souza on Twitter" target="_blank" class="md-icon-button launch">
                         <md-icon class="ion-social-linkedin"></md-icon>
                     </md-button>
-                    <md-button href="http://www.twitter.com/ClydeDz" title="Follow Clyde D'Souza on Twitter" target="_blank" class="md-icon-button launch">
+                    <md-button aria-label="Share on twitter" href="http://www.twitter.com/ClydeDz" title="Follow Clyde D'Souza on Twitter" target="_blank" class="md-icon-button launch">
                         <md-icon class="ion-social-twitter"></md-icon>
                     </md-button>
-                    <md-button href="http://www.twitter.com/ClydeDz" title="Follow Clyde D'Souza on Twitter" target="_blank" class="md-icon-button launch">
+                    <md-button aria-label="Share on twitter" href="http://www.twitter.com/ClydeDz" title="Follow Clyde D'Souza on Twitter" target="_blank" class="md-icon-button launch">
                         <md-icon class="ion-social-github"></md-icon>
                     </md-button>
                 </md-card-icon-actions>
             </md-card-actions>
-            <md-card-content class="md-padding">
-                <p>Hi. I am Clyde D'Souza. I live in Auckland, New Zealand but originally from Thane, Mumbai. I have completed my graduation in information technology from University of Mumbai and a postgraduate diploma in computer and information sciences from AUT University, Auckland, New Zealand and currently interning at Datacom. My aim is to gain practical knowledge in my field of study and excel in it with the help of my determination and motivation that keeps me going at my best.</p>
-                <p>Particularly, I have an inclination towards web development and possess the required technical skills. Along with that I also have good communication skills and leadership skills. I generally take up some self-thought projects where I can explore and learn the language and strive hard to bring the desired output. And in-fact, I already had this wonderful opportunity of designing and developing a website for the BMS departments' annual fest Inspira which went live in August 2012. Here, in New Zealand, I have also been a part of various hackathon's developing WordPress websites for charitable organisations. I have also developed a Windows Store App called 'Kiwi Sports'. <a href="projects.html">[Read More: Projects]</a></p>
-                <p>Furthermore, I have been a compere at various events held in college including the annual fest Spectrum. I really enjoy that on-stage life and that has added a great deal of confidence within me. I also love talking to people and understanding their perspective towards life. Moreover, I have contributed my articles as well as designed magazine covers for Our Lady of Mercy Church, Thane parish bulletin. I also write some refreshing content on my blog <a href="http://www.iamclyde.blogspot.in/" target="_blank" alt="Visit my blog Creative center" title="Visit my blog">Creative Center</a>. And offlate, I have been sketching too.</p>
-                <p><md-button><md-icon class="material-icons">file_download</md-icon> Download my resume</md-button></p>
+        </md-card>
+        <md-card flex-xs="99" flex-gt-xs="40" class="cd-card-yellow">
+            <md-card-header>
+                <md-card-avatar>
+                    <md-icon class="material-icons cd-card-avatar">work</md-icon>
+                </md-card-avatar>
+                <md-card-header-text>
+                    <span class="md-title">Work Experience</span>
+                    <span class="md-subhead">Currently an intern at Datacom</span>
+                </md-card-header-text>
+            </md-card-header>
+            <md-card-content class="md-padding cd-content">
+                <p>Currently, I am working as a software developer intern at <md-button class="md-primary" ng-href="http://www.datacom.co.nz" target="_blank">Datacom</md-button>. Previously, I have worked with <md-button class="md-primary" ng-href="http://www.heritagehotes.co.nz" target="_blank">Heritage Hotels</md-button> as a part-time administrative assistant</p>
             </md-card-content>
         </md-card>
     </div>
+    <div layout-xs="column" layout-gt-xs="row" layout-align="center start">
+
+        <md-card flex-xs="99" flex-gt-xs="40" class="cd-card-yellow">
+            <md-card-header>
+                <md-card-avatar>
+                    <md-icon class="material-icons cd-card-avatar">school</md-icon>
+                </md-card-avatar>
+                <md-card-header-text>
+                    <span class="md-title">Education</span>
+                    <span class="md-subhead">AUT University alumni - 2015</span>
+                </md-card-header-text>
+            </md-card-header>
+            <md-card-content class="md-padding cd-content">
+                <p>I completed a Postgraduate Diploma in Computer and Information Sciences from AUT University in December 2015. Prior to that I did my Bachelor's of Science (Information Technology) in India</p>
+            </md-card-content>
+        </md-card>
+
+        <md-card flex-xs="99" flex-gt-xs="40" class="cd-card-teal">
+            <md-card-header>
+                <md-card-avatar>
+                    <md-icon class="material-icons cd-card-avatar">place</md-icon>
+                </md-card-avatar>
+                <md-card-header-text>
+                    <span class="md-title">Location</span>
+                    <span class="md-subhead">Auckland, New Zealand</span>
+                </md-card-header-text>
+            </md-card-header>
+            <md-card-content class="md-padding cd-content">
+                <p>To pursue my higher education and gain global exposure, I moved to Auckland, NZ in February 2015. Originally, I am from Thane, Mumbai.</p>
+            </md-card-content>
+        </md-card>
+
+    </div>
+    <!------->
+    <div layout-xs="column" layout-gt-xs="row" layout-align="center start">
+
+        <md-card flex-xs="99" flex-gt-xs="40" class="cd-card-teal">
+            <md-card-header>
+                <md-card-avatar>
+                    <md-icon class="material-icons cd-card-avatar">favorite</md-icon>
+                </md-card-avatar>
+                <md-card-header-text>
+                    <span class="md-title">Volunteer experience</span>
+                    <span class="md-subhead">Volunteered at Hospice West Auckland</span>
+                </md-card-header-text>
+            </md-card-header>
+            <md-card-content class="md-padding cd-content">
+                <p>I have had this wonderful opportunity to volunteer at Hospice West Auckland for nearly four months. I also attend hackathon weekends which are conducted to help charitable organisations with their IT needs.</p>
+            </md-card-content>
+        </md-card>
+
+        <md-card flex-xs="99" flex-gt-xs="40" class="cd-card-yellow">
+            <md-card-header>
+                <md-card-avatar>
+                    <md-icon class="material-icons cd-card-avatar">local_cafe</md-icon>
+                </md-card-avatar>
+                <md-card-header-text>
+                    <span class="md-title">Leisure activities</span>
+                    <span class="md-subhead">Pick of the day!</span>
+                </md-card-header-text>
+            </md-card-header>
+            <md-card-content class="md-padding cd-content">
+                <p>I like doing different activities on a rotational basis and during my leisure time I have socialized, blogged, played soccer, sketched, learned and experimented with new frameworks, travelled and desgined. I also have and love to host events.</p>
+            </md-card-content>
+        </md-card>
+
+    </div>
+    <br />
 </div>

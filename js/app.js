@@ -2,7 +2,7 @@
 .module('clyde', ['ngMaterial', 'ngRoute', 'ngAnimate'])
 .config(['$routeProvider', '$mdThemingProvider', function ($routeProvider, $mdThemingProvider) {
     $routeProvider
-        .when('/', { templateUrl: "views/bout.html", controller:"AboutController", title:"Clyde D'Souza", tabIndex:0 })
+        .when('/', { templateUrl: "views/about.html", controller:"AboutController", title:"Clyde D'Souza", tabIndex:0 })
         .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza", tabIndex:1 })
         .otherwise({ templateUrl: "views/not-found.html" });
     $mdThemingProvider.theme('default')
@@ -57,10 +57,10 @@
             $window.open("https://twitter.com/share?text=Amazing%20website!%20Have%20a%20look%20at%20@ClydeDz%20's%20website%20at%20&url=http://clydedsouza.github.io", "_blank");
         }
         else if (x == "fb") {
-            $window.open("http://www.facebook.com/sharer.php?u=http://clydedsouza.github.io", "_blank");
+            $window.open("http://www.facebook.com/sharer.php?t=Hello&u=http://clydedsouza.github.io", "_blank");
         }
         else if (x == "google") {
-            $window.open("https://plus.google.com/share?url=http://clydedsouza.github.io", "_blank");
+            $window.open("https://plus.google.com/share?text=Hello&url=http://clydedsouza.github.io", "_blank");
         }
         else {
             $window.open("http://www.linkedin.com/shareArticle?mini=true&amp;url=http://clydedsouza.github.io", "_blank");
