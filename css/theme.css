@@ -7,7 +7,8 @@
     max-height: 210px;
 }
 .md-toolbar-tools> h2{
-    font-size:34px;
+    font-family: 'Dosis','Roboto', sans-serif;
+    font-size:46px;
 }
 .gradients{
     background: #009688;

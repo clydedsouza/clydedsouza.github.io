@@ -59,7 +59,7 @@
     "website": "http://clymate.azurewebsites.net/",
     "onGithub": true,
     "github": "https://github.com/ClydeDz/clymate",
-    "languages": [ "HTML", "CSS", "JavaScript", "jQuery" ],
+    "languages": [ "HTML", "SCSS", "CSS", "JavaScript", "jQuery" ],
     "category": "Web App",
     "icon": "images/clymate-icon.png",
     "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/clymate.png"

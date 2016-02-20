@@ -32,8 +32,7 @@
         };
     }));
 }])
-.controller('IndexController', ['$scope', '$window', '$rootScope', function ($scope, $window, $rootScope) {
-    $scope.localTabIndex = $rootScope.tabIndex;
+.controller('IndexController', ['$scope', '$window', function ($scope, $window) {
     $scope.goTo = function (x) {
         if(x=="about"){
             $window.location = "#/";
@@ -74,9 +73,9 @@
     $scope.availableDirections = ['up', 'down', 'left', 'right'];
     $scope.selectedDirection = 'up';
 }])
-.controller('AboutController', ['$scope', '$rootScope', function ($scope, $rootScope) {
+.controller('AboutController', ['$scope', function ($scope) {
 }])
-.controller('ProjectsController', ['$scope', '$http', '$rootScope', function ($scope, $http, $rootScope) {
+.controller('ProjectsController', ['$scope', '$http', function ($scope, $http) {
     $scope.projects = {};
     //https://raw.githubusercontent.com/ngClyde/ngClyde.github.io/master/js/projects.json
     $http.get("../api/projects.json")

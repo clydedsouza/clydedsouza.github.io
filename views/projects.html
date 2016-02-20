@@ -13,6 +13,7 @@
             <div layout="row" layout-align="center center"><img ng-src="{{docs.image}}" class="md-card-image" width="240" height="240"></div>
             <md-card-content class="cd-content"> 
                 <div  layout="row" layout-align="start start">
+                    <md-tooltip md-direction="top">Category</md-tooltip>
                     <p><md-icon class="material-icons">label</md-icon> {{docs.category}}</p>
                 </div>
                 <p>{{docs.description}}</p>                
@@ -24,9 +25,11 @@
             </md-card-content>         
             <md-card-actions layout="row" layout-align="end right" ng-show="docs.hasWebsite || docs.onGithub">
                 <md-button ng-href="{{docs.website}}" class="md-icon-button" aria-label="Website" ng-show="{{docs.hasWebsite}}">
+                    <md-tooltip md-direction="top">View this project on the web</md-tooltip>
                     <md-icon class="material-icons">public</md-icon>
                 </md-button>
-                <md-button ng-href="{{docs.github}}" class="md-icon-button" aria-label="Website" ng-show="{{docs.onGithub}}">
+                <md-button ng-href="{{docs.github}}" class="md-icon-button" aria-label="GitHub" ng-show="{{docs.onGithub}}">
+                    <md-tooltip md-direction="top">View this project on GitHub</md-tooltip>
                     <md-icon class="ion-social-github"></md-icon>
                 </md-button>
             </md-card-actions>           
