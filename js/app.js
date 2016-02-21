@@ -7,8 +7,8 @@ angular
 .module('clyde', ['ngMaterial', 'ngRoute', 'ngAnimate'])
 .config(['$routeProvider', '$mdThemingProvider', function ($routeProvider, $mdThemingProvider) {
     $routeProvider
-        .when('/', { templateUrl: "views/about.html", controller:"AboutController", title:"Clyde D'Souza", tabIndex:0 })
-        .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza", tabIndex:1 })
+        .when('/', { templateUrl: "views/about.html", controller:"AboutController", title:"Clyde D'Souza | Auckland, New Zealand", tabIndex:0 })
+        .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza | Auckland, New Zealand", tabIndex:1 })
         .otherwise({ templateUrl: "views/about.html" });
     $mdThemingProvider.theme('default')
         .primaryPalette('teal')
@@ -67,7 +67,7 @@ angular
             $window.open("https://plus.google.com/share?text=Hello&url=http://clydedsouza.github.io", "_blank");
         }
         else {
-            $window.open("http://www.linkedin.com/shareArticle?mini=true&amp;url=http://clydedsouza.github.io", "_blank");
+            $window.open("https://www.linkedin.com/cws/share?url=clydedsouza.github.io&original_referer=https%3A%2F%2clydedsouza.github.io", "_blank");
         }
     };
     $scope.topDirections = ['left', 'up'];

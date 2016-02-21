@@ -12,9 +12,8 @@
             </md-card-header>
             <div layout="row" layout-align="center center"><img ng-src="{{docs.image}}" class="md-card-image" width="240" height="240"></div>
             <md-card-content class="cd-content"> 
-                <div  layout="row" layout-align="start start">
-                    <md-tooltip md-direction="top">Category</md-tooltip>
-                    <p><md-icon class="material-icons">label</md-icon> {{docs.category}}</p>
+                <div  layout="row" layout-align="start start">                    
+                    <p><md-tooltip md-direction="top">Category</md-tooltip><md-icon class="material-icons">label</md-icon> {{docs.category}}</p>
                 </div>
                 <p>{{docs.description}}</p>                
                 <p>Made using:
