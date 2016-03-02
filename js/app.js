@@ -7,8 +7,8 @@ angular
 .module('clyde', ['ngMaterial', 'ngRoute', 'ngAnimate'])
 .config(['$routeProvider', '$mdThemingProvider', function ($routeProvider, $mdThemingProvider) {
     $routeProvider
-        .when('/', { templateUrl: "views/about.html", controller:"AboutController", title:"Clyde D'Souza | Auckland, New Zealand", tabIndex:0 })
-        .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza | Auckland, New Zealand", tabIndex:1 })
+        .when('/', { templateUrl: "views/about.html", controller:"AboutController", title:"Clyde D'Souza - A Passionate Front End Developer", tabIndex:0 })
+        .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza - A Passionate Front End Developer", tabIndex: 1 })
         .otherwise({ templateUrl: "views/about.html" });
     $mdThemingProvider.theme('default')
         .primaryPalette('teal')
@@ -58,16 +58,16 @@ angular
     };
     $scope.share = function (x) {
         if (x == "tweet") {
-            $window.open("https://twitter.com/share?text=Amazing%20website!%20Have%20a%20look%20at%20@ClydeDz%20's%20website%20at%20&url=http://clydedsouza.github.io", "_blank");
+            $window.open("https://twitter.com/share?text=Amazing%20website!%20Have%20a%20look%20at%20@ClydeDz%20's%20website%20at%20&url=http://www.clyde.nz", "_blank");
         }
         else if (x == "fb") {
-            $window.open("http://www.facebook.com/sharer.php?t=Hello&u=http://clydedsouza.github.io", "_blank");
+            $window.open("http://www.facebook.com/sharer.php?t=Amazing%20stuff&u=http://www.clyde.nz", "_blank");
         }
         else if (x == "google") {
-            $window.open("https://plus.google.com/share?text=Hello&url=http://clydedsouza.github.io", "_blank");
+            $window.open("https://plus.google.com/share?text=Amazing%20stuff&url=http://www.clyde.nz", "_blank");
         }
         else {
-            $window.open("https://www.linkedin.com/cws/share?url=clydedsouza.github.io&original_referer=https%3A%2F%2clydedsouza.github.io", "_blank");
+            $window.open("https://www.linkedin.com/cws/share?url=clydedsouza.github.io&original_referer=http%3A%2F%2www.clyde.nz", "_blank");
         }
     };
     $scope.topDirections = ['left', 'up'];
