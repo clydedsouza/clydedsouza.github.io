@@ -1,0 +1,23 @@
+﻿<div class='url-mapping-message md-padding body-bg' layout="row" layout-align="center start" layout-wrap ng-show="urlFlag" ng-cloak>
+    <div>
+        <div class='md-padding body-bg' layout="row" layout-align="center start" layout-wrap>
+            <i class="material-icons">autorenew</i>
+        </div>
+        <br />
+        <p>Redirecting you to the site you requested...</p>
+    </div>
+</div>
+<div class='md-padding body-bg url-mapping-message' layout="row" layout-align="center start" layout-wrap ng-hide="urlFlag" ng-cloak>
+    <div>
+        <div class='md-padding body-bg' layout="row" layout-align="center start" layout-wrap>
+            <i class="material-icons">warning</i>
+        </div>
+        <p>I couldn't fetch the site you requested at the moment. I reckon it must be due to following reasons:
+        <ul style="list-style-type:decimal-leading-zero">
+            <li>The short url entered either doesn't exist anymore or is misspelled.</li>
+            <li>There could be some technical errors in retrieving the site itself which is currently unknown.</li>
+        </ul>
+        Please give it a try once again after some time.
+        </p>
+    </div>
+</div>

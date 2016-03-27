@@ -9,6 +9,7 @@ angular
     $routeProvider
         .when('/', { templateUrl: "views/about.html", controller:"AboutController", title:"Clyde D'Souza - A Passionate Front End Developer", tabIndex:0 })
         .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza - A Passionate Front End Developer", tabIndex: 1 })
+        .when('/u/:URL', { templateUrl: "views/url.html", controller: "UrlController", title: "Url Mapping | Clyde D'Souza - A Passionate Front End Developer", tabIndex: 2 })
         .otherwise({ templateUrl: "views/about.html" });
     $mdThemingProvider.theme('default')
         .primaryPalette('teal')
@@ -88,5 +89,22 @@ angular
             $scope.projects = response.data;
         },
         function (error) {
+        });
+}])
+.controller('UrlController', ['$scope', '$http', '$routeParams','$window', function ($scope, $http, $routeParams, $window) {
+    $scope.urlName = $routeParams.URL;
+    $scope.urlFlag = true;
+    $http.get("http://clydenzapi.azurewebsites.net/api/UrlMapping?shorturl="+$scope.urlName)
+        .then(function (response) {
+            if (response.data != null) {
+                $window.location = "" + response.data.LongUrl;
+                $scope.urlFlag = true;
+            }
+            else {
+                $scope.urlFlag = false;
+            }
+        },
+        function (error) {
+            $scope.urlFlag = false;
         });
 }]);
