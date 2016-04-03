@@ -94,7 +94,7 @@ angular
 .controller('UrlController', ['$scope', '$http', '$routeParams','$window', function ($scope, $http, $routeParams, $window) {
     $scope.urlName = $routeParams.URL;
     $scope.urlFlag = true;
-    $http.get("http://clydenzapi.azurewebsites.net/api/UrlMapping?shorturl="+$scope.urlName)
+    $http.get("http://clydenzapi.azurewebsites.net/api/UrlMappings?shorturl="+$scope.urlName)
         .then(function (response) {
             if (response.data != null) {
                 $window.location = "" + response.data.LongUrl;
