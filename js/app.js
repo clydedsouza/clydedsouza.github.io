@@ -43,20 +43,20 @@ angular
 .controller('IndexController', ['$scope', '$window', function ($scope, $window) {
     $scope.goTo = function (x) {
         if(x=="about"){
-            $window.location = "/";
+            $window.location = "#/";
         }
         else {
-            $window.location = "/projects";
+            $window.location = "#/projects";
         }
     };
     $scope.onSwipeLeft = function (ev) {
         if(ev=="about"){
-            $window.location = "/projects";
+            $window.location = "#/projects";
         }
     };
     $scope.onSwipeRight = function (ev) {
         if (ev == "projects") {
-            $window.location = "/";
+            $window.location = "#/";
         }
     };
     $scope.share = function (x) {
