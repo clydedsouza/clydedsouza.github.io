@@ -5,7 +5,7 @@
 
 angular
 .module('clyde', ['ngMaterial', 'ngRoute', 'ngAnimate'])
-.config(['$routeProvider', '$mdThemingProvider', function ($routeProvider, $mdThemingProvider) {
+.config(['$routeProvider', '$mdThemingProvider', '$compileProvider', function ($routeProvider, $mdThemingProvider, $compileProvider) {
     $routeProvider
         .when('/', { templateUrl: "views/about.html", controller:"AboutController", title:"Clyde D'Souza - A Passionate Front End Developer", tabIndex:0 })
         .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza - A Passionate Front End Developer", tabIndex: 1 })
@@ -16,6 +16,7 @@ angular
     $mdThemingProvider.theme('default')
         .primaryPalette('teal')
         .accentPalette('yellow');
+    $compileProvider.debugInfoEnabled(false);
 }])
 .run(['$location', '$rootScope', function ($location, $rootScope) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
@@ -99,13 +100,10 @@ angular
     $http.get("http://clydenzapi.azurewebsites.net/api/UrlMappings?shorturl="+$scope.urlName)
         .then(function (response) {
             if (response.data != null && response.data.LongUrl != null) {
-                //console.log(response.data != null && response.data.LongUrl != null);
-                //console.log(response.data.LongUrl == null);
                 $window.location = "" + response.data.LongUrl;
                 $scope.urlFlag = true;
             }
             else {
-                //console.log("f "+response.data != null && response.data.LongUrl != null);
                 $scope.urlFlag = false;
             }
         },
