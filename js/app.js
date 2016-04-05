@@ -99,7 +99,8 @@ angular
     $http.get("http://clydenzapi.azurewebsites.net/api/UrlMappings?shorturl="+$scope.urlName)
         .then(function (response) {
             if (response.data != null) {
-                $window.location = "" + response.data.LongUrl;
+                console.log(response);
+                //$window.location = "" + response.data.LongUrl;
                 $scope.urlFlag = true;
             }
             else {
