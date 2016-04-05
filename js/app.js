@@ -100,6 +100,7 @@ angular
         .then(function (response) {
             if (response.data != null && response.data.LongUrl != null) {
                 console.log(response.data != null && response.data.LongUrl != null);
+                console.log(response.data.LongUrl == null);
                 //$window.location = "" + response.data.LongUrl;
                 $scope.urlFlag = true;
             }
