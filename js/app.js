@@ -5,7 +5,7 @@
 
 angular
 .module('clyde', ['ngMaterial', 'ngRoute', 'ngAnimate'])
-.config(['$routeProvider', '$mdThemingProvider', '$locationProvider', function ($routeProvider, $mdThemingProvider, $locationProvider) {
+.config(['$routeProvider', '$mdThemingProvider', function ($routeProvider, $mdThemingProvider) {
     $routeProvider
         .when('/', { templateUrl: "views/about.html", controller:"AboutController", title:"Clyde D'Souza - A Passionate Front End Developer", tabIndex:0 })
         .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza - A Passionate Front End Developer", tabIndex: 1 })
@@ -16,7 +16,6 @@ angular
     $mdThemingProvider.theme('default')
         .primaryPalette('teal')
         .accentPalette('yellow');
-    $locationProvider.html5Mode(true);
 }])
 .run(['$location', '$rootScope', function ($location, $rootScope) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
