@@ -5,15 +5,18 @@
 
 angular
 .module('clyde', ['ngMaterial', 'ngRoute', 'ngAnimate'])
-.config(['$routeProvider', '$mdThemingProvider', function ($routeProvider, $mdThemingProvider) {
+.config(['$routeProvider', '$mdThemingProvider', '$locationProvider', function ($routeProvider, $mdThemingProvider, $locationProvider) {
     $routeProvider
         .when('/', { templateUrl: "views/about.html", controller:"AboutController", title:"Clyde D'Souza - A Passionate Front End Developer", tabIndex:0 })
         .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza - A Passionate Front End Developer", tabIndex: 1 })
-        .when('/u/:URL', { templateUrl: "views/url.html", controller: "UrlController", title: "Url Mapping | Clyde D'Souza - A Passionate Front End Developer", tabIndex: 2 })
+        .when('/about', { redirectTo: "/" })
+        //.when('/u/:URL', { templateUrl: "views/url.html", controller: "UrlController", title: "Url Mapping | Clyde D'Souza - A Passionate Front End Developer", tabIndex: 2 })
+        .when('/:URL', { templateUrl: "views/url.html", controller: "UrlController", title: "Url Mapping | Clyde D'Souza - A Passionate Front End Developer", tabIndex: -1 })
         .otherwise({ templateUrl: "views/about.html" });
     $mdThemingProvider.theme('default')
         .primaryPalette('teal')
         .accentPalette('yellow');
+    $locationProvider.html5Mode(true);
 }])
 .run(['$location', '$rootScope', function ($location, $rootScope) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
@@ -41,20 +44,20 @@ angular
 .controller('IndexController', ['$scope', '$window', function ($scope, $window) {
     $scope.goTo = function (x) {
         if(x=="about"){
-            $window.location = "#/";
+            $window.location = "/";
         }
         else {
-            $window.location = "#/projects";
+            $window.location = "/projects";
         }
     };
     $scope.onSwipeLeft = function (ev) {
         if(ev=="about"){
-            $window.location = "#/projects";
+            $window.location = "/projects";
         }
     };
     $scope.onSwipeRight = function (ev) {
         if (ev == "projects") {
-            $window.location = "#/";
+            $window.location = "/";
         }
     };
     $scope.share = function (x) {
