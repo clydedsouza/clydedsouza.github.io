@@ -1,5 +1,18 @@
 ﻿[
   {
+    "title": "People with Parkinson's Inc",
+    "date": "27th - 29th May, 2016",
+    "description": "Developer at Impact NPO charity weekend. This time our 8 member team developed a WordPress website for People with Parkinson's Inc, NZ.",
+    "hasWebsite": true,
+    "website": "http://pwpinc.nz/",
+    "onGithub": false,
+    "github": "",
+    "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
+    "category": "WordPress",
+    "icon": "images/pwpinc-icon.png",
+    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/pwpinc.png"
+  },
+  {
     "title": "NOBS Ratings",
     "date": "26th - 28th February, 2016",
     "description": "Lead developer at yet another Impact NPO charity weekend. This time our 6 member team developed a WordPress website from scratch for NOBS Ratings NZ.",
