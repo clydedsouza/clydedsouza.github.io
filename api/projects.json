@@ -1,5 +1,33 @@
 ﻿[
   {
+    "title": "Project Restore NZ",
+    "date": "30th October - 2nd September, 2016",
+    "description": "With a team of 3 developers, 1 tester and 1 designer, we developed a website for Project Restore NZ using the very intuitive WordPress platform.",
+    "hasWebsite": true,
+    "website": "http://projectrestore.nz/",
+    "onGithub": false,
+    "github": "",
+    "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
+    "category": "WordPress",
+    "icon": "images/icons/projectrestore-icon.jpeg",
+    "image": "images/projects/projectrestore.jpg",
+    "imageDescription": "Simple and elegant website for Project Restore NZ developed at an Impact NPO event"
+  },
+  {
+    "title": "Rainbow Youth",
+    "date": "12th - 14th August, 2016",
+    "description": "Developed a learning management system over the weekend with a team of 7 members for Rainbow Youth.",
+    "hasWebsite": true,
+    "website": "http://learn.ry.org.nz/",
+    "onGithub": false,
+    "github": "",
+    "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
+    "category": "WordPress",
+    "icon": "images/icons/ry-icon.jpeg",
+    "image": "images/projects/ry.jpg",
+    "imageDescription": "Developed a learning management system using WordPress and Sensei at Impact NPO"
+  },
+  {
     "title": "People with Parkinson's Inc",
     "date": "27th - 29th May, 2016",
     "description": "Developer at Impact NPO charity weekend. This time our 8 member team developed a WordPress website for People with Parkinson's Inc, NZ.",
@@ -9,8 +37,9 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
-    "icon": "images/pwpinc-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/pwpinc.png"
+    "icon": "images/icons/pwpinc-icon.png",
+    "image": "images/projects/pwpinc.png",
+    "imageDescription": "Helping People with Parkinson's Inc with their website at Impact NPO"
   },
   {
     "title": "NOBS Ratings",
@@ -22,8 +51,9 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php", "Angular JS" ],
     "category": "WordPress",
-    "icon": "images/nobsratings-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/nobsratings.png"
+    "icon": "images/icons/nobsratings-icon.png",
+    "image": "images/projects/nobsratings.png",
+    "imageDescription": "Another awesome website created by Clyde and team at Impact NPO for NOBS Ratings"
   },
   {
     "title": "Gitly",
@@ -35,21 +65,23 @@
     "github": "https://github.com/ClydeDz/gitly",
     "languages": [ "HTML", "CSS", "JavaScript", "Angular JS", "Angular JS Material" ],
     "category": "Web App",
-    "icon": "images/gitly-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/gitly.png"
+    "icon": "images/icons/gitly-icon.png",
+    "image": "images/projects/gitly.png",
+    "imageDescription": "Gitly is a GitHub user lookup app created by Clyde D'Souza"
   },
   {
     "title": "Angular JS Workshop",
     "date": "February 2016",
-    "description": "Workshop material on Angular JS to be conducted at Datacom, NZ",
+    "description": "Workshop material on Angular JS 1.x. Easy to understand the basics of Angular JS and will give you a good kickstart in to developing your first Angular JS web app.",
     "hasWebsite": false,
     "website": "",
     "onGithub": true,
     "github": "https://github.com/ngClyde/",
     "languages": [ "Angular JS" ],
     "category": "Workshop",
-    "icon": "images/angular-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/ngClyde.png"
+    "icon": "images/icons/angular-icon.png",
+    "image": "images/projects/ngClyde.png",
+    "imageDescription": "Clyde has created an easy to understand resource/ knowledge base for Angular JS"
   },
   {
     "title": "A1 Professional Designs",
@@ -61,8 +93,9 @@
     "github": "https://github.com/a1pd/a1pd.github.io",
     "languages": [ "HTML", "CSS", "JavaScript", "Angular JS" ],
     "category": "Web App",
-    "icon": "images/a1pd-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/a1pd.png"
+    "icon": "images/icons/a1pd-icon.png",
+    "image": "images/projects/a1pd.png",
+    "imageDescription": "Clyde developed a website for A1 Professional Designs owned by Roshini Daruwala"
   },
   {
     "title": "Marcdown",
@@ -74,8 +107,9 @@
     "github": "https://github.com/ClydeDz/marcdown",
     "languages": [ "HTML", "CSS", "JavaScript", "Bootstrap", "Angular JS", "Angular Marked" ],
     "category": "Web App",
-    "icon": "images/marcdown-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/marcdown-snap.png"
+    "icon": "images/icons/marcdown-icon.png",
+    "image": "images/projects/marcdown-snap.png",
+    "imageDescription": "Marcdown is a simple but powerful web app completely based on helping a user to understand Markdown better"
   },
   {
     "title": "Clymate",
@@ -87,8 +121,9 @@
     "github": "https://github.com/ClydeDz/clymate",
     "languages": [ "HTML", "SCSS", "CSS", "Bootstrap", "JavaScript", "jQuery" ],
     "category": "Web App",
-    "icon": "images/clymate-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/clymate.png"
+    "icon": "images/icons/clymate-icon.png",
+    "image": "images/projects/clymate.png",
+    "imageDescription": "Clymate is a weather plus UV forecast app made using a colourful and brilliant UI"
   },
   {
     "title": "Bashell",
@@ -100,8 +135,9 @@
     "github": "https://github.com/ClydeDz/bashell",
     "languages": [ "HTML", "CSS", "Boostrap", "JavaScript", "jQuery" ],
     "category": "Web App",
-    "icon": "images/bashell-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/bashell.png"
+    "icon": "images/icons/bashell-icon.png",
+    "image": "images/projects/bashell.png",
+    "imageDescription": "Bashell is a browser-based terminal window running on JavaScript"
   },
   {
     "title": "Nandoso: A fictional restaurant",
@@ -113,8 +149,9 @@
     "github": "https://github.com/ClydeDz/clydedsouza-nandoso",
     "languages": [ "HTML", "CSS", "JavaScript", "C#", "MySql", "Asp.Net EF" ],
     "category": "Web App",
-    "icon": "images/nandoso-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/nandoso.png"
+    "icon": "images/icons/nandoso-icon.png",
+    "image": "images/projects/nandoso.png",
+    "imageDescription": "Nadoso is an intuitive website for a fictional restaurant developed by Clyde D'Souza which includes Web Api, facebook authentication, disqus forum and not to forget, a delicious menu"
   },
   {
     "title": "Huntington's Disease Association Auckland",
@@ -126,8 +163,9 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
-    "icon": "images/hdaakl-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/hdaakl-team.jpg"
+    "icon": "images/icons/hdaakl-icon.png",
+    "image": "images/projects/hdaakl-team.jpg",
+    "imageDescription": "The dream team at Impact NPO re-unites to make another website for Huntington's Disease Association Auckland"
   },
   {
     "title": "Kiwi Sports",
@@ -139,8 +177,9 @@
     "github": "",
     "languages": [ "XAML", "C#" ],
     "category": "Windows Store App (PC)",
-    "icon": "images/kiwisports-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/kiwi-sports.png"
+    "icon": "images/icons/kiwisports-icon.png",
+    "image": "images/projects/kiwi-sports.png",
+    "imageDescription": "Clyde developed his first Windows Store PC app called Kiwi Sports which is an all-in-one app for the All Blacks, Black Caps and Silver Ferns."
   },
   {
     "title": "Luck Venue",
@@ -152,8 +191,9 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
-    "icon": "images/luckvenue-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/luckvenue-website.png"
+    "icon": "images/icons/luckvenue-icon.png",
+    "image": "images/projects/luckvenue-website.png",
+    "imageDescription": "Luck Venue is a WordPress website developed by an awesome dream team at an Impact NPO event in August"
   },
   {
     "title": "Success For Little People",
@@ -165,8 +205,9 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
-    "icon": "images/wordpress-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/sflp-website.png"
+    "icon": "images/icons/wordpress-icon.png",
+    "image": "images/projects/sflp-website.png",
+    "imageDescription": "We developed a website for Success for Little People using WordPress"
   },
   {
     "title": "Project OMG",
@@ -178,8 +219,9 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "VML" ],
     "category": "Game",
-    "icon": "images/omg-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/omg-team.jpg"
+    "icon": "images/icons/omg-icon.png",
+    "image": "images/projects/omg-team.jpg",
+    "imageDescription": "Project OMG is an interesting HTML-based game developed in 2013"
   },
   {
     "title": "Inspira",
@@ -191,8 +233,9 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "Web App",
-    "icon": "images/inspira-icon.png",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/inspira-html.jpg"
+    "icon": "images/icons/inspira-icon.png",
+    "image": "images/projects/inspira-html.jpg",
+    "imageDescription": "Inspira 2012 website was developed by Clyde D'Souza and Sagar Lone"
   },
   {
     "title": "Tulips cover page designs",
@@ -204,7 +247,8 @@
     "github": "",
     "languages": [ "Photoshop" ],
     "category": "Graphic Design",
-    "icon": "images/tulips-icon.jpe",
-    "image": "https://ce3cb5a06865518e845a67710c6f902e9e82de42-www.googledrive.com/host/0B3iPDNpwGU-tUUExWWlmM28wYUE/assets/img/tulips-collage.jpg"
+    "icon": "images/icons/tulips-icon.jpe",
+    "image": "images/projects/tulips-collage.jpg",
+    "imageDescription": "Church magazine cover designs by Clyde D'Souza"
   }
 ]

@@ -1,7 +1,8 @@
-﻿/*
+﻿/*!
  * Author: Clyde D'Souza
  * Email: clydedsouza@outlook.com
-**/
+ * https://github.com/clydedz
+ */
 
 angular
 .module('clyde', ['ngMaterial', 'ngRoute', 'ngAnimate'])

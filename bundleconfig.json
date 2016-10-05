@@ -1,0 +1,20 @@
+[
+  {
+    "outputFileName": "js/app.min.js",
+    "inputFiles": [
+      "js/app.js"
+    ]
+  },
+  {
+    "outputFileName": "css/theme.min.css",
+    "inputFiles": [
+      "css/theme.css"
+    ]
+  },
+  {
+    "outputFileName": "content/angular-material.min.min.css",
+    "inputFiles": [
+      "content/angular-material.min.css"
+    ]
+  }
+]
