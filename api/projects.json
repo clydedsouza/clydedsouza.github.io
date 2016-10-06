@@ -24,7 +24,7 @@
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
     "icon": "images/icons/ry-icon.jpeg",
-    "image": "images/projects/ry.jpg",
+    "image": "images/projects/rainbow-youth.jpg",
     "imageDescription": "Developed a learning management system using WordPress and Sensei at Impact NPO"
   },
   {
@@ -80,7 +80,7 @@
     "languages": [ "Angular JS" ],
     "category": "Workshop",
     "icon": "images/icons/angular-icon.png",
-    "image": "images/projects/ngClyde.jpg",
+    "image": "images/projects/ngclyde.jpg",
     "imageDescription": "Clyde has created an easy to understand resource/ knowledge base for Angular JS"
   },
   {
