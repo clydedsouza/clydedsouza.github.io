@@ -10,7 +10,7 @@
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
     "icon": "images/icons/projectrestore-icon.jpeg",
-    "image": "images/projects/projectrestore.jpg",
+    "image": "images/projects/project-restore.jpg",
     "imageDescription": "Simple and elegant website for Project Restore NZ developed at an Impact NPO event"
   },
   {
@@ -38,7 +38,7 @@
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
     "icon": "images/icons/pwpinc-icon.png",
-    "image": "images/projects/pwpinc.png",
+    "image": "images/projects/pwpinc.jpg",
     "imageDescription": "Helping People with Parkinson's Inc with their website at Impact NPO"
   },
   {
@@ -52,7 +52,7 @@
     "languages": [ "HTML", "CSS", "JavaScript", "Php", "Angular JS" ],
     "category": "WordPress",
     "icon": "images/icons/nobsratings-icon.png",
-    "image": "images/projects/nobsratings.png",
+    "image": "images/projects/nobsratings.jpg",
     "imageDescription": "Another awesome website created by Clyde and team at Impact NPO for NOBS Ratings"
   },
   {
@@ -66,7 +66,7 @@
     "languages": [ "HTML", "CSS", "JavaScript", "Angular JS", "Angular JS Material" ],
     "category": "Web App",
     "icon": "images/icons/gitly-icon.png",
-    "image": "images/projects/gitly.png",
+    "image": "images/projects/gitly.jpg",
     "imageDescription": "Gitly is a GitHub user lookup app created by Clyde D'Souza"
   },
   {
@@ -80,7 +80,7 @@
     "languages": [ "Angular JS" ],
     "category": "Workshop",
     "icon": "images/icons/angular-icon.png",
-    "image": "images/projects/ngClyde.png",
+    "image": "images/projects/ngClyde.jpg",
     "imageDescription": "Clyde has created an easy to understand resource/ knowledge base for Angular JS"
   },
   {
@@ -94,7 +94,7 @@
     "languages": [ "HTML", "CSS", "JavaScript", "Angular JS" ],
     "category": "Web App",
     "icon": "images/icons/a1pd-icon.png",
-    "image": "images/projects/a1pd.png",
+    "image": "images/projects/a1pd.jpg",
     "imageDescription": "Clyde developed a website for A1 Professional Designs owned by Roshini Daruwala"
   },
   {
@@ -108,7 +108,7 @@
     "languages": [ "HTML", "CSS", "JavaScript", "Bootstrap", "Angular JS", "Angular Marked" ],
     "category": "Web App",
     "icon": "images/icons/marcdown-icon.png",
-    "image": "images/projects/marcdown-snap.png",
+    "image": "images/projects/marcdown-snap.jpg",
     "imageDescription": "Marcdown is a simple but powerful web app completely based on helping a user to understand Markdown better"
   },
   {
@@ -122,7 +122,7 @@
     "languages": [ "HTML", "SCSS", "CSS", "Bootstrap", "JavaScript", "jQuery" ],
     "category": "Web App",
     "icon": "images/icons/clymate-icon.png",
-    "image": "images/projects/clymate.png",
+    "image": "images/projects/clymate.jpg",
     "imageDescription": "Clymate is a weather plus UV forecast app made using a colourful and brilliant UI"
   },
   {
@@ -136,7 +136,7 @@
     "languages": [ "HTML", "CSS", "Boostrap", "JavaScript", "jQuery" ],
     "category": "Web App",
     "icon": "images/icons/bashell-icon.png",
-    "image": "images/projects/bashell.png",
+    "image": "images/projects/bashell.jpg",
     "imageDescription": "Bashell is a browser-based terminal window running on JavaScript"
   },
   {
@@ -150,7 +150,7 @@
     "languages": [ "HTML", "CSS", "JavaScript", "C#", "MySql", "Asp.Net EF" ],
     "category": "Web App",
     "icon": "images/icons/nandoso-icon.png",
-    "image": "images/projects/nandoso.png",
+    "image": "images/projects/nandoso.jpg",
     "imageDescription": "Nadoso is an intuitive website for a fictional restaurant developed by Clyde D'Souza which includes Web Api, facebook authentication, disqus forum and not to forget, a delicious menu"
   },
   {
@@ -178,7 +178,7 @@
     "languages": [ "XAML", "C#" ],
     "category": "Windows Store App (PC)",
     "icon": "images/icons/kiwisports-icon.png",
-    "image": "images/projects/kiwi-sports.png",
+    "image": "images/projects/kiwi-sports.jpg",
     "imageDescription": "Clyde developed his first Windows Store PC app called Kiwi Sports which is an all-in-one app for the All Blacks, Black Caps and Silver Ferns."
   },
   {
@@ -192,7 +192,7 @@
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
     "icon": "images/icons/luckvenue-icon.png",
-    "image": "images/projects/luckvenue-website.png",
+    "image": "images/projects/luckvenue-website.jpg",
     "imageDescription": "Luck Venue is a WordPress website developed by an awesome dream team at an Impact NPO event in August"
   },
   {
@@ -206,7 +206,7 @@
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
     "icon": "images/icons/wordpress-icon.png",
-    "image": "images/projects/sflp-website.png",
+    "image": "images/projects/sflp-website.jpg",
     "imageDescription": "We developed a website for Success for Little People using WordPress"
   },
   {
