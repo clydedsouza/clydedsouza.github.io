@@ -63,16 +63,16 @@ angular
     };
     $scope.share = function (x) {
         if (x == "tweet") {
-            $window.open("https://twitter.com/share?text=Amazing%20website!%20Have%20a%20look%20at%20@ClydeDz%20's%20website%20at%20&url=http://www.clyde.nz", "_blank");
+            $window.open("https://twitter.com/share?text=Amazing%20website!%20Have%20a%20look%20at%20@ClydeDz%20's%20website%20at%20&url=http://clydedsouza.net", "_blank");
         }
         else if (x == "fb") {
-            $window.open("http://www.facebook.com/sharer.php?t=Amazing%20stuff&u=http://www.clyde.nz", "_blank");
+            $window.open("http://www.facebook.com/sharer.php?t=Amazing%20stuff&u=http://clydedsouza.net", "_blank");
         }
         else if (x == "google") {
-            $window.open("https://plus.google.com/share?text=Amazing%20stuff&url=http://www.clyde.nz", "_blank");
+            $window.open("https://plus.google.com/share?text=Amazing%20stuff&url=http://clydedsouza.net", "_blank");
         }
         else {
-            $window.open("https://www.linkedin.com/cws/share?url=clydedsouza.github.io&original_referer=http%3A%2F%2www.clyde.nz", "_blank");
+            $window.open("https://www.linkedin.com/cws/share?url=clydedsouza.net&original_referer=http%3A%2F%clydedsouza.net", "_blank");
         }
     };
     $scope.topDirections = ['left', 'up'];

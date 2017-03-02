@@ -16,5 +16,11 @@
     "inputFiles": [
       "content/angular-material.min.css"
     ]
+  },
+  {
+    "outputFileName": "views/about.min.html",
+    "inputFiles": [
+      "views/about.html"
+    ]
   }
 ]

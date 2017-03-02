@@ -75,3 +75,10 @@ md-card-content .md-button{
     padding-top: 40px;
     padding-bottom: 49px;
 }
+
+@media (min-width: 600px) {
+    .layout-gt-xs-row>.flex-gt-xs-33, .layout-row>.flex-gt-xs-33{
+        min-height: 100%;
+        max-height:inherit;
+    }
+}

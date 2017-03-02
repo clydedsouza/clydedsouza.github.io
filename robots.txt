@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: http://clydedsouza.net/sitemap.xml

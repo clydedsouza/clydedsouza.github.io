@@ -1,3 +1,3 @@
 # Clyde D'Souza
-## Personal website at [http://clydedsouza.github.io/](http://clydedsouza.github.io/)
+## Personal website at [http://clydedsouza.net](http://clydedsouza.net)
   
