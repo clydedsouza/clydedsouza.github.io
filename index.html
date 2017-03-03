@@ -41,10 +41,23 @@
     <!-- Angular Material style sheet -->
     <link rel="stylesheet" href="css/angular-material.min.css" type="text/css"/>
     <link href="css/theme.min.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
+    <!--<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />-->
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K5RC8T');</script>
+    <!-- End Google Tag Manager -->
 
     <script type="application/ld+json">
         {
@@ -62,6 +75,8 @@
         "image": "http://clydedsouza.net/images/clydedsouza.jpg",
         "jobTitle": "Passionate front end and UI developer",
         "alumniOf":"AUT University",
+        "worksFor":"Datacom Systems Ltd.",
+        "jobTitle":"Software Developer",
         "birthPlace":"Mumbai, India",
         "contactPoint":"@ClydeDz",
         "name": "Clyde D'Souza",
@@ -104,29 +119,29 @@
                     <md-menu md-position-mode="target-right target" ng-cloak>
                         <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
                             <md-tooltip md-direction="left">Share this site</md-tooltip>
-                            <md-icon class="ion-android-share"></md-icon>
+                            <md-icon class="mdi mdi-share"></md-icon>
                         </md-button>
                         <md-menu-content width="1" class="md-whiteframe-z3" ng-cloak>
                             <md-menu-item >
                                 <md-button aria-label="Share on twitter"  ng-click="share('tweet')">                                  
-                                    <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="ion-social-twitter"></md-icon>  </div>                                  
+                                    <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="mdi mdi-twitter"></md-icon>  </div>                                  
                                 </md-button>
                             </md-menu-item>
                             <md-menu-item  >
                                 <md-button aria-label="Share on twitter" ng-click="share('fb')">                                
-                                    <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="ion-social-facebook"></md-icon>   </div>                                 
+                                    <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="mdi mdi-facebook"></md-icon>   </div>                                 
                                 </md-button>
                             </md-menu-item>
                             <md-menu-item>
                                 <md-button aria-label="Share on twitter" ng-click="share('google')">
                                     <div layout="row" layout-align="center center">
-                                        <md-icon md-menu-origin class="ion-social-googleplus"></md-icon>
+                                        <md-icon md-menu-origin class="mdi mdi-google-plus"></md-icon>
                                     </div>
                                 </md-button>
                             </md-menu-item>
                             <md-menu-item >
                                 <md-button aria-label="Share on twitter" ng-click="share('linkedin')">
-                                    <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="ion-social-linkedin"></md-icon></div>
+                                    <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="mdi mdi-linkedin"></md-icon></div>
                                 </md-button>
                             </md-menu-item>
                         </md-menu-content>
@@ -135,10 +150,10 @@
                 <div flex></div>               
                 <md-tabs md-selected="globalConfig.tabIndex==0?0:1" md-dynamic-height ng-cloak>
                     <md-tab ng-click="goTo('about')">
-                        <md-icon aria-label="Share on twitter" class="material-icons">&#xe7fd;</md-icon> About
+                        About
                     </md-tab>
                     <md-tab ng-click="goTo('projects')">
-                        <md-icon aria-label="Share on twitter" class="material-icons">code</md-icon> Projects
+                        Projects
                     </md-tab>
                  </md-tabs>                          
             </md-toolbar>
@@ -148,23 +163,29 @@
             <div layout="row" layout-align="center center">
                 <md-button aria-label="Send me an email" href="mailto:clydedsouza@outlook.com?Subject=Hi%20Clyde%21&amp;Body=Greetings%20Clyde,%20%0D%0DI%20want%20to%20get%20in%20touch%20with%20you.%0D%0DThanks,%20%0D%0DSent%20from%20http%3A%2F%2Fclydedsouza.github.io" target="_blank" class="md-icon-button launch">
                     <md-tooltip md-direction="top">Send me an email</md-tooltip>
-                    <md-icon class="material-icons">email</md-icon>
+                    <md-icon class="mdi mdi-email"></md-icon>
                 </md-button>
                 <md-button aria-label="Connect with me on LinkedIn" href="https://nz.linkedin.com/in/clydedz" target="_blank" class="md-icon-button launch">
                     <md-tooltip md-direction="top">Connect with me on LinkedIn</md-tooltip>
-                    <md-icon class="ion-social-linkedin"></md-icon>
+                    <md-icon class="mdi mdi-linkedin"></md-icon>
                 </md-button>
                 <md-button aria-label="Follow me on twitter" href="http://www.twitter.com/ClydeDz" target="_blank" class="md-icon-button launch">
                     <md-tooltip md-direction="top">Follow me on twitter</md-tooltip>
-                    <md-icon class="ion-social-twitter"></md-icon>
+                    <md-icon class="mdi mdi-twitter"></md-icon>
                 </md-button>
                 <md-button aria-label="Follow me on GitHub" href="http://www.github.com/ClydeDz" target="_blank" class="md-icon-button launch">
                     <md-tooltip md-direction="top">Follow me on GitHub</md-tooltip>
-                    <md-icon class="ion-social-github"></md-icon>
+                    <md-icon class="mdi mdi-github-circle"></md-icon>
                 </md-button>
             </div>
             <div layout="row" layout-align="center center">
                 <p>Website crafted by Clyde D'Souza</p>
+            </div>
+            <div class="fb-msg-button">
+                <md-button aria-label="Send me a message on Facebook" href="https://m.me/clydedz" target="_blank" class="md-fab md-primary">
+                    <md-tooltip md-direction="left">Send me a message</md-tooltip>
+                    <md-icon class="mdi mdi-facebook-messenger"></md-icon>
+                </md-button>
             </div>
             <div class="footer-block gradients"></div>
         </md-content>
@@ -180,16 +201,5 @@
     <script src="js/angular-material.min.js" type="text/javascript"></script>
     <script src="js/app.min.js" type="text/javascript"></script>
 
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-K5RC8T');</script>
-    <!-- End Google Tag Manager -->
 </body>
 </html>

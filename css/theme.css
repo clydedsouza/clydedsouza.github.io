@@ -76,6 +76,34 @@ md-card-content .md-button{
     padding-bottom: 49px;
 }
 
+md-icon{
+    font-size:24px;
+}
+
+.fb-msg-button{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+}
+
+.md-button.md-fab.md-fab-bottom-right {
+    /*top: auto;
+    right: 20px;
+    bottom: 20px;
+    left: auto;
+    position: absolute;*/
+}
+
+.md-fab.docs-scroll-fab {
+    /*position: fixed !important;*/
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
 @media (min-width: 600px) {
     .layout-gt-xs-row>.flex-gt-xs-33, .layout-row>.flex-gt-xs-33{
         min-height: 100%;
