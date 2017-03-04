@@ -18,9 +18,27 @@
     ]
   },
   {
-    "outputFileName": "views/about.min.html",
+    "outputFileName": "css/primarycss-v1.min.css",
     "inputFiles": [
-      "views/about.html"
+      "css/angular-material.min.css",
+      "css/theme.min.css"
+    ]
+  },
+  {
+    "outputFileName": "js/primaryjs-v1.js",
+    "inputFiles": [
+      "js/app.min.js",
+      "js/angular-material.min.js"
+    ]
+  },
+  {
+    "outputFileName": "js/angularmaterial-bundle.js",
+    "inputFiles": [
+      "js/angular.min.js",
+      "js/angular-route.min.js",
+      "js/angular-animate.min.js",
+      "js/angular-aria.min.js",
+      "js/angular-messages.min.js"
     ]
   }
 ]

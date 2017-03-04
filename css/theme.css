@@ -86,16 +86,8 @@ md-icon{
     right:20px;
 }
 
-.md-button.md-fab.md-fab-bottom-right {
-    /*top: auto;
-    right: 20px;
-    bottom: 20px;
-    left: auto;
-    position: absolute;*/
-}
 
 .md-fab.docs-scroll-fab {
-    /*position: fixed !important;*/
     -webkit-transform: scale(0);
     transform: scale(0);
     -webkit-transition: -webkit-transform 0.2s;

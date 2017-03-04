@@ -1,12 +1,11 @@
 ﻿<html lang="en" ng-app="clyde" ng-controller="GlobalController">
 <head>
-    <title ng-cloak ng-bind="globalConfig.pageTitle">Clyde D'Souza - A Passionate Front End Developer</title>
-    <meta name="viewport" content="initial-scale=1" />
-    
+    <title ng-cloak ng-bind="globalConfig.pageTitle">Clyde D'Souza - A Passionate Front-End Developer</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />    
     <base href="/">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="author" href="http://plus.google.com/u/0/+ClydeDsouzaPlus">
-    <meta name="Keywords" content="Clyde D'Souza, @ClydeDz, Passionate front end developer, eye for ui, Auckland New Zealand" />
+    <meta name="Keywords" content="Clyde D'Souza, @ClydeDz, passionate front end developer, eye for ui, Auckland New Zealand" />
     <meta name="author" content="Clyde D'Souza">
     <meta name="description" content="Know more about Clyde D'Souza - a passionate front end developer with an eye for UI. Clyde is currently living in Auckland, New Zealand but is originally from Mumbai, India. Feel free to send him a tweet @ClydeDz">
     
@@ -22,8 +21,7 @@
     <meta name="twitter:creator" content="@ClydeDz">
     <meta property="og:description"  content="Know more about Clyde D'Souza - a passionate front end developer with an eye for UI" />
     <link rel="canonical" href="http://clydedsouza.net/">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="http://clydedsouza.net/sitemap.xml">
-    
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="http://clydedsouza.net/sitemap.xml">    
     <meta name="theme-color" content="#009688">
     <link rel="icon" sizes="192x192" href="images/clydedsouza-face-icon.png">
     <link rel="apple-touch-icon" sizes="57x57" href="images/clydedsouza-face-icon.png">
@@ -39,14 +37,11 @@
     <meta name="msapplication-TileImage" content="images/clydedsouza-face-icon.png">
 
     <!-- Angular Material style sheet -->
-    <link rel="stylesheet" href="css/angular-material.min.css" type="text/css"/>
-    <link href="css/theme.min.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
-    <!--<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />-->
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
-
+    <!--<link rel="stylesheet" href="css/angular-material.min.css" type="text/css"/>
+    <link href="css/theme.min.css" rel="stylesheet" type="text/css"/>-->
+    <link href="css/primarycss-v1.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">   
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Roboto" rel="stylesheet">
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -57,47 +52,7 @@
             j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
             'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-K5RC8T');</script>
-    <!-- End Google Tag Manager -->
-
-    <script type="application/ld+json">
-        {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Auckland CBD",
-        "addressRegion": "Auckland",
-        "addressCountry": "New Zealand"
-        },
-        "givenName":"Clyde D'Souza",
-        "gender":"Male",
-        "email": "mailto:clyde@clydedsouza.net",
-        "image": "http://clydedsouza.net/images/clydedsouza.jpg",
-        "jobTitle": "Passionate front end and UI developer",
-        "alumniOf":"AUT University",
-        "worksFor":"Datacom Systems Ltd.",
-        "jobTitle":"Software Developer",
-        "birthPlace":"Mumbai, India",
-        "contactPoint":"@ClydeDz",
-        "name": "Clyde D'Souza",
-        "telephone": "",
-        "url": "http://clydedsouza.net"
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-        "@context": "http://schema.org",
-        "@type": "WebSite",
-        "url": "http://clydedsouza.net/",
-        "name" : "Clyde D'Souza",
-        "alternateName" : "clydedsouza.net",
-        "potentialAction": {
-        "@type": "SearchAction",
-        "target": "http://clydedsouza.net/",
-        "query-input": "required"
-        }
-        }
-    </script>
+    <!-- End Google Tag Manager -->   
 </head>
 <body ng-cloak>
     <!-- Google Tag Manager (noscript) -->
@@ -106,7 +61,6 @@
                 height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-
     <div ng-controller="IndexController">
         <md-content>
             <md-toolbar class="md-primary gradients">
@@ -191,15 +145,54 @@
         </md-content>
     </div>
     <!-- Angular Material requires Angular.js Libraries -->
-    <script src="js/angular.min.js" type="text/javascript"></script>
+    <script src="js/angularmaterial-bundle.js"></script>
+    <script src="js/primaryjs-v1.min.js"></script>
+    <!--<script src="js/angular.min.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js" type="text/javascript"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js" type="text/javascript"></script>
-
-    <!-- Angular Material Library -->
-    <script src="js/angular-material.min.js" type="text/javascript"></script>
-    <script src="js/app.min.js" type="text/javascript"></script>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js" type="text/javascript"></script>-->
+    <!--<script src="js/angular-material.min.js" type="text/javascript"></script>
+    <script src="js/app.min.js" type="text/javascript"></script>-->
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Auckland CBD",
+        "addressRegion": "Auckland",
+        "addressCountry": "New Zealand"
+        },
+        "givenName":"Clyde D'Souza",
+        "gender":"Male",
+        "email": "mailto:clyde@clydedsouza.net",
+        "image": "http://clydedsouza.net/images/clydedsouza.jpg",
+        "jobTitle": "Passionate front end and UI developer",
+        "alumniOf":"AUT University",
+        "worksFor":"Datacom Systems Ltd.",
+        "jobTitle":"Software Developer",
+        "birthPlace":"Mumbai, India",
+        "contactPoint":"@ClydeDz",
+        "name": "Clyde D'Souza",
+        "telephone": "",
+        "url": "http://clydedsouza.net"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "http://clydedsouza.net/",
+        "name" : "Clyde D'Souza",
+        "alternateName" : "clydedsouza.net",
+        "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://clydedsouza.net/",
+        "query-input": "required"
+        }
+        }
+    </script>
 </body>
 </html>
