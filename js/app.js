@@ -45,11 +45,9 @@ angular
 .controller('IndexController', ['$scope', '$window', function ($scope, $window) {
     $scope.goTo = function (x) {
         if (x == "about") {
-            ga('send', 'event', 'Page', 'about', 'Fall Campaign');
             $window.location = "#/";
         }
         else {
-            ga('send', 'event', 'Page', 'projects', 'Fall Campaign');
             $window.location = "#/projects";
         }
     };
