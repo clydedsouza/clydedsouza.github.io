@@ -1,4 +1,7 @@
-﻿User-agent: *
+﻿# robots.txt for http://clydedsouza.net
+
+User-agent: *
 Allow: /
 
+# sitemap file
 Sitemap: http://clydedsouza.net/sitemap.xml

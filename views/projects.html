@@ -1,4 +1,14 @@
-﻿<div md-swipe-right="onSwipeRight('projects')" ng-cloak >
+﻿<!--Projects loading panel-->
+<div id="projectsLoading">
+    <div style="position:absolute;top:50%;left:50%;">
+        <div class="spinner">
+            <div class="double-bounce1" style="background-color: #009688;"></div>
+            <div class="double-bounce2" style="background-color: #009688;"></div>
+        </div>
+    </div>
+</div>
+<!--Projects content panel-->
+<div md-swipe-right="onSwipeRight('projects')" ng-cloak style="opacity:0" id="projectsPage">
     <div class='md-padding body-bg' layout="row" layout-align="center start" layout-wrap>
         <md-card flex-xs="99" flex-gt-xs="33" ng-repeat="docs in projects" ng-class-odd="'cd-card-teal'" ng-class-even="'cd-card-yellow'">
             <md-card-header>

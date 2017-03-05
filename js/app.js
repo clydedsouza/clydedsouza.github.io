@@ -46,19 +46,23 @@ angular
     $scope.goTo = function (x) {
         if (x == "about") {
             $window.location = "#/";
+            setTimeout(loadAbout, 750);
         }
         else {
             $window.location = "#/projects";
+            setTimeout(loadProjects, 500);
         }
     };
     $scope.onSwipeLeft = function (ev) {
         if(ev=="about"){
             $window.location = "#/projects";
+            setTimeout(loadProjects,500);
         }
     };
     $scope.onSwipeRight = function (ev) {
         if (ev == "projects") {
             $window.location = "#/";
+            setTimeout(loadAbout, 1000);
         }
     };
     $scope.share = function (x) {
@@ -112,3 +116,30 @@ angular
             $scope.urlFlag = false;
         });
 }]);
+
+/* 
+ * Some basic JS 
+ */
+
+function loadBody() {
+    ///<summary>Fades in body contents including the pages</summary>
+    document.getElementsByClassName('website-body')[0].style.opacity = 1;
+    setTimeout(loadAbout, 150);
+    setTimeout(loadProjects, 150);
+}
+
+function loadAbout() {
+    ///<summary>Fades in about contents after showing a loading sign</summary>
+    setTimeout(function () {
+        document.getElementById('aboutLoading').style.display = 'none';
+        document.getElementById('aboutPage').style.opacity = 1
+    }, 150);
+}
+
+function loadProjects() {
+    ///<summary>Fades in projects contents after showing a loading sign</summary>
+    setTimeout(function () {
+        document.getElementById('projectsLoading').style.display = 'none';
+        document.getElementById('projectsPage').style.opacity = 1
+    }, 150);
+}
