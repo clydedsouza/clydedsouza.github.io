@@ -38,7 +38,9 @@
     <link rel="apple-touch-icon" sizes="152x152" href="images/clydedsouza-face-icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/clydedsouza-face-icon.png">
     <meta name="msapplication-TileColor" content="#009688">
-    <meta name="msapplication-TileImage" content="images/clydedsouza-face-icon.png">
+    <meta name="msapplication-TileImage" content="images/clydedsouza-face-icon.png">    
+</head>
+<body ng-cloak>
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -50,8 +52,6 @@
             'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-K5RC8T');</script>
     <!-- End Google Tag Manager -->   
-</head>
-<body ng-cloak>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5RC8T"
@@ -74,13 +74,13 @@
         <md-content>
             <md-toolbar class="md-primary gradients">
                 <div class="md-toolbar-tools">
-                    <img src="images/clydedsouza-face-icon.png" class="md-avatar user-avatar" height="65" width="65" alt="Clyde D'Souza icon photo'" />
+                    <img src="images/clydedsouza-face-icon.png" class="md-avatar user-avatar" height="65" width="65" alt="Clyde D'Souza icon photo'" onclick="sendGoogleTrackingEvent(websiteCategory.pageNavigation, websiteEvent.click, 'Animated profile picture');" />
                     <h2>                        
                         <span>Clyde D'Souza</span>
                     </h2>
                     <span flex></span>
                     <md-menu md-position-mode="target-right target" ng-cloak>
-                        <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                        <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)" onclick="sendGoogleTrackingEvent(websiteCategory.share, websiteEvent.click, 'Share button');">
                             <md-tooltip md-direction="left">Share this site</md-tooltip>
                             <md-icon class="mdi mdi-share"></md-icon>
                         </md-button>
@@ -124,19 +124,19 @@
         <div ng-view style="min-height:100vh"></div>
         <md-content class="body-bg">
             <div layout="row" layout-align="center center">
-                <md-button aria-label="Send me an email" href="mailto:clyde@clydedsouza.net?Subject=Hi%20Clyde%21&amp;Body=Greetings%20Clyde,%20%0D%0DI%20want%20to%20get%20in%20touch%20with%20you.%0D%0DThanks,%20%0D%0DSent%20from%20http%3A%2F%2Fclydedsouza.net" target="_blank" class="md-icon-button launch">
+                <md-button aria-label="Send me an email" href="mailto:clyde@clydedsouza.net?Subject=Hi%20Clyde%21&amp;Body=Greetings%20Clyde,%20%0D%0DI%20want%20to%20get%20in%20touch%20with%20you.%0D%0DThanks,%20%0D%0DSent%20from%20http%3A%2F%2Fclydedsouza.net" target="_blank" class="md-icon-button launch" onclick="sendGoogleTrackingEvent(websiteCategory.contact, websiteEvent.click, 'Email me');">
                     <md-tooltip md-direction="top">Send me an email</md-tooltip>
                     <md-icon class="mdi mdi-email"></md-icon>
                 </md-button>
-                <md-button aria-label="Connect with me on LinkedIn" href="https://nz.linkedin.com/in/clydedz" target="_blank" class="md-icon-button launch">
+                <md-button aria-label="Connect with me on LinkedIn" href="https://nz.linkedin.com/in/clydedz" target="_blank" class="md-icon-button launch" onclick="sendGoogleTrackingEvent(websiteCategory.contact, websiteEvent.click, 'View LinkedIn profile');">
                     <md-tooltip md-direction="top">Connect with me on LinkedIn</md-tooltip>
                     <md-icon class="mdi mdi-linkedin"></md-icon>
                 </md-button>
-                <md-button aria-label="Follow me on twitter" href="http://www.twitter.com/ClydeDz" target="_blank" class="md-icon-button launch">
+                <md-button aria-label="Follow me on twitter" href="http://www.twitter.com/ClydeDz" target="_blank" class="md-icon-button launch" onclick="sendGoogleTrackingEvent(websiteCategory.contact, websiteEvent.click, 'View Twitter profile');">
                     <md-tooltip md-direction="top">Follow me on twitter</md-tooltip>
                     <md-icon class="mdi mdi-twitter"></md-icon>
                 </md-button>
-                <md-button aria-label="Follow me on GitHub" href="http://www.github.com/ClydeDz" target="_blank" class="md-icon-button launch">
+                <md-button aria-label="Follow me on GitHub" href="http://www.github.com/ClydeDz" target="_blank" class="md-icon-button launch" onclick="sendGoogleTrackingEvent(websiteCategory.contact, websiteEvent.click, 'View GitHub profile');">
                     <md-tooltip md-direction="top">Follow me on GitHub</md-tooltip>
                     <md-icon class="mdi mdi-github-circle"></md-icon>
                 </md-button>
@@ -145,7 +145,7 @@
                 <p>Website crafted by Clyde D'Souza</p>
             </div>
             <div class="fb-msg-button" style="display:none;">
-                <md-button aria-label="Send me a message on Facebook" href="https://m.me/clydedz" target="_blank" class="md-fab md-primary">
+                <md-button aria-label="Send me a message on Facebook" href="https://m.me/clydedz" target="_blank" class="md-fab md-primary" onclick="sendGoogleTrackingEvent(websiteCategory.contact, websiteEvent.click, 'Send a message on Facebook');">
                     <md-tooltip md-direction="left">Send me a message</md-tooltip>
                     <md-icon class="mdi mdi-facebook-messenger"></md-icon>
                 </md-button>

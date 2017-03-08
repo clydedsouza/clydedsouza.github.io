@@ -33,11 +33,11 @@
                 </p>
             </md-card-content>         
             <md-card-actions layout="row" layout-align="end right" ng-show="docs.hasWebsite || docs.onGithub">
-                <md-button ng-href="{{docs.website}}" class="md-icon-button" aria-label="Website" ng-show="{{docs.hasWebsite}}">
+                <md-button ng-href="{{docs.website}}" target="_blank" rel="nofollow" class="md-icon-button" aria-label="Website" ng-show="{{docs.hasWebsite}}" ng-click="navigateProjectWebsite(docs.title)">
                     <md-tooltip md-direction="top">View this project on the web</md-tooltip>
                     <md-icon class="mdi mdi-earth"></md-icon>
                 </md-button>
-                <md-button ng-href="{{docs.github}}" class="md-icon-button" aria-label="GitHub" ng-show="{{docs.onGithub}}">
+                <md-button ng-href="{{docs.github}}" target="_blank" rel="nofollow" class="md-icon-button" aria-label="GitHub" ng-show="{{docs.onGithub}}" ng-click="navigateProjectGitHub(docs.title)">
                     <md-tooltip md-direction="top">View this project on GitHub</md-tooltip>
                     <md-icon class="mdi mdi-github-circle"></md-icon>
                 </md-button>

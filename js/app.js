@@ -4,6 +4,23 @@
  * https://github.com/clydedz
  */
 
+var websiteCategory = {
+    pageNavigation: "Page Navigation",
+    pageView: "Page View",
+    contact: "Contact",
+    share: "Share",
+    projectDetails: "Project Details",
+    error: "Error",
+}
+
+var websiteEvent={
+    click: "Click",
+    clickProjectWebsite: "Click Website",
+    clickProjectGitHub: "Click GitHub",
+    viewLoad: "View Load",
+    errorAPI: "Error from API",
+}
+
 angular
 .module('clyde', ['ngMaterial', 'ngRoute', 'ngAnimate'])
 .config(['$routeProvider', '$mdThemingProvider', '$compileProvider', function ($routeProvider, $mdThemingProvider, $compileProvider) {
@@ -46,38 +63,52 @@ angular
     $scope.goTo = function (x) {
         if (x == "about") {
             $window.location = "#/";
+            sendGoogleTrackingEvent(websiteCategory.pageNavigation, websiteEvent.click, 'About');
             setTimeout(loadAbout, 750);
         }
         else {
             $window.location = "#/projects";
+            sendGoogleTrackingEvent(websiteCategory.pageNavigation, websiteEvent.click, 'Projects');
             setTimeout(loadProjects, 500);
         }
     };
     $scope.onSwipeLeft = function (ev) {
         if(ev=="about"){
             $window.location = "#/projects";
+            sendGoogleTrackingEvent(websiteCategory.pageNavigation, websiteEvent.click, 'Projects');
             setTimeout(loadProjects,500);
         }
     };
     $scope.onSwipeRight = function (ev) {
         if (ev == "projects") {
             $window.location = "#/";
+            sendGoogleTrackingEvent(websiteCategory.PageNavigation, websiteEvent.Click, 'Projects');
             setTimeout(loadAbout, 1000);
         }
     };
     $scope.share = function (x) {
         if (x == "tweet") {
+            sendGoogleTrackingEvent(websiteCategory.share, websiteEvent.click, 'Share on Twitter');
             $window.open("https://twitter.com/share?text=Amazing%20website!%20Have%20a%20look%20at%20@ClydeDz%20's%20website%20at%20&url=http://clydedsouza.net", "_blank");
         }
         else if (x == "fb") {
+            sendGoogleTrackingEvent(websiteCategory.share, websiteEvent.click, 'Share on Facebook');
             $window.open("http://www.facebook.com/sharer.php?t=Amazing%20stuff&u=http://clydedsouza.net", "_blank");
         }
         else if (x == "google") {
+            sendGoogleTrackingEvent(websiteCategory.share, websiteEvent.click, 'Share on Google+');
             $window.open("https://plus.google.com/share?text=Amazing%20stuff&url=http://clydedsouza.net", "_blank");
         }
         else {
+            sendGoogleTrackingEvent(websiteCategory.share, websiteEvent.click, 'Share on LinkedIn');
             $window.open("https://www.linkedin.com/cws/share?url=clydedsouza.net&original_referer=http%3A%2F%clydedsouza.net", "_blank");
         }
+    };
+    $scope.navigateProjectWebsite = function (projectTitle) {
+        sendGoogleTrackingEvent(websiteCategory.projectDetails, websiteEvent.clickProjectWebsite, projectTitle);
+    };
+    $scope.navigateProjectGitHub = function (projectTitle) {
+        sendGoogleTrackingEvent(websiteCategory.projectDetails, websiteEvent.clickProjectGitHub, projectTitle);
     };
     $scope.topDirections = ['left', 'up'];
     $scope.bottomDirections = ['down', 'right'];
@@ -90,18 +121,19 @@ angular
 .controller('AboutController', ['$scope', function ($scope) {
 }])
 .controller('ProjectsController', ['$scope', '$http', function ($scope, $http) {
-    $scope.projects = {};
-    //https://raw.githubusercontent.com/ngClyde/ngClyde.github.io/master/js/projects.json
+    $scope.projects = {};    //https://raw.githubusercontent.com/ngClyde/ngClyde.github.io/master/js/projects.json
     $http.get("../api/projects.json")
         .then(function (response) {
             $scope.projects = response.data;
         },
         function (error) {
+            sendGoogleTrackingEvent(websiteCategory.error, websiteEvent.errorAPI, 'Project .JSON response error');
         });
 }])
 .controller('UrlController', ['$scope', '$http', '$routeParams','$window', function ($scope, $http, $routeParams, $window) {
     $scope.urlName = $routeParams.URL;
     $scope.urlFlag = true;
+    sendGoogleTrackingEvent(websiteCategory.pageView, websiteEvent.viewLoad, 'Short URL: ' + $scope.urlName);
     $http.get("http://clydenzapi.azurewebsites.net/api/UrlMappings?shorturl="+$scope.urlName)
         .then(function (response) {
             if (response.data != null && response.data.LongUrl != null) {
@@ -114,6 +146,7 @@ angular
         },
         function (error) {
             $scope.urlFlag = false;
+            sendGoogleTrackingEvent(websiteCategory.error, websiteEvent.errorAPI, 'Short URL service response error. URL: ' + $scope.urlName);
         });
 }]);
 
@@ -124,12 +157,19 @@ angular
 function loadBody() {
     ///<summary>Fades in body contents including the pages</summary>
     document.getElementsByClassName('website-body')[0].style.opacity = 1;
-    setTimeout(loadAbout, 150);
-    setTimeout(loadProjects, 150);
+    if (window.location.hash == "#/projects") {
+        sendGoogleTrackingEvent(websiteCategory.pageView, websiteEvent.viewLoad, 'Projects');
+        setTimeout(loadProjects, 150);
+    }
+    else {
+        sendGoogleTrackingEvent(websiteCategory.pageView, websiteEvent.viewLoad, 'About');
+        setTimeout(loadAbout, 150);
+    }
 }
 
 function loadAbout() {
     ///<summary>Fades in about contents after showing a loading sign</summary>
+    console.log("load about");
     setTimeout(function () {
         document.getElementById('aboutLoading').style.display = 'none';
         document.getElementById('aboutPage').style.opacity = 1
@@ -138,8 +178,13 @@ function loadAbout() {
 
 function loadProjects() {
     ///<summary>Fades in projects contents after showing a loading sign</summary>
+    console.log("load projects");
     setTimeout(function () {
         document.getElementById('projectsLoading').style.display = 'none';
         document.getElementById('projectsPage').style.opacity = 1
     }, 150);
+}
+
+function sendGoogleTrackingEvent(category, action, label) {
+    ga('gtm1.send', 'event', category, action, label);
 }
