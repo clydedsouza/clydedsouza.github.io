@@ -1,0 +1,4 @@
+﻿# robots.txt for http://static.clydedsouza.net
+User-agent: *
+Allow: /images/
+Disallow: /

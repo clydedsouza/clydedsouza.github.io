@@ -3,37 +3,45 @@
  * Email: clydedsouza@outlook.com
  * https://github.com/clydedz
  */
-html{
+html {
     background-color: #f8f8f8;
 }
-.md-toolbar-tools{
+
+.md-toolbar-tools {
     min-height: 200px;
     max-height: 210px;
 }
-.md-toolbar-tools> h2{
-    font-family: 'Dosis','Roboto', sans-serif;
-    font-size:46px;
-}
-.gradients{
+
+    .md-toolbar-tools > h2 {
+        font-family: 'Dosis','Roboto', sans-serif;
+        font-size: 46px;
+    }
+
+.gradients {
     background: #009688;
     background: linear-gradient(155deg,#009688,#10984B);
 }
-.footer-block{
-    min-height:12px;
-    display:block;
-    width:100%;
+
+.footer-block {
+    min-height: 12px;
+    display: block;
+    width: 100%;
 }
-md-toolbar > md-tabs.md-default-theme > md-tabs-wrapper, md-toolbar > md-tabs > md-tabs-wrapper{
-    background-color:transparent;
+
+md-toolbar > md-tabs.md-default-theme > md-tabs-wrapper, md-toolbar > md-tabs > md-tabs-wrapper {
+    background-color: transparent;
 }
-.user-avatar{
+
+.user-avatar {
     margin-right: 10px;
     margin-left: 8px;
 }
-body,.body-bg{
-   background-color: rgb(248, 248, 248);
+
+body, .body-bg {
+    background-color: rgb(248, 248, 248);
 }
-.cd-chip{
+
+.cd-chip {
     cursor: default;
     border-radius: 16px;
     display: block;
@@ -50,43 +58,54 @@ body,.body-bg{
     font-family: Roboto,"Helvetica Neue",sans-serif;
     font-size: 16px;
 }
-.cd-content{
+
+.cd-content {
     line-height: 1.5em;
-    text-align:justify;
-    margin:5px;
+    text-align: justify;
+    margin: 5px;
 }
-.cd-card-yellow{
+
+.cd-card-yellow {
     border-bottom: 1px solid #ffeb3b;
 }
-.cd-card-teal{
+
+.cd-card-teal {
     border-bottom: 1px solid #009688;
 }
-.cd-card-yellow .cd-card-avatar{
-    background-color:#009688;
+
+.cd-card-yellow .cd-card-avatar {
+    background-color: #009688;
 }
-.cd-card-teal .cd-card-avatar{
-    background-color:#ffeb3b;
-    color:#009688;
+
+.cd-card-teal .cd-card-avatar {
+    background-color: #ffeb3b;
+    color: #009688;
 }
-md-card-content .md-button{
-    display:inline;
-    margin:0;
-    padding:3px 6px;
-    line-height:inherit;
+
+md-card-content .md-button {
+    display: inline;
+    margin: 0;
+    padding: 3px 6px;
+    line-height: inherit;
 }
-.url-mapping-message{
+
+.url-mapping-message {
     padding-top: 40px;
     padding-bottom: 49px;
 }
 
-md-icon, i.mdi{
-    font-size:24px;
+md-icon, i.mdi {
+    font-size: 24px;
 }
 
-.fb-msg-button{
-    position:fixed;
-    bottom:20px;
-    right:20px;
+.fb-msg-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+md-card md-card img, md-card > :not(md-card-content) img {
+    height: initial;
 }
 
 .md-fab.docs-scroll-fab {
@@ -98,9 +117,15 @@ md-icon, i.mdi{
     transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
+@media (max-width: 368px) {
+    md-card md-card-header {
+        min-height: 60px;
+    }
+}
+
 @media (min-width: 600px) {
-    .layout-gt-xs-row>.flex-gt-xs-33, .layout-row>.flex-gt-xs-33{
-        min-height: 100%;
-        max-height:inherit;
+    .layout-gt-xs-row > .flex-gt-xs-33, .layout-row > .flex-gt-xs-33 {
+        min-height: 80%;
+        max-height: inherit;
     }
 }
