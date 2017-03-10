@@ -59,7 +59,7 @@ angular
         };
     }));
 }])
-.controller('IndexController', ['$scope', '$window', function ($scope, $window) {
+.controller('IndexController', ['$scope', '$window', '$mdMedia', function ($scope, $window, $mdMedia) {
     $scope.goTo = function (x) {
         if (x == "about") {
             $window.location = "#/";
@@ -109,6 +109,18 @@ angular
     };
     $scope.navigateProjectGitHub = function (projectTitle) {
         sendGoogleTrackingEvent(websiteCategory.projectDetails, websiteEvent.clickProjectGitHub, projectTitle);
+    };
+    $scope.$watch(function () { return $mdMedia('(max-width: 599px)'); }, function (big) {
+        $scope.isDesktop = !big;
+    });
+    $scope.ccindex = -1;   
+    $scope.toggleDescriptionVisibility = function (thisCard) {
+        if ($scope.ccindex == thisCard) {
+            $scope.ccindex = -1;
+        }
+        else {
+            $scope.ccindex = thisCard;
+        }
     };
     $scope.topDirections = ['left', 'up'];
     $scope.bottomDirections = ['down', 'right'];

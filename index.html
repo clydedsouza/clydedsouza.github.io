@@ -113,15 +113,15 @@
                 <div flex></div>               
                 <md-tabs md-selected="globalConfig.tabIndex==0?0:1" md-dynamic-height ng-cloak>
                     <md-tab ng-click="goTo('about')">
-                        About
+                        <span> About</span>
                     </md-tab>
                     <md-tab ng-click="goTo('projects')">
-                        Projects
+                        <span>Projects</span>
                     </md-tab>
                  </md-tabs>                          
             </md-toolbar>
         </md-content>
-        <div ng-view style="min-height:100vh"></div>
+        <div ng-view style="min-height:100px"></div>
         <md-content class="body-bg">
             <div layout="row" layout-align="center center">
                 <md-button aria-label="Send me an email" href="mailto:clyde@clydedsouza.net?Subject=Hi%20Clyde%21&amp;Body=Greetings%20Clyde,%20%0D%0DI%20want%20to%20get%20in%20touch%20with%20you.%0D%0DThanks,%20%0D%0DSent%20from%20http%3A%2F%2Fclydedsouza.net" target="_blank" class="md-icon-button launch" onclick="sendGoogleTrackingEvent(websiteCategory.contact, websiteEvent.click, 'Email me');">
