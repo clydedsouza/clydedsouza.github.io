@@ -16,11 +16,12 @@
     <!-----OpenGraph settings for social sharing------>
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Clyde D'Souza" />
-    <meta property="og:type" content="personal website" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="http://clydedsouza.net/" />
     <meta property="og:image" content="http://clydedsouza.net/images/clydedsouza-share.jpg" />
     <meta property="og:site_name" content="Clyde D'Souza" />
-    <meta property="fb:admins" content="269712373471582" />
+    <meta property="fb:admins" content="ClydeDz" />
+    <meta property="fb:app_id" content="269712373471582" />
     <meta name="twitter:site" content="@ClydeDz">
     <meta name="twitter:creator" content="@ClydeDz">
     <meta property="og:description"  content="Know more about Clyde D'Souza - a passionate front end developer with an eye for UI" />
@@ -113,10 +114,10 @@
                 <div flex></div>               
                 <md-tabs md-selected="globalConfig.tabIndex==0?0:1" md-dynamic-height ng-cloak>
                     <md-tab ng-click="goTo('about')">
-                        <span> About</span>
+                        <div style="min-width:50px">About</div>
                     </md-tab>
                     <md-tab ng-click="goTo('projects')">
-                        <span>Projects</span>
+                        <div style="min-width:50px">Projects</div>
                     </md-tab>
                  </md-tabs>                          
             </md-toolbar>
@@ -144,7 +145,7 @@
             <div layout="row" layout-align="center center">
                 <p>Website crafted by Clyde D'Souza</p>
             </div>
-            <div class="fb-msg-button" style="display:none;">
+            <div class="fb-msg-button bounceIn" style="display:none;">
                 <md-button aria-label="Send me a message on Facebook" href="https://m.me/clydedz" target="_blank" class="md-fab md-primary" onclick="sendGoogleTrackingEvent(websiteCategory.contact, websiteEvent.click, 'Send a message on Facebook');">
                     <md-tooltip md-direction="left">Send me a message</md-tooltip>
                     <md-icon class="mdi mdi-facebook-messenger"></md-icon>
@@ -188,14 +189,19 @@
         },
         "givenName":"Clyde D'Souza",
         "gender":"Male",
-        "email": "mailto:clyde@clydedsouza.net",
+        "email": "clyde@clydedsouza.net",
         "image": "http://clydedsouza.net/images/clydedsouza.jpg",
         "jobTitle": "Passionate front end and UI developer",
         "alumniOf":"AUT University",
         "worksFor":"Datacom Systems Ltd.",
         "jobTitle":"Software Developer",
         "birthPlace":"Mumbai, India",
-        "contactPoint":"@ClydeDz",
+        "contactPoint":{
+        "@type": "PostalAddress",
+        "name":"Clyde D'Souza",
+        "email":"clyde@clydedsouza.net",
+        "url":"http://clydedsouza.net"
+        },
         "name": "Clyde D'Souza",
         "telephone": "",
         "url": "http://clydedsouza.net"
@@ -208,10 +214,15 @@
         "url": "http://clydedsouza.net/",
         "name" : "Clyde D'Souza",
         "alternateName" : "clydedsouza.net",
-        "potentialAction": {
-        "@type": "SearchAction",
-        "target": "http://clydedsouza.net/",
-        "query-input": "required"
+        "about":{
+        "@type":"Thing",
+        "description":"This is Clyde's personal website."
+        },
+        "author":{
+        "@type":"Person",
+        "givenName":"Clyde D'Souza",
+        "gender":"Male",
+        "email": "clyde@clydedsouza.net"
         }
         }
     </script>

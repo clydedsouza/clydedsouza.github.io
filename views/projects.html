@@ -48,7 +48,7 @@
                             <md-icon class="mdi mdi-github-circle"></md-icon>
                         </md-button>
                     </div>
-                    <md-button class="md-icon-button" aria-label="toggle" ng-click="toggleDescriptionVisibility($index)" ng-hide="isDesktop">
+                    <md-button class="md-icon-button" aria-label="toggle" ng-click="toggleDescriptionVisibility($index, docs.title)" ng-hide="isDesktop">
                         <md-tooltip md-direction="top">{{ ccindex==$index? "Less":"More"}}</md-tooltip>
                         <md-icon ng-class="ccindex==$index? 'mdi mdi-chevron-up': 'mdi mdi-chevron-down'"></md-icon>
                     </md-button>

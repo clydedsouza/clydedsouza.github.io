@@ -15,8 +15,11 @@ var websiteCategory = {
 
 var websiteEvent={
     click: "Click",
+    swipe: "Swipe",
     clickProjectWebsite: "Click Website",
     clickProjectGitHub: "Click GitHub",
+    clickProjectDescriptionOpen: "Open Project Description",
+    clickProjectDescriptionClose: "Close Project Description",
     viewLoad: "View Load",
     errorAPI: "Error from API",
 }
@@ -75,14 +78,14 @@ angular
     $scope.onSwipeLeft = function (ev) {
         if(ev=="about"){
             $window.location = "#/projects";
-            sendGoogleTrackingEvent(websiteCategory.pageNavigation, websiteEvent.click, 'Projects');
+            sendGoogleTrackingEvent(websiteCategory.pageNavigation, websiteEvent.swipe, 'Projects');
             setTimeout(loadProjects,500);
         }
     };
     $scope.onSwipeRight = function (ev) {
         if (ev == "projects") {
             $window.location = "#/";
-            sendGoogleTrackingEvent(websiteCategory.PageNavigation, websiteEvent.Click, 'Projects');
+            sendGoogleTrackingEvent(websiteCategory.PageNavigation, websiteEvent.swipe, 'About');
             setTimeout(loadAbout, 1000);
         }
     };
@@ -114,12 +117,14 @@ angular
         $scope.isDesktop = !big;
     });
     $scope.ccindex = -1;   
-    $scope.toggleDescriptionVisibility = function (thisCard) {
+    $scope.toggleDescriptionVisibility = function (thisCard, thisCardTitle) {
         if ($scope.ccindex == thisCard) {
             $scope.ccindex = -1;
+            sendGoogleTrackingEvent(websiteCategory.projectDetails, websiteEvent.clickProjectDescriptionClose, thisCardTitle);
         }
         else {
             $scope.ccindex = thisCard;
+            sendGoogleTrackingEvent(websiteCategory.projectDetails, websiteEvent.clickProjectDescriptionOpen, thisCardTitle);
         }
     };
     $scope.topDirections = ['left', 'up'];
@@ -181,7 +186,6 @@ function loadBody() {
 
 function loadAbout() {
     ///<summary>Fades in about contents after showing a loading sign</summary>
-    console.log("load about");
     setTimeout(function () {
         document.getElementById('aboutLoading').style.display = 'none';
         document.getElementById('aboutPage').style.opacity = 1
@@ -190,7 +194,6 @@ function loadAbout() {
 
 function loadProjects() {
     ///<summary>Fades in projects contents after showing a loading sign</summary>
-    console.log("load projects");
     setTimeout(function () {
         document.getElementById('projectsLoading').style.display = 'none';
         document.getElementById('projectsPage').style.opacity = 1
@@ -198,5 +201,9 @@ function loadProjects() {
 }
 
 function sendGoogleTrackingEvent(category, action, label) {
+    ///<summary>Method to send event tracking data to Google Analytics</summary>
+    /// <param name="category" type="string">Pre defined or custom category value of the event.</param>  
+    /// <param name="action" type="string">Represents what action is being tracked.</param>  
+    /// <param name="label" type="string">Extra piece of information to track the event.</param>  
     ga('gtm1.send', 'event', category, action, label);
 }
