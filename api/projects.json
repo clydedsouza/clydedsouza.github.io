@@ -1,5 +1,19 @@
 ﻿[
   {
+    "title": "Profile Sticker",
+    "date": "1st July 2017",
+    "description": "Profile Sticker is a web app that allows a user to add a sticker from different themes to their profile picture. The user can choose to upload a picture from and download to a computer or Facebook.",
+    "hasWebsite": true,
+    "website": "https://profilesticker.net",
+    "onGithub": true,
+    "github": "https://github.com/profilesticker/profilesticker.github.io/",
+    "languages": [ "HTML", "CSS", "SCSS", "JavaScript", "Mustache.js" ],
+    "category": "Website",
+    "icon": "http://static.clydedsouza.net/images/icons/profilesticker-icon.png",
+    "image": "http://static.clydedsouza.net/images/projects/profilesticker-website.png",
+    "imageDescription": "Add a sticker to your profile picture using Profile Sticker in just 4 easy steps."
+  },
+  {
     "title": "Folder Inspector",
     "date": "5th November 2016",
     "description": "Folder Inspector is a console application that scans a given directory and sub-directories for Word and Excel files and adds custom headers and/or footer to every page of that file.",
