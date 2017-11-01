@@ -1,5 +1,33 @@
 ﻿[
   {
+    "title": "The Chameleon",
+    "date": "1st November 2017",
+    "description": "The Chameleon is an experiment with building a themeable website and using SCSS - a preprocessor for CSS - to the fullest.",
+    "hasWebsite": true,
+    "website": "https://thechameleon-web.azurewebsites.net",
+    "onGithub": true,
+    "github": "https://github.com/ClydeDz/TheChameleon",
+    "languages": [ "ASP.NET", "HTML", "SCSS", "Bootstrap", "CSS", "JavaScript", "Google Analytics (gtag)" ],
+    "category": "Website",
+    "icon": "https://static.clydedsouza.net/images/icons/thechameleon-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/thechameleon.jpg",
+    "imageDescription": "Just like a chameleon, this website can change colour. Use the theme picker to see it in action."
+  },
+  {
+    "title": "The Recipy Bot",
+    "date": "15th October 2017",
+    "description": "The Recipy Bot is my first attempt at making a bot for Facebook Messenger and Skype coupled with artificial intelligence using DialogFlow. Visit the website to add the bot to your contact list and start chatting.",
+    "hasWebsite": true,
+    "website": "https://recipybot.azurewebsites.net/",
+    "onGithub": true,
+    "github": "https://github.com/clydedz/RecipyBot",
+    "languages": [ "Microsoft Bot Framework", "Dialogflow (API.AI)", "C#", "SCSS", "Bootstrap", "HTML", "Google Analytics" ],
+    "category": "Bot",
+    "icon": "https://static.clydedsouza.net/images/icons/therecipybot-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/therecipybot.jpg",
+    "imageDescription": "The Recipy Bot helps you cook delicious meals by picking the best recipie for you."
+  },
+  {
     "title": "Profile Sticker",
     "date": "1st July 2017",
     "description": "Profile Sticker is a web app that allows a user to add a sticker from different themes to their profile picture. The user can choose to upload a picture from and download to a computer or Facebook.",
@@ -9,8 +37,8 @@
     "github": "https://github.com/profilesticker/profilesticker.github.io/",
     "languages": [ "HTML", "CSS", "SCSS", "JavaScript", "Mustache.js" ],
     "category": "Website",
-    "icon": "http://static.clydedsouza.net/images/icons/profilesticker-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/profilesticker-website.png",
+    "icon": "https://static.clydedsouza.net/images/icons/profilesticker-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/profilesticker-website.png",
     "imageDescription": "Add a sticker to your profile picture using Profile Sticker in just 4 easy steps."
   },
   {
@@ -23,8 +51,8 @@
     "github": "https://github.com/ClydeDz/folder-inspector",
     "languages": [ "C#" ],
     "category": "Console",
-    "icon": "http://static.clydedsouza.net/images/icons/folderinspector-icon.jpg",
-    "image": "http://static.clydedsouza.net/images/projects/folder-inspector.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/folderinspector-icon.jpg",
+    "image": "https://static.clydedsouza.net/images/projects/folder-inspector.jpg",
     "imageDescription": "Folder Inspector to edit Word and Excel files developed by Clyde D'Souza"
   },
   {
@@ -37,8 +65,8 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
-    "icon": "http://static.clydedsouza.net/images/icons/projectrestore-icon.jpeg",
-    "image": "http://static.clydedsouza.net/images/projects/project-restore.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/projectrestore-icon.jpeg",
+    "image": "https://static.clydedsouza.net/images/projects/project-restore.jpg",
     "imageDescription": "Simple and elegant website for Project Restore NZ developed at an Impact NPO event"
   },
   {
@@ -51,8 +79,8 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
-    "icon": "http://static.clydedsouza.net/images/icons/ry-icon.jpeg",
-    "image": "http://static.clydedsouza.net/images/projects/rainbow-youth.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/ry-icon.jpeg",
+    "image": "https://static.clydedsouza.net/images/projects/rainbow-youth.jpg",
     "imageDescription": "Developed a learning management system using WordPress and Sensei at Impact NPO"
   },
   {
@@ -65,8 +93,8 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
-    "icon": "http://static.clydedsouza.net/images/icons/pwpinc-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/pwpinc.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/pwpinc-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/pwpinc.jpg",
     "imageDescription": "Helping People with Parkinson's Inc with their website at Impact NPO"
   },
   {
@@ -79,8 +107,8 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php", "Angular JS" ],
     "category": "WordPress",
-    "icon": "http://static.clydedsouza.net/images/icons/nobsratings-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/nobsratings.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/nobsratings-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/nobsratings.jpg",
     "imageDescription": "Another awesome website created by Clyde and team at Impact NPO for NOBS Ratings"
   },
   {
@@ -93,8 +121,8 @@
     "github": "https://github.com/ClydeDz/gitly",
     "languages": [ "HTML", "CSS", "JavaScript", "Angular JS", "Angular JS Material" ],
     "category": "Web App",
-    "icon": "http://static.clydedsouza.net/images/icons/gitly-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/gitly.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/gitly-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/gitly.jpg",
     "imageDescription": "Gitly is a GitHub user lookup app created by Clyde D'Souza"
   },
   {
@@ -107,8 +135,8 @@
     "github": "https://github.com/ngClyde/",
     "languages": [ "Angular JS" ],
     "category": "Workshop",
-    "icon": "http://static.clydedsouza.net/images/icons/angular-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/ngclyde.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/angular-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/ngclyde.jpg",
     "imageDescription": "Clyde has created an easy to understand resource/ knowledge base for Angular JS"
   },
   {
@@ -121,8 +149,8 @@
     "github": "https://github.com/a1pd/a1pd.github.io",
     "languages": [ "HTML", "CSS", "JavaScript", "Angular JS" ],
     "category": "Website",
-    "icon": "http://static.clydedsouza.net/images/icons/a1pd-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/a1pd.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/a1pd-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/a1pd.jpg",
     "imageDescription": "Clyde developed a website for A1 Professional Designs owned by Roshini Daruwala"
   },
   {
@@ -135,8 +163,8 @@
     "github": "https://github.com/ClydeDz/marcdown",
     "languages": [ "HTML", "CSS", "JavaScript", "Bootstrap", "Angular JS", "Angular Marked" ],
     "category": "Web App",
-    "icon": "http://static.clydedsouza.net/images/icons/marcdown-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/marcdown-snap.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/marcdown-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/marcdown-snap.jpg",
     "imageDescription": "Marcdown is a simple but powerful web app completely based on helping a user to understand Markdown better"
   },
   {
@@ -149,8 +177,8 @@
     "github": "https://github.com/ClydeDz/clymate",
     "languages": [ "HTML", "SCSS", "CSS", "Bootstrap", "JavaScript", "jQuery" ],
     "category": "Web App",
-    "icon": "http://static.clydedsouza.net/images/icons/clymate-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/clymate.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/clymate-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/clymate.jpg",
     "imageDescription": "Clymate is a weather plus UV forecast app made using a colourful and brilliant UI"
   },
   {
@@ -163,8 +191,8 @@
     "github": "https://github.com/ClydeDz/bashell",
     "languages": [ "HTML", "CSS", "Boostrap", "JavaScript", "jQuery" ],
     "category": "Web App",
-    "icon": "http://static.clydedsouza.net/images/icons/bashell-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/bashell.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/bashell-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/bashell.jpg",
     "imageDescription": "Bashell is a browser-based terminal window running on JavaScript"
   },
   {
@@ -177,8 +205,8 @@
     "github": "https://github.com/ClydeDz/clydedsouza-nandoso",
     "languages": [ "HTML", "CSS", "JavaScript", "C#", "MySql", "Asp.Net EF" ],
     "category": "Website",
-    "icon": "http://static.clydedsouza.net/images/icons/nandoso-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/nandoso.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/nandoso-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/nandoso.jpg",
     "imageDescription": "Nadoso is an intuitive website for a fictional restaurant developed by Clyde D'Souza which includes Web Api, facebook authentication, disqus forum and not to forget, a delicious menu"
   },
   {
@@ -191,8 +219,8 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
-    "icon": "http://static.clydedsouza.net/images/icons/hdaakl-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/hdaakl-team.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/hdaakl-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/hdaakl-team.jpg",
     "imageDescription": "The dream team at Impact NPO re-unites to make another website for Huntington's Disease Association Auckland"
   },
   {
@@ -205,8 +233,8 @@
     "github": "",
     "languages": [ "XAML", "C#" ],
     "category": "Windows Store App (PC)",
-    "icon": "http://static.clydedsouza.net/images/icons/kiwisports-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/kiwi-sports.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/kiwisports-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/kiwi-sports.jpg",
     "imageDescription": "Clyde developed his first Windows Store PC app called Kiwi Sports which is an all-in-one app for the All Blacks, Black Caps and Silver Ferns."
   },
   {
@@ -233,8 +261,8 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "WordPress",
-    "icon": "http://static.clydedsouza.net/images/icons/wordpress-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/sflp-website.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/wordpress-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/sflp-website.jpg",
     "imageDescription": "We developed a website for Success for Little People using WordPress"
   },
   {
@@ -247,8 +275,8 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "VML" ],
     "category": "Game",
-    "icon": "http://static.clydedsouza.net/images/icons/omg-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/omg-team.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/omg-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/omg-team.jpg",
     "imageDescription": "Project OMG is an interesting HTML-based game developed in 2013"
   },
   {
@@ -261,8 +289,8 @@
     "github": "",
     "languages": [ "HTML", "CSS", "JavaScript", "Php" ],
     "category": "Website",
-    "icon": "http://static.clydedsouza.net/images/icons/inspira-icon.png",
-    "image": "http://static.clydedsouza.net/images/projects/inspira-html.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/inspira-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/inspira-html.jpg",
     "imageDescription": "Inspira 2012 website was developed by Clyde D'Souza and Sagar Lone"
   },
   {
@@ -275,8 +303,8 @@
     "github": "",
     "languages": [ "Photoshop" ],
     "category": "Graphic Design",
-    "icon": "http://static.clydedsouza.net/images/icons/tulips-icon.jpe",
-    "image": "http://static.clydedsouza.net/images/projects/tulips-collage.jpg",
+    "icon": "https://static.clydedsouza.net/images/icons/tulips-icon.jpe",
+    "image": "https://static.clydedsouza.net/images/projects/tulips-collage.jpg",
     "imageDescription": "Church magazine cover designs by Clyde D'Souza"
   }
 ]
