@@ -76,18 +76,18 @@ angular
         }
     };
     $scope.onSwipeLeft = function (ev) {
-        if(ev=="about"){
-            $window.location = "#/projects";
-            sendGoogleTrackingEvent(websiteCategory.pageNavigation, websiteEvent.swipe, 'Projects');
-            setTimeout(loadProjects,500);
-        }
+        //if(ev=="about"){
+        //    $window.location = "#/projects";
+        //    sendGoogleTrackingEvent(websiteCategory.pageNavigation, websiteEvent.swipe, 'Projects');
+        //    setTimeout(loadProjects,500);
+        //}
     };
     $scope.onSwipeRight = function (ev) {
-        if (ev == "projects") {
-            $window.location = "#/";
-            sendGoogleTrackingEvent(websiteCategory.PageNavigation, websiteEvent.swipe, 'About');
-            setTimeout(loadAbout, 1000);
-        }
+        //if (ev == "projects") {
+        //    $window.location = "#/";
+        //    sendGoogleTrackingEvent(websiteCategory.PageNavigation, websiteEvent.swipe, 'About');
+        //    setTimeout(loadAbout, 1000);
+        //}
     };
     $scope.share = function (x) {
         if (x == "tweet") {
