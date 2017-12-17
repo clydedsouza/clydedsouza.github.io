@@ -86,7 +86,7 @@ angular
         //if (ev == "projects") {
         //    $window.location = "#/";
         //    sendGoogleTrackingEvent(websiteCategory.PageNavigation, websiteEvent.swipe, 'About');
-        //    setTimeout(loadAbout, 1000);
+        //    setTimeout(loadAbout, 1000); 
         //}
     };
     $scope.share = function (x) {
