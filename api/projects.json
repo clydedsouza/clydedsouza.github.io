@@ -1,5 +1,19 @@
 ﻿[
   {
+    "title": "CI/CD Docs",
+    "date": "22nd September 2018",
+    "description": "Documenting your Azure DevOps pipeline was never easier - export, upload and go.",
+    "hasWebsite": true,
+    "website": "https://bit.ly/cicd-docs",
+    "onGithub": true,
+    "github": "https://github.com/ClydeDz/cicd-docs",
+    "languages": [ "HTML", "SCSS", "JavaScript", "Mustache.js", "Bootstrap", "Google Analytics (gtag)" ],
+    "category": "Website",
+    "icon": "https://static.clydedsouza.net/images/icons/cicd-docs-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/cicd-docs.png",
+    "imageDescription": "Documenting your Azure DevOps pipeline was never easier - export, upload and go."
+  },
+  {
     "title": "Fancy Comments",
     "date": "6th February 2018",
     "description": "A snippet pack for use-case specific comments, supported for HTML, CSS, JavaScript, C#, SQL and XML. Available for Visual Studio 2015 & 2017 (All editions).",
