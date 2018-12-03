@@ -1,21 +1,84 @@
-﻿<html lang="en" ng-app="clyde" ng-controller="GlobalController">
+﻿<!-- Clyde D'Souza -->
+<html lang="en" ng-app="clyde" ng-controller="GlobalController">
 <head>
-    <title ng-cloak ng-bind="globalConfig.pageTitle">Clyde D'Souza - A Passionate Front-End Developer</title>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />    
+    <title ng-cloak ng-bind="globalConfig.pageTitle">Clyde D'Souza - A full-stack software developer</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
     <base href="/">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="author" href="https://plus.google.com/u/0/+ClydeDsouzaPlus">
     <meta name="msvalidate.01" content="8ABC4E1B7DBE4391CF265948730B9299" />
-    <meta name="Keywords" content="Clyde D'Souza, @ClydeDz, passionate front end developer, eye for ui, Auckland New Zealand" />
+    <meta name="Keywords" content="Clyde D'Souza, @ClydeDz, full-stack software developer, passionate front end developer, eye for ui, ux, Auckland, New Zealand, NZ" />
     <meta name="author" content="Clyde D'Souza">
-    <meta name="description" content="Know more about Clyde D'Souza - a passionate front end developer with an eye for UI. Clyde is currently living in Auckland, New Zealand but is originally from Mumbai, India. Feel free to send him a tweet @ClydeDz">    
+    <meta name="description" content="Know more about Clyde D'Souza - a full-stack software developer. Clyde is currently living in Auckland, New Zealand but is originally from Mumbai, India. Feel free to send him a tweet @ClydeDz">
     <!---Basic styling--->
     <style>
-        body{overflow-y:hidden}.website-body{display:none;transition:all .25s;-moz-transition:all.25s;-webkit-transition:all .25s;opacity:0}.website-loading{overflow:hidden;transition:background .25s ease-in-out;-moz-transition:background .25s ease-in-out;-webkit-transition:background .25s ease-in-out}.spinner{width:40px;height:40px}.double-bounce1,.double-bounce2{width:100%;height:100%;border-radius:50%;background-color:white;opacity:.6;position:absolute;top:0;left:0;-webkit-animation:sk-bounce 2.0s infinite ease-in-out;animation:sk-bounce 2.0s infinite ease-in-out}.double-bounce2{-webkit-animation-delay:-1.0s;animation-delay:-1.0s}@-webkit-keyframes sk-bounce{0%,100%{-webkit-transform:scale(0)}50%{-webkit-transform:scale(1)}}@keyframes sk-bounce{0%,100%{transform:scale(0);-webkit-transform:scale(0)}50%{transform:scale(1);-webkit-transform:scale(1)}}
+        body {
+            overflow-y: hidden
+        }
+
+        .website-body {
+            display: none;
+            transition: all .25s;
+            -moz-transition: all.25s;
+            -webkit-transition: all .25s;
+            opacity: 0
+        }
+
+        .website-loading {
+            overflow: hidden;
+            transition: background .25s ease-in-out;
+            -moz-transition: background .25s ease-in-out;
+            -webkit-transition: background .25s ease-in-out
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px
+        }
+
+        .double-bounce1, .double-bounce2 {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: white;
+            opacity: .6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+            animation: sk-bounce 2.0s infinite ease-in-out
+        }
+
+        .double-bounce2 {
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s
+        }
+
+        @-webkit-keyframes sk-bounce {
+            0%,100% {
+                -webkit-transform: scale(0)
+            }
+
+            50% {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes sk-bounce {
+            0%,100% {
+                transform: scale(0);
+                -webkit-transform: scale(0)
+            }
+
+            50% {
+                transform: scale(1);
+                -webkit-transform: scale(1)
+            }
+        }
     </style>
     <!-----OpenGraph settings for social sharing------>
     <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="Clyde D'Souza" />
+    <meta property="og:title" content="Clyde D'Souza - A full-stack software developer" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://clydedsouza.net/" />
     <meta property="og:image" content="https://clydedsouza.net/images/clydedsouza-share.jpg" />
@@ -23,9 +86,9 @@
     <meta property="fb:app_id" content="269712373471582" />
     <meta name="twitter:site" content="ClydeDz">
     <meta name="twitter:creator" content="ClydeDz">
-    <meta property="og:description"  content="Know more about Clyde D'Souza - a passionate front end developer with an eye for UI" />
+    <meta property="og:description" content="Know more about Clyde D'Souza - a full-stack developer. Clyde is currently living in Auckland, New Zealand but is originally from Mumbai, India. Feel free to send him a tweet @ClydeDz" />
     <link rel="canonical" href="https://clydedsouza.net/">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://clydedsouza.net/sitemap.xml">    
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://clydedsouza.net/sitemap.xml">
     <meta name="theme-color" content="#009688">
     <link rel="icon" sizes="192x192" href="images/clydedsouza-face-icon.png">
     <link rel="apple-touch-icon" sizes="57x57" href="images/clydedsouza-face-icon.png">
@@ -38,7 +101,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="images/clydedsouza-face-icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/clydedsouza-face-icon.png">
     <meta name="msapplication-TileColor" content="#009688">
-    <meta name="msapplication-TileImage" content="images/clydedsouza-face-icon.png">    
+    <meta name="msapplication-TileImage" content="images/clydedsouza-face-icon.png">
 </head>
 <body ng-cloak>
     <!-- Google Tag Manager -->
@@ -46,19 +109,18 @@
         (function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
-                new Date().getTime(), event: 'gtm.js'
+                    new Date().getTime(), event: 'gtm.js'
             }); var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-K5RC8T');</script>
-    <!-- End Google Tag Manager -->   
+    <!-- End Google Tag Manager -->
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5RC8T"
                 height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-
     <!-- Loading panel -->
     <div class="website-loading" style="background-color:#009688;height:100vh;width:100%;">
         <div style="position:absolute;top:50%;left:50%;">
@@ -75,7 +137,7 @@
             <md-toolbar class="md-primary gradients">
                 <div class="md-toolbar-tools">
                     <img src="images/clydedsouza-face-icon.png" class="md-avatar user-avatar" height="65" width="65" alt="Clyde D'Souza icon photo'" onclick="sendGoogleTrackingEvent(websiteCategory.pageNavigation, websiteEvent.click, 'Animated profile picture');" />
-                    <h1>                        
+                    <h1>
                         <span>Clyde D'Souza</span>
                     </h1>
                     <span flex></span>
@@ -85,14 +147,14 @@
                             <md-icon class="mdi mdi-share"></md-icon>
                         </md-button>
                         <md-menu-content width="1" class="md-whiteframe-z3" ng-cloak>
-                            <md-menu-item >
-                                <md-button aria-label="Share on twitter"  ng-click="share('tweet')">                                  
-                                    <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="mdi mdi-twitter"></md-icon>  </div>                                  
+                            <md-menu-item>
+                                <md-button aria-label="Share on twitter" ng-click="share('tweet')">
+                                    <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="mdi mdi-twitter"></md-icon>  </div>
                                 </md-button>
                             </md-menu-item>
-                            <md-menu-item  >
-                                <md-button aria-label="Share on twitter" ng-click="share('fb')">                                
-                                    <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="mdi mdi-facebook"></md-icon>   </div>                                 
+                            <md-menu-item>
+                                <md-button aria-label="Share on twitter" ng-click="share('fb')">
+                                    <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="mdi mdi-facebook"></md-icon>   </div>
                                 </md-button>
                             </md-menu-item>
                             <md-menu-item>
@@ -102,15 +164,15 @@
                                     </div>
                                 </md-button>
                             </md-menu-item>
-                            <md-menu-item >
+                            <md-menu-item>
                                 <md-button aria-label="Share on twitter" ng-click="share('linkedin')">
                                     <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="mdi mdi-linkedin"></md-icon></div>
                                 </md-button>
                             </md-menu-item>
                         </md-menu-content>
                     </md-menu>
-                </div>  
-                <div flex></div>               
+                </div>
+                <div flex></div>
                 <md-tabs md-selected="globalConfig.tabIndex==0?0:1" md-dynamic-height ng-cloak>
                     <md-tab ng-click="goTo('about')">
                         <div style="min-width:50px">About</div>
@@ -118,7 +180,7 @@
                     <md-tab ng-click="goTo('projects')">
                         <div style="min-width:50px">Projects</div>
                     </md-tab>
-                 </md-tabs>                          
+                </md-tabs>
             </md-toolbar>
         </md-content>
         <div ng-view style="min-height:100px"></div>
@@ -154,9 +216,9 @@
         </md-content>
     </div>
 
-    <!-- Remaining scripts and styling -->    
-    <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Dosis|Roboto" rel="stylesheet">
+    <!-- Remaining scripts and styling -->
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Roboto" rel="stylesheet" />
     <link href="css/primarycss-v1.min.css" rel="stylesheet" />
     <!-- Angular Material requires Angular.js Libraries -->
     <script src="js/angularmaterial-bundle.js"></script>
@@ -172,9 +234,8 @@
                     setTimeout(loadBody, 500); //Fade in the body content including about and projects page
                 }, 2000);
             }
-        })(window.onload);        
+        })(window.onload);
     </script>
- 
     <!-- Schema.org -->
     <script type="application/ld+json">
         {
@@ -190,7 +251,7 @@
         "gender":"Male",
         "email": "clyde@clydedsouza.net",
         "image": "https://clydedsouza.net/images/clydedsouza.jpg",
-        "jobTitle": "Passionate front end and UI developer",
+        "jobTitle": "A full-stack software developer at Datacom",
         "alumniOf":"AUT University",
         "worksFor":"Datacom Systems Ltd.",
         "jobTitle":"Software Developer",
@@ -202,7 +263,6 @@
         "url":"https://clydedsouza.net"
         },
         "name": "Clyde D'Souza",
-        "telephone": "",
         "url": "https://clydedsouza.net"
         }
     </script>

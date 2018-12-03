@@ -1,6 +1,6 @@
 ﻿/*!
  * Author: Clyde D'Souza
- * Email: clydedsouza@outlook.com
+ * Email: clyde@clydedsouza.net
  * https://github.com/clydedz
  */
 
@@ -28,11 +28,10 @@ angular
 .module('clyde', ['ngMaterial', 'ngRoute', 'ngAnimate'])
 .config(['$routeProvider', '$mdThemingProvider', '$compileProvider', function ($routeProvider, $mdThemingProvider, $compileProvider) {
     $routeProvider
-        .when('/', { templateUrl: "views/about.html", controller:"AboutController", title:"Clyde D'Souza - A Passionate Front End Developer", tabIndex:0 })
-        .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza - A Passionate Front End Developer", tabIndex: 1 })
+        .when('/', { templateUrl: "views/about.html", controller: "AboutController", title:"Clyde D'Souza - A full-stack software developer", tabIndex:0 })
+        .when('/projects', { templateUrl: "views/projects.html", controller: "ProjectsController", title: "Projects | Clyde D'Souza - A full-stack software developer", tabIndex: 1 })
         .when('/about', { redirectTo: "/" })
-        //.when('/u/:URL', { templateUrl: "views/url.html", controller: "UrlController", title: "Url Mapping | Clyde D'Souza - A Passionate Front End Developer", tabIndex: 2 })
-        .when('/:URL', { templateUrl: "views/url.html", controller: "UrlController", title: "Url Mapping | Clyde D'Souza - A Passionate Front End Developer", tabIndex: -1 })
+        .when('/:URL', { templateUrl: "views/url.html", controller: "UrlController", title: "Url Mapping | Clyde D'Souza - A full-stack software developer", tabIndex: -1 })
         .otherwise({ templateUrl: "views/about.html" });
     $mdThemingProvider.theme('default')
         .primaryPalette('teal')
@@ -92,19 +91,19 @@ angular
     $scope.share = function (x) {
         if (x == "tweet") {
             sendGoogleTrackingEvent(websiteCategory.share, websiteEvent.click, 'Share on Twitter');
-            $window.open("https://twitter.com/share?text=Amazing%20website!%20Have%20a%20look%20at%20@ClydeDz%20's%20website%20at%20&url=http://clydedsouza.net", "_blank");
+            $window.open("https://twitter.com/share?text=Amazing%20website!%20Have%20a%20look%20at%20@ClydeDz%20's%20website%20at%20&url=https://clydedsouza.net", "_blank");
         }
         else if (x == "fb") {
             sendGoogleTrackingEvent(websiteCategory.share, websiteEvent.click, 'Share on Facebook');
-            $window.open("http://www.facebook.com/sharer.php?t=Amazing%20stuff&u=http://clydedsouza.net", "_blank");
+            $window.open("http://www.facebook.com/sharer.php?t=Amazing%20stuff&u=https://clydedsouza.net", "_blank");
         }
         else if (x == "google") {
             sendGoogleTrackingEvent(websiteCategory.share, websiteEvent.click, 'Share on Google+');
-            $window.open("https://plus.google.com/share?text=Amazing%20stuff&url=http://clydedsouza.net", "_blank");
+            $window.open("https://plus.google.com/share?text=Amazing%20stuff&url=https://clydedsouza.net", "_blank");
         }
         else {
             sendGoogleTrackingEvent(websiteCategory.share, websiteEvent.click, 'Share on LinkedIn');
-            $window.open("https://www.linkedin.com/cws/share?url=clydedsouza.net&original_referer=http%3A%2F%clydedsouza.net", "_blank");
+            $window.open("https://www.linkedin.com/cws/share?url=clydedsouza.net&original_referer=https%3A%2F%clydedsouza.net", "_blank");
         }
     };
     $scope.navigateProjectWebsite = function (projectTitle) {
