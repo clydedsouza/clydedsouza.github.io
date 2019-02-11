@@ -28,7 +28,7 @@
                 <!--Description block-->
                 <div class="card-description" id="{{$index}}" ng-show="isDesktop?isDesktop:ccindex == $index">
                     <p>{{docs.description}}</p>
-                    <p>
+                    <p ng-show="docs.languages.length > 0">
                         Made using:
                         <div ng-repeat="lang in docs.languages">
                             <span class="cd-chip">{{lang}}</span>
