@@ -12,69 +12,7 @@
     <meta name="description" content="Know more about Clyde D'Souza - a full-stack software developer. Clyde is currently living in Auckland, New Zealand but is originally from Mumbai, India. Feel free to send him a tweet @ClydeDz">
     <!---Basic styling--->
     <style>
-        body {
-            overflow-y: hidden
-        }
-
-        .website-body {
-            display: none;
-            transition: all .25s;
-            -moz-transition: all.25s;
-            -webkit-transition: all .25s;
-            opacity: 0
-        }
-
-        .website-loading {
-            overflow: hidden;
-            transition: background .25s ease-in-out;
-            -moz-transition: background .25s ease-in-out;
-            -webkit-transition: background .25s ease-in-out
-        }
-
-        .spinner {
-            width: 40px;
-            height: 40px
-        }
-
-        .double-bounce1, .double-bounce2 {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background-color: white;
-            opacity: .6;
-            position: absolute;
-            top: 0;
-            left: 0;
-            -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-            animation: sk-bounce 2.0s infinite ease-in-out
-        }
-
-        .double-bounce2 {
-            -webkit-animation-delay: -1.0s;
-            animation-delay: -1.0s
-        }
-
-        @-webkit-keyframes sk-bounce {
-            0%,100% {
-                -webkit-transform: scale(0)
-            }
-
-            50% {
-                -webkit-transform: scale(1)
-            }
-        }
-
-        @keyframes sk-bounce {
-            0%,100% {
-                transform: scale(0);
-                -webkit-transform: scale(0)
-            }
-
-            50% {
-                transform: scale(1);
-                -webkit-transform: scale(1)
-            }
-        }
+        body{overflow-y:hidden}.website-body{display:none;transition:all .25s;-moz-transition:all.25s;-webkit-transition:all .25s;opacity:0}.website-loading{overflow:hidden;transition:background .25s ease-in-out;-moz-transition:background .25s ease-in-out;-webkit-transition:background .25s ease-in-out}.spinner{width:40px;height:40px}.double-bounce1,.double-bounce2{width:100%;height:100%;border-radius:50%;background-color:#fff;opacity:.6;position:absolute;top:0;left:0;-webkit-animation:sk-bounce 2s infinite ease-in-out;animation:sk-bounce 2s infinite ease-in-out}.double-bounce2{-webkit-animation-delay:-1s;animation-delay:-1s}@-webkit-keyframes sk-bounce{0%,100%{-webkit-transform:scale(0)}50%{-webkit-transform:scale(1)}}@keyframes sk-bounce{0%,100%{transform:scale(0);-webkit-transform:scale(0)}50%{transform:scale(1);-webkit-transform:scale(1)}}
     </style>
     <!-----OpenGraph settings for social sharing------>
     <meta property="og:locale" content="en_US">
@@ -106,14 +44,8 @@
 <body ng-cloak>
     <!-- Google Tag Manager -->
     <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-K5RC8T');</script>
+        (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = !0; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f) })(window, document, 'script', 'dataLayer', 'GTM-K5RC8T');
+    </script>
     <!-- End Google Tag Manager -->
     <!-- Google Tag Manager (noscript) -->
     <noscript>
@@ -136,7 +68,7 @@
         <md-content>
             <md-toolbar class="md-primary gradients">
                 <div class="md-toolbar-tools">
-                    <img src="images/clydedsouza-face-icon.png" class="md-avatar user-avatar" height="65" width="65" alt="Clyde D'Souza icon photo'" onclick="sendGoogleTrackingEvent(websiteCategory.pageNavigation, websiteEvent.click, 'Animated profile picture');" />
+                    <img src="images/clydedsouza-2018.jpg" class="md-avatar user-avatar" height="65" width="65" alt="Clyde D'Souza photo" onclick="sendGoogleTrackingEvent(websiteCategory.pageNavigation, websiteEvent.click, 'Animated profile picture');" />
                     <h1>
                         <span>Clyde D'Souza</span>
                     </h1>
@@ -219,22 +151,12 @@
     <!-- Remaining scripts and styling -->
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Dosis|Roboto" rel="stylesheet" />
-    <link href="css/primarycss-v1.min.css" rel="stylesheet" />
+    <link href="https://static.clydedsouza.net/css/primarycss-v1.min.css?v=20190401" rel="stylesheet" />
     <!-- Angular Material requires Angular.js Libraries -->
-    <script src="js/angularmaterial-bundle.js"></script>
-    <script src="js/primaryjs-v2.min.js"></script>
+    <script src="https://static.clydedsouza.net/js/angularmaterial-bundle.js?v=20190401"></script>
+    <script src="https://static.clydedsouza.net/js/primaryjs-v2.min.js?v=20190401"></script>
     <script>
-        window.onload = (function () {
-            return function () {
-                document.getElementsByClassName('website-body')[0].style.display = 'block'; //Shows the website body section
-                setTimeout(function () {
-                    document.getElementsByClassName('website-loading')[0].style.display = 'none'; //Hides the website loading panel
-                    document.getElementsByClassName('fb-msg-button')[0].style.display = 'block'; //Shows the messenger FAB button
-                    document.getElementsByTagName('body')[0].style.overflowY = 'auto'; //Resets the body overflow setting
-                    setTimeout(loadBody, 500); //Fade in the body content including about and projects page
-                }, 2000);
-            }
-        })(window.onload);
+        window.onload = (function () { return function () { document.getElementsByClassName('website-body')[0].style.display = 'block'; setTimeout(function () { document.getElementsByClassName('website-loading')[0].style.display = 'none'; document.getElementsByClassName('fb-msg-button')[0].style.display = 'block'; document.getElementsByTagName('body')[0].style.overflowY = 'auto'; setTimeout(loadBody, 500) }, 2000) } })(window.onload);
     </script>
     <!-- Schema.org -->
     <script type="application/ld+json">
