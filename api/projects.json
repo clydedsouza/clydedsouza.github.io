@@ -1,6 +1,20 @@
 ﻿[
   {
-    "title": "Demystifying Markdown – Skillshare class",
+    "title": "Developing and distributing NuGet packages",
+    "date": "7th March 2019",
+    "description": "Learn how to develop your very own NuGet package and then publish it to nuget.org. Use the link in this card to get 2 free months of Skillshare subscription.",
+    "hasWebsite": true,
+    "website": "https://skl.sh/2W5AA5w",
+    "onGithub": false,
+    "github": "",
+    "languages": [],
+    "category": "Skillshare online class",
+    "icon": "https://static.clydedsouza.net/images/icons/skillshare-logo.jpg",
+    "image": "https://static.clydedsouza.net/images/projects/ddnp.png",
+    "imageDescription": "Developing and distributing NuGet packages – Skillshare class"
+  },
+  {
+    "title": "Demystifying GitHub flavored Markdown",
     "date": "20th December 2018",
     "description": "Learn GitHub flavored Markdown (GFM) in this online class on Skillshare. Use the link in this card to get 2 free months of Skillshare subscription.",
     "hasWebsite": true,
@@ -8,7 +22,7 @@
     "onGithub": false,
     "github": "",
     "languages": [],
-    "category": "Online class",
+    "category": "Skillshare online class",
     "icon": "https://static.clydedsouza.net/images/icons/skillshare-logo.jpg",
     "image": "https://static.clydedsouza.net/images/projects/skillshare-markdown.png",
     "imageDescription": "Demystifying Markdown - Learn GitHub flavored Markdown (GFM) - Skillshare class"
