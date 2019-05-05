@@ -1,5 +1,61 @@
 ﻿[
   {
+    "title": "Meta Tag Analyzer",
+    "date": "1st May 2019",
+    "description": "An Azure DevOps task that generates a report after analysing the meta tags of each page on your website.",
+    "hasWebsite": true,
+    "website": "https://marketplace.visualstudio.com/items?itemName=clydedsouza.meta-tag-analyzer",
+    "onGithub": true,
+    "github": "https://github.com/ClydeDz/meta-tag-analyzer",
+    "languages": [ "TypeScript", "Node.js", "Mocha" ],
+    "category": "Azure DevOps Extension",
+    "icon": "https://static.clydedsouza.net/images/icons/metataganalyzer-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/metataganalyzer.png",
+    "imageDescription": "An Azure DevOps task that generates a report after analysing the meta tags of each page on your website."
+  },
+  {
+    "title": "Chameleon by Clymate Themes",
+    "date": "22nd April 2019",
+    "description": "Adds a themeable website called Chameleon to your project.",
+    "hasWebsite": true,
+    "website": "https://www.nuget.org/packages/Clymate.Themes.Chameleon/",
+    "onGithub": true,
+    "github": "https://github.com/ClydeDz/clymate-themes-chameleon-nuget",
+    "languages": [ "SCSS", "JS", "HTML", "Azure DevOps", "Azure Artifacts" ],
+    "category": "NuGet",
+    "icon": "https://static.clydedsouza.net/images/icons/clymatenuget-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/clymate-chameleon-theme.png",
+    "imageDescription": "NuGet package that adds a themeable website called Chameleon to your project."
+  },
+  {
+    "title": "Folder Inspector",
+    "date": "21st April 2019",
+    "description": "Folder Inspector is a command line utility that helps bulk update the headers and footers of Word and Excel files. This utility is provided via a NuGet package.",
+    "hasWebsite": true,
+    "website": "https://www.nuget.org/packages/FolderInspector/",
+    "onGithub": true,
+    "github": "https://github.com/ClydeDz/folder-inspector",
+    "languages": [ "C#", "xUnit", "Azure DevOps", "Azure Artifacts" ],
+    "category": "NuGet",
+    "icon": "/images/icons/folderinspector-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/folder-inspector.jpg",
+    "imageDescription": "Folder Inspector to edit Word and Excel files developed by Clyde D'Souza"
+  },
+  {
+    "title": "Clymate Scaffolding for Sass",
+    "date": "5th April 2019",
+    "description": "Adds basic Sass scaffolding to your project. Use this scaffolding along with a sass compiler of your choice.",
+    "hasWebsite": true,
+    "website": "https://www.nuget.org/packages/Clymate.Scaffolding.Sass/",
+    "onGithub": true,
+    "github": "https://github.com/ClydeDz/clymate-scaffolding-sass-nuget/",
+    "languages": [ "SCSS", "Azure DevOps", "Azure Artifacts" ],
+    "category": "NuGet",
+    "icon": "https://static.clydedsouza.net/images/icons/clymatenuget-icon.png",
+    "image": "https://static.clydedsouza.net/images/projects/clymate-scaf-sass.png",
+    "imageDescription": "NuGet package that adds basic Sass scaffolding to your project. Use this scaffolding along with a sass compiler of your choice."
+  },
+  {
     "title": "Developing and distributing NuGet packages",
     "date": "7th March 2019",
     "description": "Learn how to develop your very own NuGet package and then publish it to nuget.org. Use the link in this card to get 2 free months of Skillshare subscription.",
@@ -152,20 +208,6 @@
     "icon": "https://static.clydedsouza.net/images/icons/profilesticker-icon.png",
     "image": "https://static.clydedsouza.net/images/projects/profilesticker-website.png",
     "imageDescription": "Add a sticker to your profile picture using Profile Sticker in just 4 easy steps."
-  },
-  {
-    "title": "Folder Inspector",
-    "date": "5th November 2016",
-    "description": "Folder Inspector is a console application that scans a given directory and sub-directories for Word and Excel files and adds custom headers and/or footer to every page of that file.",
-    "hasWebsite": false,
-    "website": "",
-    "onGithub": true,
-    "github": "https://github.com/ClydeDz/folder-inspector",
-    "languages": [ "C#" ],
-    "category": "Console",
-    "icon": "https://static.clydedsouza.net/images/icons/folderinspector-icon.jpg",
-    "image": "https://static.clydedsouza.net/images/projects/folder-inspector.jpg",
-    "imageDescription": "Folder Inspector to edit Word and Excel files developed by Clyde D'Souza"
   },
   {
     "title": "Project Restore NZ",
