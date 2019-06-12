@@ -1,0 +1,21 @@
+﻿@import "../abstract/variables";
+
+nav {
+    text-align: center;
+
+    a {
+        color: $primary-accent;
+        margin-left: 18px;
+        padding: 9px 18px;
+        border-radius: 30px;
+        cursor:pointer;
+
+        &:hover {
+            background-color: $contrast-accent;
+        }
+
+        &.active {
+            background-color: $contrast-accent;
+        }
+    }
+}
