@@ -48,10 +48,13 @@
 
     <!-- TODO: Add Google Analytics -->
 </head>
-<body> 
+<body>
+    <!-- Loading animation -->
     <div id="loading">
         <div id="spinner"></div>
     </div>
+
+    <!-- Static profile sidebar -->
     <div id="sidebar">
         <div class="sidebar-background" style="background: url(images/clydedsouza-2018.jpg) center;"></div>
         <h1>Clyde D'Souza</h1>
@@ -64,13 +67,18 @@
             <span><i class="fas fa-user-tie"></i> &nbsp;</span>
         </div>
     </div>
+
+    <!-- Main body -->
     <div id="display">
-        <div id="nav">
+        <!-- Static navigation -->
+        <nav>
             <a>About</a>
             <a>Projects</a>
             <a>Speaking</a>
             <a>Teaching</a>
-        </div>
+        </nav>
+
+        <!-- Dynamic content -->
         <div>
             <h2>About me</h2>
             <p>
@@ -148,11 +156,11 @@
                 document.getElementById("loading").classList.remove("fadeOut");
                 document.getElementById("loading").style.display = "none";
             }, 800);
-        }, 1500); 
+        }, 1500);
         console.log(window.location.href);
     </script>
 
-     
+
 
     <!-- Schema.org -->
     <script type="application/ld+json">
