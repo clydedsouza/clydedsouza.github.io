@@ -1,0 +1,30 @@
+﻿@import "../abstract/variables";
+
+
+#footer_blog {
+    width: 90vw;
+    padding: 8vh 5vw;
+    text-align: center;
+}
+
+
+
+#footer_blog a {
+    color: $text-color !important;
+    text-decoration: none;
+    font-family: 'Questrial', sans-serif;
+    font-weight: bold;
+}
+
+#footer {
+    width: 100%;
+    padding: 8vh 0px;
+    text-align: center;
+}
+
+#footer a {
+    color: $text-color !important;
+    text-decoration: none;
+    font-family: 'Questrial', sans-serif;
+    font-weight: bold;
+}

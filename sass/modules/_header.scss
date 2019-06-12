@@ -1,8 +1,5 @@
 ﻿@import "../abstract/variables";
 
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-@import url('https://fonts.googleapis.com/css?family=Questrial');
-
 body {
     margin: 0%;
     padding: 0%;
@@ -19,56 +16,7 @@ h1, h2, h3{
     color: $primary-accent;
 }
 
-#loading {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background: $bg-color;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
 
-#spinner {
-    animation: rotate 0.5s infinite linear;
-    width: 50px;
-    height: 50px;
-    border: 2px solid $bg-color;
-    border-bottom: 2px solid $text-color;
-    border-radius: 50%;
-    margin: 0;
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-#profile {
-    width: 24vw;
-    padding: 4vh 3vw;
-    height: 92vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-    background: $background-image;
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    position: fixed;
-    color: #fff !important;
-}
 
 #display {
     width: 64vw;
@@ -77,10 +25,7 @@ h1, h2, h3{
     display: inline-block;
     padding-left: 33vw;
 }
-#profile h1{
-    color: white;
-    margin:4px 0;
-}
+
 #display h1 {
     font-size: 50px;
     color: $text-color;
@@ -190,79 +135,15 @@ h1, h2, h3{
 }
 
 #header a {
-    color: var(--text-color);
+    color: $text-color ;
     text-decoration: none;
     margin-left: 4vw;
     font-weight: bold;
 }
 
-#footer_blog {
-    width: 90vw;
-    padding: 8vh 5vw;
-    text-align: center;
-}
 
-#footer_blog a {
-    color: $text-color !important;
-    text-decoration: none;
-    font-family: 'Questrial', sans-serif;
-    font-weight: bold;
-}
 
-#footer {
-    width: 100%;
-    padding: 8vh 0px;
-    text-align: center;
-}
 
-#footer a {
-    color: $text-color !important;
-    text-decoration: none;
-    font-family: 'Questrial', sans-serif;
-    font-weight: bold;
-}
-
-#profile_img {
-    width: 180px;
-    height: 180px;
-    border-radius: 120px;
-    background-size: cover !important;
-    border: 6px solid #ffeb3bc7;
-}
-
-#profile div {
-    font-weight: bold;
-    margin: 1.5vh 0px;
-}
-
-#username {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-#username span {
-    font-size: 24px;
-}
-
-#userbio {
-    font-size: 26px;
-    font-family: 'Questrial', sans-serif;
-    width: 100%;
-}
-
-#about {
-    font-size: 18px;
-    font-family: 'Questrial', sans-serif;
-}
-
-#about span {
-    margin: 1vh 0px;
-    display: block;
-}
-
-#about span i {
-    font-size: 16px;
-}
 
 #work {
     margin: 2vh 0px;
@@ -405,27 +286,14 @@ h1, h2, h3{
 }
 
 @media (max-width: 800px) {
-    #profile {
-        width: 90vw;
-        padding: 4vh 5vw;
-        height: 60vh;
-        text-align: center;
-        position: relative;
-    }
-
+ 
     #display {
         width: 90vw;
         padding: 4vh 5vw;
         height: auto;
         display: inline-block;
         padding-left: 5vw;
-    }
-
-    #profile_img {
-        width: 120px;
-        height: 120px;
-        margin: 0px auto !important;
-    }
+    } 
 
     #work {
         margin: 0px;
@@ -457,15 +325,7 @@ h1, h2, h3{
         text-align: left;
         margin-top: 0vh;
         z-index: 1;
-    }
-
-    #profile_blog {
-        width: 90vw;
-        margin: 0px 5vw;
-        margin-top: 10vh;
-        text-align: left;
-        z-index: 1;
-    }
+    } 
 
     .go_back {
         position: relative;
@@ -482,19 +342,6 @@ h1, h2, h3{
     #blog p {
         margin: 2vh 0px;
     }
-}
-
-::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-}
-
-::-webkit-scrollbar-track {
-    background: $bg-color;
-}
-
-::-webkit-scrollbar-thumb {
-    background: $text-color;
 }
 
 
