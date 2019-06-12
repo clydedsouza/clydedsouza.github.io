@@ -1,12 +1,12 @@
 ﻿@import "../abstract/variables";
 
-#blog_section {
+#pinnedProjects {
     margin: 2vh 0px;
     padding: 2vh 0px !important;
 }
 
 
-#blogs {
+#pinnedProjectsList {
     section {
         width: 45%;
         display: inline-block;
@@ -33,12 +33,12 @@
             border-radius: 5px 5px 0px 0px;
         }
 
-        .blog_metacontainer_contents, .blog_container {
+        .project-header-contents, .project-body {
             position: relative;
         }
 
 
-        .blog_metacontainer {
+        .project-header {
             background-image: url("https://images.unsplash.com/photo-1553748024-d1b27fb3f960?w=1450");
             background-color: #000000;
 
@@ -61,7 +61,7 @@
             }
         }
 
-        .blog_container {
+        .project-body {
             padding: 2.5vh 5%;
         }
     }
@@ -70,11 +70,11 @@
  
 
 @media (max-width: 800px) {
-    #blog_section {
+    #pinnedProjects {
         margin: 0px;
     }
     
-    #blogs {
+    #pinnedProjectsList {
         columns: 1;
 
         section {
