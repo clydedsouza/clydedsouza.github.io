@@ -221,27 +221,15 @@ h1, h2, h3 {
 ::-webkit-scrollbar-thumb {
   background: rgba(10, 10, 10, 0.6); }
 
-#footer_blog {
-  width: 90vw;
-  padding: 8vh 5vw;
-  text-align: center; }
-
-#footer_blog a {
-  color: rgba(10, 10, 10, 0.6) !important;
-  text-decoration: none;
-  font-family: 'Questrial', sans-serif;
-  font-weight: bold; }
-
-#footer {
+footer {
   width: 100%;
   padding: 8vh 0px;
   text-align: center; }
-
-#footer a {
-  color: rgba(10, 10, 10, 0.6) !important;
-  text-decoration: none;
-  font-family: 'Questrial', sans-serif;
-  font-weight: bold; }
+  footer a {
+    color: rgba(10, 10, 10, 0.6) !important;
+    text-decoration: none;
+    font-family: 'Questrial', sans-serif;
+    font-weight: bold; }
 
 #loading {
   width: 100vw;
