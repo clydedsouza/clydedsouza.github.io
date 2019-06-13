@@ -1,44 +1,10 @@
 [
   {
-    "outputFileName": "js/app.min.js",
+    "outputFileName": "js/bundle.js",
     "inputFiles": [
-      "js/app.js"
-    ]
-  },
-  {
-    "outputFileName": "css/theme.min.css",
-    "inputFiles": [
-      "css/theme.css"
-    ]
-  },
-  {
-    "outputFileName": "content/angular-material.min.min.css",
-    "inputFiles": [
-      "content/angular-material.min.css"
-    ]
-  },
-  {
-    "outputFileName": "css/primarycss-v1.min.css",
-    "inputFiles": [
-      "css/angular-material.min.css",
-      "css/theme.min.css"
-    ]
-  },
-  {
-    "outputFileName": "js/primaryjs-v2.js",
-    "inputFiles": [
-      "js/app.min.js",
-      "js/angular-material.min.js"
-    ]
-  },
-  {
-    "outputFileName": "js/angularmaterial-bundle.js",
-    "inputFiles": [
-      "js/angular.min.js",
-      "js/angular-route.min.js",
-      "js/angular-animate.min.js",
-      "js/angular-aria.min.js",
-      "js/angular-messages.min.js"
+      "js/vendor/jquery-3.4.1.min.js",
+      "js/vendor/mustache.js",
+      "js/custom/app.js"
     ]
   }
 ]
