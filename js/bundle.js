@@ -583,12 +583,14 @@ function pinnedViewPageLoad() {
 
 var templateNames = {
     intro: "introPartial",
-    pinned: "pinnedPartial"
+    pinned: "pinnedPartial",
+    portfolio: "portfolioPartial"
 };
 
 var templateCacheHolder = {
     intro: "",
-    pinned: ""
+    pinned: "",
+    portfolio: ""
 };
 
 var switchTemplateView = {};
@@ -599,14 +601,14 @@ function switchTemplate(templateName) {
 
     if (templateName === templateNames.intro) {
         if (templateCacheHolder.intro === "" || templateCacheHolder.intro === null) {
-            $("#templateHolder").load("partials/intro.html #introPartial", function () { 
+            $("#templateHolder").load("partials/intro.html #introPartial", function () {
                 templateCacheHolder.intro = document.getElementById(templateName).innerHTML;
-                renderTemplateToView(templateCacheHolder.intro, switchTemplateView, "#view"); 
+                renderTemplateToView(templateCacheHolder.intro, switchTemplateView, "#view");
                 postRenderViewInitialise(templateName);
             });
         }
         else {
-            renderTemplateToView(templateCacheHolder.intro, switchTemplateView, "#view");  
+            renderTemplateToView(templateCacheHolder.intro, switchTemplateView, "#view");
             postRenderViewInitialise(templateName);
         }
     }
@@ -622,6 +624,22 @@ function switchTemplate(templateName) {
             renderTemplateToView(templateCacheHolder.pinned, switchTemplateView, "#introPartialView");
             postRenderViewInitialise(templateName);
         }
+    }
+    else if (templateName === templateNames.portfolio) {
+        if (templateCacheHolder.portfolio === "" || templateCacheHolder.portfolio === null) {
+            $("#templateHolder").load("partials/portfolio.html #portfolioPartial", function () {
+                templateCacheHolder.portfolio = document.getElementById(templateName).innerHTML;
+                renderTemplateToView(templateCacheHolder.pinned, switchTemplateView, "#view");
+            });
+            postRenderViewInitialise(templateName);
+        }
+        else {
+            renderTemplateToView(templateCacheHolder.portfolio, switchTemplateView, "#view");
+            postRenderViewInitialise(templateName);
+        }
+    }
+    else {
+        // do nothing
     }
 }
 
@@ -645,4 +663,10 @@ function postRenderViewInitialise(templateName) {
 // Start here
 $(document).ready(function () {
     switchTemplate("introPartial");
+
+    $("#display nav a").on('click', function () {
+        $("#display nav a").removeClass('active');
+        $(this).addClass('active');
+        switchTemplate($(this).attr('data-partialview'));
+    });
 });
