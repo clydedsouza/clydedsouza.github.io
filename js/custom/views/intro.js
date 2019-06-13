@@ -1,0 +1,4 @@
+﻿function introViewPageLoad() {
+    switchTemplate("pinnedPartial");
+}
+

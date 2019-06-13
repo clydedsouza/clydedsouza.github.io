@@ -4,6 +4,9 @@
     "inputFiles": [
       "js/vendor/jquery-3.4.1.min.js",
       "js/vendor/mustache.js",
+      "js/custom/views/intro.js",
+      "js/custom/views/pinned.js",
+      "js/custom/templateEngine.js",
       "js/custom/app.js"
     ]
   }
