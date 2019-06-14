@@ -31,24 +31,22 @@ function getTemplateProperties(templateName) {
     return templates[templateName];
 }
 
-var switchTemplateView = {};
-
-function switchTemplate(templateName) {
+function switchTemplate(templateName, templateData) {
     /// <summary>Method to switch to a different template.</summary>
     /// <param name="templateName" type="string">The template to be loaded.</param> 
 
-    var templateProperties = getTemplateProperties(templateName);
+    var template = getTemplateProperties(templateName);
 
-    if (templateProperties.cache !== "" && templateProperties.cache !== null) {
-        renderTemplateToView(templateProperties.view, templateProperties.cache, switchTemplateView);
-        templateProperties.initView();
+    if (template.cache !== "" && template.cache !== null) {
+        renderTemplateToView(template.view, template.cache, templateData);
+        template.initView();
         return; 
     }
 
-    $(templateProperties.container).load(templateProperties.contents, function () {
-        templateProperties.cache = document.getElementById(templateName).innerHTML;
-        renderTemplateToView(templateProperties.view, templateProperties.cache, switchTemplateView);
-        templateProperties.initView();
+    $(template.container).load(template.contents, function () {
+        template.cache = document.getElementById(templateName).innerHTML;
+        renderTemplateToView(template.view, template.cache, templateData);
+        template.initView();
     });
 }
 
