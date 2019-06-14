@@ -39,17 +39,17 @@ function switchTemplate(templateName) {
 
     var templateProperties = getTemplateProperties(templateName);
 
-    if (templateProperties.cache === "" || templateProperties.cache === null) {
-        $(templateProperties.container).load(templateProperties.contents, function () {
-            templateProperties.cache = document.getElementById(templateName).innerHTML;
-            renderTemplateToView(templateProperties.view, templateProperties.cache, switchTemplateView);
-            templateProperties.initView();
-        });
-    }
-    else {
+    if (templateProperties.cache !== "" && templateProperties.cache !== null) {
         renderTemplateToView(templateProperties.view, templateProperties.cache, switchTemplateView);
         templateProperties.initView();
+        return; 
     }
+
+    $(templateProperties.container).load(templateProperties.contents, function () {
+        templateProperties.cache = document.getElementById(templateName).innerHTML;
+        renderTemplateToView(templateProperties.view, templateProperties.cache, switchTemplateView);
+        templateProperties.initView();
+    });
 }
 
 function renderTemplateToView(htmlViewID, htmlTemplate, jsData) {
