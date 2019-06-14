@@ -1,14 +1,35 @@
-﻿var templateNames = {
-    intro: "introPartial",
-    pinned: "pinnedPartial",
-    portfolio: "portfolioPartial"
+﻿var templates = {
+    "introPartial": {
+        "container": "#templateHolder",
+        "contents": "partials/intro.html #introPartial",
+        "view": "#view",
+        "cache": "",
+        "initView": function () {
+            introViewPageLoad();
+        }
+    },
+    "pinnedPartial": {
+        "container": "#introPartialTemplateHolder",
+        "contents": "partials/pinned.html #pinnedPartial",
+        "view": "#introPartialView",
+        "cache": "",
+        "initView": function () {
+            pinnedViewPageLoad();
+        }
+    },
+    "portfolioPartial": {
+        "container": "#templateHolder",
+        "contents": "partials/portfolio.html #portfolioPartial",
+        "view": "#view",
+        "cache": "",
+        "initView": function () { 
+        }
+    }
 };
 
-var templateCacheHolder = {
-    intro: "",
-    pinned: "",
-    portfolio: ""
-};
+function getTemplateProperties(templateName) { 
+    return templates[templateName];
+}
 
 var switchTemplateView = {};
 
@@ -16,64 +37,26 @@ function switchTemplate(templateName) {
     /// <summary>Method to switch to a different template.</summary>
     /// <param name="templateName" type="string">The template to be loaded.</param> 
 
-    if (templateName === templateNames.intro) {
-        if (templateCacheHolder.intro === "" || templateCacheHolder.intro === null) {
-            $("#templateHolder").load("partials/intro.html #introPartial", function () {
-                templateCacheHolder.intro = document.getElementById(templateName).innerHTML;
-                renderTemplateToView(templateCacheHolder.intro, switchTemplateView, "#view");
-                postRenderViewInitialise(templateName);
-            });
-        }
-        else {
-            renderTemplateToView(templateCacheHolder.intro, switchTemplateView, "#view");
-            postRenderViewInitialise(templateName);
-        }
-    }
-    else if (templateName === templateNames.pinned) {
-        if (templateCacheHolder.pinned === "" || templateCacheHolder.pinned === null) {
-            $("#introPartialTemplateHolder").load("partials/pinned.html #pinnedPartial", function () {
-                templateCacheHolder.pinned = document.getElementById(templateName).innerHTML;
-                renderTemplateToView(templateCacheHolder.pinned, switchTemplateView, "#introPartialView");
-            });
-            postRenderViewInitialise(templateName);
-        }
-        else {
-            renderTemplateToView(templateCacheHolder.pinned, switchTemplateView, "#introPartialView");
-            postRenderViewInitialise(templateName);
-        }
-    }
-    else if (templateName === templateNames.portfolio) {
-        if (templateCacheHolder.portfolio === "" || templateCacheHolder.portfolio === null) {
-            $("#templateHolder").load("partials/portfolio.html #portfolioPartial", function () {
-                templateCacheHolder.portfolio = document.getElementById(templateName).innerHTML;
-                renderTemplateToView(templateCacheHolder.pinned, switchTemplateView, "#view");
-            });
-            postRenderViewInitialise(templateName);
-        }
-        else {
-            renderTemplateToView(templateCacheHolder.portfolio, switchTemplateView, "#view");
-            postRenderViewInitialise(templateName);
-        }
+    var templateProperties = getTemplateProperties(templateName);
+
+    if (templateProperties.cache === "" || templateProperties.cache === null) {
+        $(templateProperties.container).load(templateProperties.contents, function () {
+            templateProperties.cache = document.getElementById(templateName).innerHTML;
+            renderTemplateToView(templateProperties.view, templateProperties.cache, switchTemplateView);
+            templateProperties.initView();
+        });
     }
     else {
-        // do nothing
+        renderTemplateToView(templateProperties.view, templateProperties.cache, switchTemplateView);
+        templateProperties.initView();
     }
 }
 
-function renderTemplateToView(htmlTemplate, jsData, htmlContainerId) {
+function renderTemplateToView(htmlViewID, htmlTemplate, jsData) {
     /// <summary>Helper method to cache partial views and not request again.</summary>
 
     var output = Mustache.render(htmlTemplate, jsData);
-    $(htmlContainerId).html(output);
+    $(htmlViewID).html(output);
 }
-
-function postRenderViewInitialise(templateName) {
-    if (templateName === templateNames.intro) {
-        introViewPageLoad();
-    }
-    else if (templateName === templateNames.pinned) {
-        pinnedViewPageLoad();
-    }
-}
-
+ 
  
