@@ -31,6 +31,13 @@ function getTemplateProperties(templateName) {
     return templates[templateName];
 }
 
+function renderTemplateToView(htmlViewID, htmlTemplate, jsData) {
+    /// <summary>Helper method to cache partial views and not request again.</summary>
+
+    var output = Mustache.render(htmlTemplate, jsData);
+    $(htmlViewID).html(output);
+}
+
 function switchTemplate(templateName, templateData) {
     /// <summary>Method to switch to a different template.</summary>
     /// <param name="templateName" type="string">The template to be loaded.</param> 
@@ -50,11 +57,5 @@ function switchTemplate(templateName, templateData) {
     });
 }
 
-function renderTemplateToView(htmlViewID, htmlTemplate, jsData) {
-    /// <summary>Helper method to cache partial views and not request again.</summary>
 
-    var output = Mustache.render(htmlTemplate, jsData);
-    $(htmlViewID).html(output);
-}
- 
  
