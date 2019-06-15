@@ -27,11 +27,11 @@ h1, h2, h3 {
   color: #009688; }
 
 #display {
-  width: 64vw;
+  width: 66vw;
   padding: 4vh 3vw;
   height: 92vh;
   display: inline-block;
-  padding-left: 33vw; }
+  padding-left: 30.5vw; }
 
 #display h1 {
   font-size: 50px;
@@ -52,19 +52,6 @@ h1, h2, h3 {
   position: absolute;
   z-index: -1;
   margin-top: -10vh; }
-
-.section_title {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 1vh 0px;
-  word-wrap: break-word; }
-
-.about_section {
-  font-size: 18px;
-  font-family: 'Questrial', sans-serif;
-  margin: 2vh 0px;
-  font-weight: bold;
-  word-wrap: break-word; }
 
 .bottom_section {
   margin: 1vh 0px;
@@ -122,8 +109,9 @@ h1, h2, h3 {
   transition: 0.4s ease-in-out;
   transform: scale(1);
   padding: 0px;
-  margin: 2vh 1vw 2vh 0;
-  background: #141414; }
+  margin: 2vh 1.5vw 2vh 0;
+  background: linear-gradient(155deg, rgba(0, 150, 136, 0.878431), rgba(16, 152, 75, 0.941176));
+  vertical-align: top; }
   #pinnedProjectsList section:hover {
     cursor: pointer;
     border: 1px solid transparent;
@@ -135,22 +123,65 @@ h1, h2, h3 {
   #pinnedProjectsList section .project-header-contents, #pinnedProjectsList section .project-body {
     position: relative; }
   #pinnedProjectsList section .project-header {
-    background-image: url("https://images.unsplash.com/photo-1553748024-d1b27fb3f960?w=1450");
-    background-color: #000000; }
-    #pinnedProjectsList section .project-header:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.7); }
+    background-color: #009688;
+    background-size: contain;
+    min-height: 240px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: -1px;
+    width: 101.19%;
+    margin-left: -1px; }
+    #pinnedProjectsList section .project-header label {
+      background-color: #ffff00;
+      padding: 3px 6px;
+      color: #009688;
+      text-transform: uppercase;
+      font-size: x-small;
+      letter-spacing: 2px;
+      position: relative;
+      left: -11px;
+      top: 7px;
+      font-weight: bold; }
     #pinnedProjectsList section .project-header div {
       z-index: 99999; }
-    #pinnedProjectsList section .project-header img {
-      border-radius: 60px; }
+  #pinnedProjectsList section .project-header-contents:before {
+    /*content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background: $primary-accent-transparent; //rgba(0,0,0,0.7);
+                z-index: -1;*/ }
+  #pinnedProjectsList section .project-header-contents div {
+    font-size: 20px;
+    margin: 10px; }
   #pinnedProjectsList section .project-body {
-    padding: 2.5vh 5%; }
+    padding: 0 9px; }
+    #pinnedProjectsList section .project-body h3 {
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 18px 0;
+      margin-block-end: 0; }
+    #pinnedProjectsList section .project-body p {
+      font-size: small; }
+    #pinnedProjectsList section .project-body div:last-child {
+      text-align: right;
+      margin-bottom: 9px; }
+      #pinnedProjectsList section .project-body div:last-child i.material-icons {
+        font-size: 24px;
+        margin-left: 9px;
+        color: white; }
+    #pinnedProjectsList section .project-body .section_title {
+      margin: 1vh 0px;
+      word-wrap: break-word; }
+    #pinnedProjectsList section .project-body .about_section {
+      font-size: 18px;
+      font-family: 'Questrial', sans-serif;
+      margin: 2vh 0px;
+      font-weight: bold;
+      word-wrap: break-word; }
 
 @media (max-width: 800px) {
   #pinnedProjects {
@@ -161,7 +192,7 @@ h1, h2, h3 {
       width: 98%; } }
 
 #sidebar {
-  width: 24vw;
+  width: 22vw;
   padding: 4vh 3vw;
   height: 92vh;
   display: flex;
@@ -187,7 +218,7 @@ h1, h2, h3 {
     height: 180px;
     border-radius: 120px;
     background-size: cover !important;
-    border: 6px solid #ffeb3bc7; }
+    border: 6px solid #ffff00; }
   #sidebar .sidebar-tagline {
     font-size: 26px;
     font-family: 'Questrial', sans-serif;
@@ -270,6 +301,6 @@ nav {
     border-radius: 30px;
     cursor: pointer; }
     nav a:hover {
-      background-color: #ffeb3bc7; }
+      background-color: #ffff00; }
     nav a.active {
-      background-color: #ffeb3bc7; }
+      background-color: #ffff00; }
