@@ -1,17 +1,4 @@
-﻿@import url("https://fonts.googleapis.com/css?family=Poppins");
-@import url("https://fonts.googleapis.com/css?family=Questrial");
-@import url("https://fonts.googleapis.com/css?family=Poppins");
-@import url("https://fonts.googleapis.com/css?family=Questrial");
-@import url("https://fonts.googleapis.com/css?family=Poppins");
-@import url("https://fonts.googleapis.com/css?family=Questrial");
-@import url("https://fonts.googleapis.com/css?family=Poppins");
-@import url("https://fonts.googleapis.com/css?family=Questrial");
-@import url("https://fonts.googleapis.com/css?family=Poppins");
-@import url("https://fonts.googleapis.com/css?family=Questrial");
-@import url("https://fonts.googleapis.com/css?family=Poppins");
-@import url("https://fonts.googleapis.com/css?family=Questrial");
-@import url("https://fonts.googleapis.com/css?family=Poppins");
-@import url("https://fonts.googleapis.com/css?family=Questrial");
+﻿@import url("https://fonts.googleapis.com/css?family=Dosis|Roboto");
 body {
   margin: 0%;
   padding: 0%;
@@ -21,10 +8,15 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   align-items: center;
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px; }
 
 h1, h2, h3 {
-  color: #009688; }
+  color: #009688;
+  font-family: 'Roboto',sans-serif; }
+
+h1 {
+  font-family: 'Dosis','Roboto',sans-serif; }
 
 #display {
   width: 66vw;
@@ -161,7 +153,7 @@ h1, h2, h3 {
     #pinnedProjectsList section .project-body h3 {
       color: white;
       font-size: 22px;
-      font-weight: bold;
+      font-weight: normal;
       margin: 18px 0;
       margin-block-end: 0; }
     #pinnedProjectsList section .project-body p {
@@ -169,6 +161,8 @@ h1, h2, h3 {
     #pinnedProjectsList section .project-body div:last-child {
       text-align: right;
       margin-bottom: 9px; }
+      #pinnedProjectsList section .project-body div:last-child a {
+        text-decoration: none; }
       #pinnedProjectsList section .project-body div:last-child i.material-icons {
         font-size: 24px;
         margin-left: 9px;
@@ -212,24 +206,30 @@ h1, h2, h3 {
     font-weight: bold; }
   #sidebar div {
     font-weight: bold;
-    margin: 1.5vh 0px; }
+    margin: 2vh 0px; }
   #sidebar .sidebar-background {
     width: 180px;
     height: 180px;
     border-radius: 120px;
     background-size: cover !important;
     border: 6px solid #ffff00; }
-  #sidebar .sidebar-tagline {
-    font-size: 26px;
-    font-family: 'Questrial', sans-serif;
-    width: 100%; }
+  #sidebar .sidebar-tagline p {
+    font-size: 24px;
+    font-family: 'Dosis', sans-serif;
+    width: 100%;
+    margin: 9px 0; }
+    #sidebar .sidebar-tagline p small {
+      padding: 9px 0; }
   #sidebar .sidebar-icons {
     font-size: 18px;
     font-family: 'Questrial', sans-serif; }
     #sidebar .sidebar-icons span {
       margin: 1vh 0px; }
       #sidebar .sidebar-icons span i {
-        font-size: 20px; }
+        font-size: 24px;
+        margin: 0 0.5vw; }
+        #sidebar .sidebar-icons span i:first-child {
+          margin-left: 0; }
   @media (max-width: 800px) {
     #sidebar {
       width: 90vw;
