@@ -2,102 +2,36 @@
     <div id="pinnedProjects">
         <h2>Pinned projects</h2>
         <div id="pinnedProjectsList">
+            {{#projects}}
             <section>
-                <div class="project-header" style="background-image: url('../images/projects/ddnp.png');">
+                <div class="project-header" style="background-image: url('{{image}}');">
                     <div class="project-header-contents">
                         &nbsp;
-                        <label>Online class</label>
+                        <label>{{category}}</label>
                     </div>
                 </div>
                 <div class="project-body">
                     <h3>
-                        Developing &amp; distributing NuGet packages
+                        {{title}}
                     </h3>
                     <p>
-                        An Azure DevOps task that generates a report after analysing the meta tags of each page on your website.
+                        {{description}}
                     </p>
                     <div>
-                        <a href="#">
+                        {{#hasWebsite}}
+                        <a href="{{website}}">
                             <i class="mdi mdi-earth material-icons" aria-hidden="true"></i>
                         </a>
-                        <a href="#">
+                        {{/hasWebsite}}
+                        {{#onGithub}}
+                        <a href="{{github}}">
                             <i class="mdi mdi-github-circle material-icons" aria-hidden="true"></i>
                         </a>
+                        {{/onGithub}}
                     </div>
                 </div>
             </section>
-            <section>
-                <div class="project-header" style="background-image: url('../images/projects/cicd-docs.png');">
-                    <div class="project-header-contents">
-                        &nbsp;
-                        <label>Web app</label>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <h3>
-                        CI/CD Docs
-                    </h3>
-                    <p>
-                        Documenting your Azure DevOps pipeline was never easier - export, upload and go.
-                    </p>
-                    <div>
-                        <a href="#">
-                            <i class="mdi mdi-earth material-icons" aria-hidden="true"></i>
-                        </a>
-                        <a href="#">
-                            <i class="mdi mdi-github-circle material-icons" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="project-header" style="background-image: url('../images/projects/ddnp.png');">
-                    <div class="project-header-contents">
-                        &nbsp;
-                        <label>Online class</label>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <h3>
-                        Developing &amp; distributing NuGet packages
-                    </h3>
-                    <p>
-                        An Azure DevOps task that generates a report after analysing the meta tags of each page on your website.
-                    </p>
-                    <div>
-                        <a href="#">
-                            <i class="mdi mdi-earth material-icons" aria-hidden="true"></i>
-                        </a>
-                        <a href="#">
-                            <i class="mdi mdi-github-circle material-icons" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="project-header" style="background-image: url('../images/projects/cicd-docs.png');">
-                    <div class="project-header-contents">
-                        &nbsp;
-                        <label>Web app</label>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <h3>
-                        CI/CD Docs
-                    </h3>
-                    <p>
-                        Documenting your Azure DevOps pipeline was never easier - export, upload and go.
-                    </p>
-                    <div>
-                        <a href="#">
-                            <i class="mdi mdi-earth material-icons" aria-hidden="true"></i>
-                        </a>
-                        <a href="#">
-                            <i class="mdi mdi-github-circle material-icons" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </section>
+            {{/projects}}
         </div>
     </div>
 </div>

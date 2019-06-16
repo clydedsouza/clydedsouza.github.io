@@ -41,8 +41,8 @@
 
         .project-header {
             background-color: $primary-accent;
-            background-size: contain;
-            min-height: 240px;
+            background-size: cover;
+            min-height: 207px;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
             margin-top: -1px;
@@ -68,16 +68,6 @@
         }
 
         .project-header-contents {
-            &:before {
-                /*content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0;
-                bottom: 0;
-                background: $primary-accent-transparent; //rgba(0,0,0,0.7);
-                z-index: -1;*/
-            }
 
             div {
                 font-size: 20px;
@@ -123,7 +113,6 @@
 
             .about_section {
                 font-size: 18px;
-                font-family: 'Questrial', sans-serif;
                 margin: 2vh 0px;
                 font-weight: bold;
                 word-wrap: break-word;
@@ -133,7 +122,6 @@
 }
  
  
-
 @media (max-width: 800px) {
     #pinnedProjects {
         margin: 0px;

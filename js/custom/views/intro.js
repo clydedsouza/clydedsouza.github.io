@@ -1,4 +1,5 @@
 ﻿function introViewPageLoad() {
-    switchTemplate("pinnedPartial");
+    loadPinnedProjects();
 }
+
 
