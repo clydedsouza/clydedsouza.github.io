@@ -59,6 +59,18 @@
             speakingViewPreSwitchTemplate();
         }
     },
+    "teachingPartial": {
+        "container": "#templateHolder",
+        "contents": "partials/teaching.html #teachingPartial",
+        "view": "#view",
+        "cache": "",
+        "initView": function () {
+            teachingViewPageLoad();
+        },
+        "preSwitchTemplate": function () {
+            teachingViewPreSwitchTemplate();
+        }
+    }
 };
 
 function getTemplateProperties(templateName) { 

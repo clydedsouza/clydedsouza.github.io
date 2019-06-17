@@ -8,6 +8,7 @@
       "js/custom/views/pinned.js",
       "js/custom/views/projects.js",
       "js/custom/views/speaking.js",
+      "js/custom/views/teaching.js",
       "js/custom/views/projectRepeater.js",
       "js/custom/templateEngine.js",
       "js/custom/app.js"

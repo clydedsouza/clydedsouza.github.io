@@ -624,6 +624,16 @@ function speakingViewPreSwitchTemplate() {
 }
 
 
+function teachingViewPageLoad() {
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-teaching.json");
+}
+
+
+function teachingViewPreSwitchTemplate() {
+    switchTemplate("teachingPartial", {});
+}
+
+
 function projectRepeaterViewPageLoad() {
 }
 
@@ -708,6 +718,18 @@ var templates = {
             speakingViewPreSwitchTemplate();
         }
     },
+    "teachingPartial": {
+        "container": "#templateHolder",
+        "contents": "partials/teaching.html #teachingPartial",
+        "view": "#view",
+        "cache": "",
+        "initView": function () {
+            teachingViewPageLoad();
+        },
+        "preSwitchTemplate": function () {
+            teachingViewPreSwitchTemplate();
+        }
+    }
 };
 
 function getTemplateProperties(templateName) { 
