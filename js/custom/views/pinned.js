@@ -1,13 +1,17 @@
 ﻿function pinnedViewPageLoad() {
 }
 
-function loadPinnedProjects() {
+function pinnedViewPreSwitchTemplate() {
+    loadPinnedItems();
+}
+
+function loadPinnedItems() {
     $.get("https://api.clydedsouza.net/all-pinned.json", function (data) {
-        getPinnedProjects(data);
+        getPinnedItems(data);
     });
 }
 
-function getPinnedProjects(data) {
+function getPinnedItems(data) {
     var pinnedProjectData = {projects:[]};
     for (var i = 0; i < Object.keys(data).length; i++) {
         pinnedProjectData.projects.push(data[Object.keys(data)[i]]);

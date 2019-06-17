@@ -1,12 +1,12 @@
-﻿<div id="pinnedPartial">
-    <div id="pinnedProjects">
-        <h2>Pinned projects</h2>
+﻿<div id="projectsRepeaterPartial">
+    <div id="pinnedProjects"> 
         <div id="pinnedProjectsList">
             {{#projects}}
             <section>
                 <div class="project-header" style="background-image: url('{{image}}');">
                     <div class="project-header-contents">
                         <label>{{category}}</label>
+                        <label>{{date}}</label>
                     </div>
                 </div>
                 <div class="project-body">
@@ -15,6 +15,11 @@
                     </h3>
                     <p>
                         {{description}}
+                    </p>
+                    <p>
+                        {{#madeUsing}}
+                        <label>{{.}}</label>
+                        {{/madeUsing}}
                     </p>
                     <div>
                         {{#hasWebsite}}

@@ -42,7 +42,7 @@
         .project-header {
             background-color: $primary-accent;
             background-size: cover;
-            min-height: 207px;
+            min-height: 181px;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
             margin-top: -1px;
@@ -57,9 +57,14 @@
                 font-size: x-small;
                 letter-spacing: 2px;
                 position: relative;
-                left: -11px;
+                left: -4px;
                 top: 7px;
                 font-weight: bold;
+            }
+
+            label:nth-of-type(2) {
+                top: 28px;
+                left: -49px;
             }
 
             div {
@@ -82,7 +87,7 @@
                 color: white;
                 font-size: 22px;
                 font-weight: normal;
-                margin: 18px 0;
+                margin: 9px 0;
                 margin-block-end: 0;
             }
 
@@ -90,12 +95,21 @@
                 font-size: small;
             }
 
+            p > label {
+                background-color: #ffffff30;
+                color: white;
+                padding: 1px 9px;
+                border-radius: 10px;
+                display: inline-block;
+                margin: 9px 0 0 0;
+            }
+
             div:last-child {
                 text-align: right;
                 margin-bottom: 9px;
-                
-                a{
-                    text-decoration:none;
+
+                a {
+                    text-decoration: none;
                 }
 
                 i.material-icons {

@@ -5,6 +5,6 @@ $(document).ready(function () {
     $("#display nav a").on('click', function () {
         $("#display nav a").removeClass('active');
         $(this).addClass('active');
-        switchTemplate($(this).attr('data-partialview'), {});
+        templates[$(this).attr('data-partialview')].preSwitchTemplate(); 
     });
 });

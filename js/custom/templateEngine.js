@@ -6,6 +6,9 @@
         "cache": "",
         "initView": function () {
             introViewPageLoad();
+        },
+        "preSwitchTemplate": function () {
+            introViewPreSwitchTemplate();
         }
     },
     "pinnedPartial": {
@@ -15,14 +18,33 @@
         "cache": "",
         "initView": function () {
             pinnedViewPageLoad();
+        },
+        "preSwitchTemplate": function () {
+            //pinnedViewPreSwitchTemplate();
         }
     },
-    "portfolioPartial": {
+    "projectsPartial": {
         "container": "#templateHolder",
-        "contents": "partials/portfolio.html #portfolioPartial",
+        "contents": "partials/projects.html #projectsPartial",
         "view": "#view",
         "cache": "",
         "initView": function () { 
+            projectViewPageLoad();
+        },
+        "preSwitchTemplate": function () {
+            projectViewPreSwitchTemplate();
+        }
+    },
+    "projectsRepeaterPartial": {
+        "container": "#projectsPartialTemplateHolder",
+        "contents": "partials/projectsRepeater.html #projectsRepeaterPartial",
+        "view": "#projectsPartialView",
+        "cache": "",
+        "initView": function () {
+            projectRepeaterViewPageLoad();
+        },
+        "preSwitchTemplate": function () {
+           // projectViewPreSwitchTemplate();
         }
     }
 };
