@@ -7,6 +7,7 @@
       "js/custom/views/intro.js",
       "js/custom/views/pinned.js",
       "js/custom/views/projects.js",
+      "js/custom/views/speaking.js",
       "js/custom/views/projectRepeater.js",
       "js/custom/templateEngine.js",
       "js/custom/app.js"

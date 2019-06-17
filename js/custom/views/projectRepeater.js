@@ -1,13 +1,13 @@
 ﻿function projectRepeaterViewPageLoad() {
 }
 
-function projectRepeaterViewPreSwitchTemplate() {
-    loadProjectItems();
+function projectRepeaterViewPreSwitchTemplate(url) {
+    loadProjectItems(url);
 }
 
 
-function loadProjectItems() {
-    $.get("https://api.clydedsouza.net/all-projects.json", function (data) {
+function loadProjectItems(url) {
+    $.get(url, function (data) {
         getProjectItems(data);
     });
 }

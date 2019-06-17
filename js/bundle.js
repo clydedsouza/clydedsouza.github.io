@@ -605,7 +605,7 @@ function getPinnedItems(data) {
 
 
 function projectViewPageLoad() {
-    projectRepeaterViewPreSwitchTemplate();
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-projects.json");
 }
 
 
@@ -614,16 +614,26 @@ function projectViewPreSwitchTemplate() {
 }
 
 
+function speakingViewPageLoad() {
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-speaking.json");
+}
+
+
+function speakingViewPreSwitchTemplate() {
+    switchTemplate("speakingPartial", {});
+}
+
+
 function projectRepeaterViewPageLoad() {
 }
 
-function projectRepeaterViewPreSwitchTemplate() {
-    loadProjectItems();
+function projectRepeaterViewPreSwitchTemplate(url) {
+    loadProjectItems(url);
 }
 
 
-function loadProjectItems() {
-    $.get("https://api.clydedsouza.net/all-projects.json", function (data) {
+function loadProjectItems(url) {
+    $.get(url, function (data) {
         getProjectItems(data);
     });
 }
@@ -685,7 +695,19 @@ var templates = {
         "preSwitchTemplate": function () {
            // projectViewPreSwitchTemplate();
         }
-    }
+    },
+    "speakingPartial": {
+        "container": "#templateHolder",
+        "contents": "partials/speaking.html #speakingPartial",
+        "view": "#view",
+        "cache": "",
+        "initView": function () {
+            speakingViewPageLoad();
+        },
+        "preSwitchTemplate": function () {
+            speakingViewPreSwitchTemplate();
+        }
+    },
 };
 
 function getTemplateProperties(templateName) { 

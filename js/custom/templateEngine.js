@@ -46,7 +46,19 @@
         "preSwitchTemplate": function () {
            // projectViewPreSwitchTemplate();
         }
-    }
+    },
+    "speakingPartial": {
+        "container": "#templateHolder",
+        "contents": "partials/speaking.html #speakingPartial",
+        "view": "#view",
+        "cache": "",
+        "initView": function () {
+            speakingViewPageLoad();
+        },
+        "preSwitchTemplate": function () {
+            speakingViewPreSwitchTemplate();
+        }
+    },
 };
 
 function getTemplateProperties(templateName) { 
