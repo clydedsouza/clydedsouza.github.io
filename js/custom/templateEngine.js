@@ -5,6 +5,7 @@
         "view": "#view",
         "cache": "",
         "initView": function () {
+            activateNavigationMenuItem("introPartial");
             introViewPageLoad();
         },
         "preSwitchTemplate": function () {
@@ -29,6 +30,8 @@
         "view": "#view",
         "cache": "",
         "initView": function () { 
+            activateNavigationMenuItem("projectsPartial");
+            console.log("reach");
             projectViewPageLoad();
         },
         "preSwitchTemplate": function () {
@@ -53,6 +56,7 @@
         "view": "#view",
         "cache": "",
         "initView": function () {
+            activateNavigationMenuItem("speakingPartial");
             speakingViewPageLoad();
         },
         "preSwitchTemplate": function () {
@@ -65,6 +69,7 @@
         "view": "#view",
         "cache": "",
         "initView": function () {
+            activateNavigationMenuItem("teachingPartial");
             teachingViewPageLoad();
         },
         "preSwitchTemplate": function () {
@@ -75,6 +80,11 @@
 
 function getTemplateProperties(templateName) { 
     return templates[templateName];
+}
+
+function activateNavigationMenuItem(templateName) {
+    $("#display nav a").removeClass('active');
+    $("#display nav a[data-partialview='" + templateName+"']").addClass('active');
 }
 
 function renderTemplateToView(htmlViewID, htmlTemplate, jsData) {

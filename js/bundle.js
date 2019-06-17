@@ -664,6 +664,7 @@ var templates = {
         "view": "#view",
         "cache": "",
         "initView": function () {
+            activateNavigationMenuItem("introPartial");
             introViewPageLoad();
         },
         "preSwitchTemplate": function () {
@@ -688,6 +689,8 @@ var templates = {
         "view": "#view",
         "cache": "",
         "initView": function () { 
+            activateNavigationMenuItem("projectsPartial");
+            console.log("reach");
             projectViewPageLoad();
         },
         "preSwitchTemplate": function () {
@@ -712,6 +715,7 @@ var templates = {
         "view": "#view",
         "cache": "",
         "initView": function () {
+            activateNavigationMenuItem("speakingPartial");
             speakingViewPageLoad();
         },
         "preSwitchTemplate": function () {
@@ -724,6 +728,7 @@ var templates = {
         "view": "#view",
         "cache": "",
         "initView": function () {
+            activateNavigationMenuItem("teachingPartial");
             teachingViewPageLoad();
         },
         "preSwitchTemplate": function () {
@@ -734,6 +739,11 @@ var templates = {
 
 function getTemplateProperties(templateName) { 
     return templates[templateName];
+}
+
+function activateNavigationMenuItem(templateName) {
+    $("#display nav a").removeClass('active');
+    $("#display nav a[data-partialview='" + templateName+"']").addClass('active');
 }
 
 function renderTemplateToView(htmlViewID, htmlTemplate, jsData) {
@@ -764,9 +774,35 @@ function switchTemplate(templateName, templateData) {
 
 
  
+function containsPermanentRedirectURLs(url) {
+    return containsOldProjectURL(url) || containsOldAboutURL(url);
+}
+
+function containsOldProjectURL(url) {
+    return url.indexOf("#/projects") > 0;
+}
+
+function containsOldAboutURL(url) {
+    return url.indexOf("#/") > 0;
+}
+
+function redirectOldURLs(url) {
+    if (containsOldProjectURL(url)) {
+        switchTemplate("projectsPartial", {});
+    }
+    else {
+        switchTemplate("introPartial", {});
+    }
+}
 // Start here
 $(document).ready(function () {
-    switchTemplate("introPartial", {});
+    if (!containsPermanentRedirectURLs(window.location.href)) {
+        switchTemplate("introPartial", {});
+    }
+    else {
+        redirectOldURLs(window.location.href);
+    }
+    
 
     $("#display nav a").on('click', function () {
         $("#display nav a").removeClass('active');
