@@ -75,6 +75,17 @@
         "preSwitchTemplate": function () {
             teachingViewPreSwitchTemplate();
         }
+    },
+    "searchControlPartial": {
+        "container": "#searchControlPartialTemplateHolder",
+        "contents": "partials/searchControl.html #searchControlPartial",
+        "view": "#searchControlPartialView",
+        "cache": "",
+        "initView": function () { 
+            searchControlViewPageLoad();
+        },
+        "preSwitchTemplate": function () { 
+        }
     }
 };
 

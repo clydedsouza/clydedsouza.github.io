@@ -1,5 +1,5 @@
 ﻿function speakingViewPageLoad() {
-    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-speaking.json");
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-speaking.json", "key-speaking");
 }
 
 

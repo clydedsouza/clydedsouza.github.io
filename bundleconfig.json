@@ -10,6 +10,7 @@
       "js/custom/views/speaking.js",
       "js/custom/views/teaching.js",
       "js/custom/views/projectRepeater.js",
+      "js/custom/views/searchControl.js",
       "js/custom/templateEngine.js",
       "js/custom/urlEngine.js",
       "js/custom/app.js"
