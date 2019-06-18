@@ -4,6 +4,8 @@
     "inputFiles": [
       "js/vendor/jquery-3.4.1.min.js",
       "js/vendor/mustache.js",
+      "js/vendor/bootstrap.min.js",
+      "js/vendor/bootstrap-multiselect.js",
       "js/custom/views/intro.js",
       "js/custom/views/pinned.js",
       "js/custom/views/projects.js",

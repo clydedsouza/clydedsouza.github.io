@@ -1,5 +1,9 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Dosis|Roboto');
 
+
+@import "vendor/bootstrap.min";
+@import "vendor/bootstrap-multiselect";
+
 @import "modules/header";
 @import "modules/portfolioCards";
 @import "modules/sidebar";
@@ -7,3 +11,4 @@
 @import "modules/footer";
 @import "modules/loading";
 @import "modules/menu";
+
