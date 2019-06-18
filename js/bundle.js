@@ -617,6 +617,7 @@ function projectViewPreSwitchTemplate() {
 
 function speakingViewPageLoad() {
     projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-speaking.json", "speakingPartial");
+    searchControlViewPreSwitchTemplate();
 }
 
 
@@ -627,6 +628,7 @@ function speakingViewPreSwitchTemplate() {
 
 function teachingViewPageLoad() {
     projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-teaching.json", "teachingPartial");
+    searchControlViewPreSwitchTemplate();
 }
 
 
