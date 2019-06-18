@@ -1,5 +1,5 @@
 ﻿function teachingViewPageLoad() {
-    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-teaching.json", "key-teaching");
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-teaching.json", "teachingPartial");
 }
 
 

@@ -605,7 +605,7 @@ function getPinnedItems(data) {
 
 
 function projectViewPageLoad() {
-    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-projects.json", "key-projects");
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-projects.json", "projectsPartial");
     searchControlViewPreSwitchTemplate();
 }
 
@@ -616,7 +616,7 @@ function projectViewPreSwitchTemplate() {
 
 
 function speakingViewPageLoad() {
-    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-speaking.json", "key-speaking");
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-speaking.json", "speakingPartial");
 }
 
 
@@ -626,7 +626,7 @@ function speakingViewPreSwitchTemplate() {
 
 
 function teachingViewPageLoad() {
-    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-teaching.json", "key-teaching");
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-teaching.json", "teachingPartial");
 }
 
 
@@ -659,8 +659,8 @@ function getProjectItems(data, key) {
     switchTemplate("projectsRepeaterPartial", allProjectData);
 }
 
-function filterAndDisplayProjectItems(filter) {
-    var localValue = getLocalData("key-projects"); 
+function filterAndDisplayProjectItems(filter, searchControlParentView) {
+    var localValue = getLocalData(searchControlParentView); 
     if (localValue === "" || localValue === null) {
         return;
     }
@@ -704,9 +704,11 @@ function searchControlViewPreSwitchTemplate() {
 
 
 function initSearchControls() {
+    var searchControlParentView = $("#display nav a.active").attr('data-partialview');
+
     $("#searchBtn").on("click", function () {
         var filter = { searchText: $("#searchTxt").val() };
-        filterAndDisplayProjectItems(filter);
+        filterAndDisplayProjectItems(filter, searchControlParentView);
     });
     $("#searchTxt").on("keyup", function () {
         var searchInput = $("#searchTxt").val();
@@ -714,7 +716,7 @@ function initSearchControls() {
             return;
         }
         var filter = { searchText: searchInput };
-        filterAndDisplayProjectItems(filter);
+        filterAndDisplayProjectItems(filter, searchControlParentView);
     });
 }
 

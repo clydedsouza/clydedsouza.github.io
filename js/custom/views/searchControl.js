@@ -9,9 +9,11 @@ function searchControlViewPreSwitchTemplate() {
 
 
 function initSearchControls() {
+    var searchControlParentView = $("#display nav a.active").attr('data-partialview');
+
     $("#searchBtn").on("click", function () {
         var filter = { searchText: $("#searchTxt").val() };
-        filterAndDisplayProjectItems(filter);
+        filterAndDisplayProjectItems(filter, searchControlParentView);
     });
     $("#searchTxt").on("keyup", function () {
         var searchInput = $("#searchTxt").val();
@@ -19,6 +21,6 @@ function initSearchControls() {
             return;
         }
         var filter = { searchText: searchInput };
-        filterAndDisplayProjectItems(filter);
+        filterAndDisplayProjectItems(filter, searchControlParentView);
     });
 }

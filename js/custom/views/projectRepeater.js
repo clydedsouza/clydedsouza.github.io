@@ -22,8 +22,8 @@ function getProjectItems(data, key) {
     switchTemplate("projectsRepeaterPartial", allProjectData);
 }
 
-function filterAndDisplayProjectItems(filter) {
-    var localValue = getLocalData("key-projects"); 
+function filterAndDisplayProjectItems(filter, searchControlParentView) {
+    var localValue = getLocalData(searchControlParentView); 
     if (localValue === "" || localValue === null) {
         return;
     }
