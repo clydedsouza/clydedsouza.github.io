@@ -2522,44 +2522,66 @@ function initSearchControls() {
 function initMultiselect(key) {
     console.log("initMultiselect");
 
-    var localValue = getLocalData(key); 
-    var projectItemsData = JSON.parse(localValue); 
-    var multiselectCategories = [];
+    var localValue = getLocalData(key);
+    var projectItemsData = JSON.parse(localValue);
+    var multiselectData = {categories : [], madeUsing: []};
 
     for (var i = 0; i < projectItemsData.projects.length; i++) {
 
         if (key === "projectsPartial") {
             for (var j = 0; j < projectItemsData.projects[i].madeUsing.length; j++) {
-                multiselectCategories.push( projectItemsData.projects[i].madeUsing[j] );
+                multiselectData.madeUsing.push(projectItemsData.projects[i].madeUsing[j]); 
             } 
         }
-        
-    }
-    console.log(multiselectCategories); 
-    var uniqueNames = [];
-    $.each(multiselectCategories, function (i, el) {
-        if ($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
-    });
 
-    var multiselectCategoriesData = [];
-    for (var k = 0; k < uniqueNames.length; k++) {
-        multiselectCategoriesData.push({
-            label: uniqueNames[k],
-            title: uniqueNames[k],
-            value: uniqueNames[k]
+        multiselectData.categories.push(projectItemsData.projects[i].category);
+        
+    } 
+
+    var refinedMultiselectData = { categories: [], madeUsing: [] };
+    
+    $.each(multiselectData.categories, function (i, el) { 
+        var targetData = refinedMultiselectData.categories.map(function (a) { return a.label; }); 
+        if ($.inArray(el, targetData) === -1) {
+            refinedMultiselectData.categories.push({
+                label: el,
+                title: el,
+                value: el
+            }); 
+        }
+    });     
+
+    if (key === "projectsPartial") {
+        $.each(multiselectData.madeUsing, function (i, el) {
+            var targetData = refinedMultiselectData.madeUsing.map(function (a) { return a.label; });
+            if ($.inArray(el, targetData) === -1) {
+                refinedMultiselectData.madeUsing.push({
+                    label: el,
+                    title: el,
+                    value: el
+                });
+            }
         });
+        $('#example-getting-started').multiselect({
+            enableFiltering: true,
+            includeSelectAllOption: true,
+            maxHeight: 200,
+            nonSelectedText: 'Filter by tech'
+        });
+        $('#example-getting-started').multiselect('dataprovider', refinedMultiselectData.madeUsing);
     }
-    console.log(multiselectCategoriesData);
-    $('#example-dropUp').multiselect({
+    else {
+        $('#example-getting-started').hide();
+    }
+
+
+    $('#categoriesMultiselect').multiselect({
         enableFiltering: true,
         includeSelectAllOption: true,
-        maxHeight: 400,
-        dropUp: true
+        maxHeight: 200,
+        nonSelectedText: 'Filter by category'
     });
-    $('#example-getting-started').multiselect({
-        maxHeight: 200
-    });
-    $('#example-getting-started').multiselect('dataprovider', multiselectCategoriesData);
+    $('#categoriesMultiselect').multiselect('dataprovider', refinedMultiselectData.categories);
 }
 
 var templates = {
