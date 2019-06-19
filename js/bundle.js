@@ -2388,8 +2388,8 @@ function getPinnedItems(data) {
 
 
 function projectViewPageLoad() {
+    
     projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-projects.json", "projectsPartial");
-    searchControlViewPreSwitchTemplate();
 }
 
 
@@ -2429,15 +2429,25 @@ function projectRepeaterViewPreSwitchTemplate(url, key) {
 
 
 function loadProjectItems(url, key) {
-    $.get(url, function (data) {
-        getProjectItems(data, key);
-    });
+    var localValue = getLocalData(key); 
+    if (localValue === "" || localValue === null) {
+        $.get(url, function (data) {
+            console.log("$.get");
+            getProjectItems(data, key);
+            searchControlViewPreSwitchTemplate();
+        });
+    }
+    else {
+        var data = JSON.parse(localValue); 
+        switchTemplate("projectsRepeaterPartial", data);
+        searchControlViewPreSwitchTemplate();
+    }    
 }
 
 function getProjectItems(data, key) {
     var allProjectData = { projects: [] };
     for (var i = 0; i < Object.keys(data).length; i++) {
-        allProjectData.projects.push(data[Object.keys(data)[i]]);
+        allProjectData.projects.push(data[Object.keys(data)[i]]); 
     }
     allProjectData.projects = allProjectData.projects.reverse();
     storeDataLocally(key, allProjectData); 
@@ -2480,6 +2490,7 @@ function getLocalData(dataKey) {
 }
 function searchControlViewPageLoad() {
     initSearchControls();
+    console.log("searchControlViewPageLoad");
 }
 
 
@@ -2490,21 +2501,14 @@ function searchControlViewPreSwitchTemplate() {
 
 function initSearchControls() {
     var searchControlParentView = $("#display nav a.active").attr('data-partialview');
-    var data = []; 
-    for (var i = 0; i < 100; i++) {
-        data.push({
-            label: 'Option ' + (i + 1) ,
-            title: 'Option ' + (i + 1) ,
-            value: i + '-'
-        });
-    }
-    $('#example-getting-started').multiselect('dataprovider', data);
-    //$('#example-getting-started').multiselect();
+
+    initMultiselect(searchControlParentView);
 
     $("#searchBtn").on("click", function () {
         var filter = { searchText: $("#searchTxt").val() };
         filterAndDisplayProjectItems(filter, searchControlParentView);
     });
+
     $("#searchTxt").on("keyup", function () {
         var searchInput = $("#searchTxt").val();
         if (searchInput.length > 0 && searchInput.length < 3) {
@@ -2513,6 +2517,49 @@ function initSearchControls() {
         var filter = { searchText: searchInput };
         filterAndDisplayProjectItems(filter, searchControlParentView);
     });
+}
+
+function initMultiselect(key) {
+    console.log("initMultiselect");
+
+    var localValue = getLocalData(key); 
+    var projectItemsData = JSON.parse(localValue); 
+    var multiselectCategories = [];
+
+    for (var i = 0; i < projectItemsData.projects.length; i++) {
+
+        if (key === "projectsPartial") {
+            for (var j = 0; j < projectItemsData.projects[i].madeUsing.length; j++) {
+                multiselectCategories.push( projectItemsData.projects[i].madeUsing[j] );
+            } 
+        }
+        
+    }
+    console.log(multiselectCategories); 
+    var uniqueNames = [];
+    $.each(multiselectCategories, function (i, el) {
+        if ($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+    });
+
+    var multiselectCategoriesData = [];
+    for (var k = 0; k < uniqueNames.length; k++) {
+        multiselectCategoriesData.push({
+            label: uniqueNames[k],
+            title: uniqueNames[k],
+            value: uniqueNames[k]
+        });
+    }
+    console.log(multiselectCategoriesData);
+    $('#example-dropUp').multiselect({
+        enableFiltering: true,
+        includeSelectAllOption: true,
+        maxHeight: 400,
+        dropUp: true
+    });
+    $('#example-getting-started').multiselect({
+        maxHeight: 200
+    });
+    $('#example-getting-started').multiselect('dataprovider', multiselectCategoriesData);
 }
 
 var templates = {

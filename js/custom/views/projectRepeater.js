@@ -7,15 +7,25 @@ function projectRepeaterViewPreSwitchTemplate(url, key) {
 
 
 function loadProjectItems(url, key) {
-    $.get(url, function (data) {
-        getProjectItems(data, key);
-    });
+    var localValue = getLocalData(key); 
+    if (localValue === "" || localValue === null) {
+        $.get(url, function (data) {
+            console.log("$.get");
+            getProjectItems(data, key);
+            searchControlViewPreSwitchTemplate();
+        });
+    }
+    else {
+        var data = JSON.parse(localValue); 
+        switchTemplate("projectsRepeaterPartial", data);
+        searchControlViewPreSwitchTemplate();
+    }    
 }
 
 function getProjectItems(data, key) {
     var allProjectData = { projects: [] };
     for (var i = 0; i < Object.keys(data).length; i++) {
-        allProjectData.projects.push(data[Object.keys(data)[i]]);
+        allProjectData.projects.push(data[Object.keys(data)[i]]); 
     }
     allProjectData.projects = allProjectData.projects.reverse();
     storeDataLocally(key, allProjectData); 
