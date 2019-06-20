@@ -9,14 +9,12 @@ function projectRepeaterViewPreSwitchTemplate(url, key) {
 function loadProjectItems(url, key) {
     var localValue = getLocalData(key); 
     if (localValue === "" || localValue === null) {
-        $.get(url, function (data) {
-            console.log("$.get");
+        $.get(url, function (data) { 
             getProjectItems(data, key);
             searchControlViewPreSwitchTemplate();
         });
     }
-    else {
-        //var data = JSON.parse(localValue); 
+    else { 
         switchTemplate("projectsRepeaterPartial", localValue);
         searchControlViewPreSwitchTemplate();
     }    

@@ -1,6 +1,5 @@
 ﻿function searchControlViewPageLoad() {
-    initSearchControls();
-    console.log("searchControlViewPageLoad");
+    initSearchControls(); 
 }
 
 
@@ -30,9 +29,13 @@ function initSearchControls() {
 }
 
 function initMultiselect(key) {
-    console.log("initMultiselect");
-    var localValue = getLocalData(key);
-    var projectItemsData = localValue; //JSON.parse(localValue);
+    var projectItemsData = getLocalData(key);
+    if (projectItemsData === "" || projectItemsData === null) {
+        $('#example-getting-started').hide();
+        $('#categoriesMultiselect').hide();
+        return;
+    }
+
     var multiselectData = {categories : [], madeUsing: []};
 
     for (var i = 0; i < projectItemsData.projects.length; i++) {
