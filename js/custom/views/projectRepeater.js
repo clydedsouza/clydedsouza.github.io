@@ -34,12 +34,11 @@ function getProjectItems(data, key) {
 }
 
 function filterAndDisplayProjectItems(filter, searchControlParentView) {
-    var localValue = getLocalData(searchControlParentView); 
-    if (localValue === "" || localValue === null) {
+    var projectItemData = getLocalData(searchControlParentView); 
+    if (projectItemData === "" || projectItemData === null) {
         return;
     }
 
-    var projectItemData = JSON.parse(localValue);
     if (filter.searchText !== "") {
         projectItemData = applySearchFilter(filter, projectItemData);
     }

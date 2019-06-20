@@ -2456,12 +2456,11 @@ function getProjectItems(data, key) {
 }
 
 function filterAndDisplayProjectItems(filter, searchControlParentView) {
-    var localValue = getLocalData(searchControlParentView); 
-    if (localValue === "" || localValue === null) {
+    var projectItemData = getLocalData(searchControlParentView); 
+    if (projectItemData === "" || projectItemData === null) {
         return;
     }
 
-    var projectItemData = JSON.parse(localValue);
     if (filter.searchText !== "") {
         projectItemData = applySearchFilter(filter, projectItemData);
     }
@@ -2533,7 +2532,7 @@ function initSearchControls() {
 function initMultiselect(key) {
     var projectItemsData = getLocalData(key);
     if (projectItemsData === "" || projectItemsData === null) {
-        $('#example-getting-started').hide();
+        $('#techMultiselect').hide();
         $('#categoriesMultiselect').hide();
         return;
     }
@@ -2572,7 +2571,7 @@ function initMultiselect(key) {
                 });
             }
         });
-        $('#example-getting-started').multiselect({
+        $('#techMultiselect').multiselect({
             enableFiltering: true,
             includeSelectAllOption: true,
             maxHeight: 200,
@@ -2583,10 +2582,10 @@ function initMultiselect(key) {
                 filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="mdi mdi-close material-icons"></i></button></span>'
             }
         });
-        $('#example-getting-started').multiselect('dataprovider', refinedMultiselectData.madeUsing);
+        $('#techMultiselect').multiselect('dataprovider', refinedMultiselectData.madeUsing);
     }
     else {
-        $('#example-getting-started').hide();
+        $('#techMultiselect').hide();
     }
 
 
