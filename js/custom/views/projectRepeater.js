@@ -16,8 +16,8 @@ function loadProjectItems(url, key) {
         });
     }
     else {
-        var data = JSON.parse(localValue); 
-        switchTemplate("projectsRepeaterPartial", data);
+        //var data = JSON.parse(localValue); 
+        switchTemplate("projectsRepeaterPartial", localValue);
         searchControlViewPreSwitchTemplate();
     }    
 }
@@ -28,6 +28,9 @@ function getProjectItems(data, key) {
         allProjectData.projects.push(data[Object.keys(data)[i]]); 
     }
     allProjectData.projects = allProjectData.projects.reverse();
+    var newdate = new Date();
+    newdate.setDate(newdate.getDate() + 3 );
+    allProjectData.expiresOn = newdate.getTime();
     storeDataLocally(key, allProjectData); 
     switchTemplate("projectsRepeaterPartial", allProjectData);
 }
@@ -64,5 +67,16 @@ function storeDataLocally(dataKey, dataValue) {
 }
 
 function getLocalData(dataKey) {
-    return window.localStorage.getItem(dataKey);
+    var localdata = window.localStorage.getItem(dataKey);
+    if (localdata === "" || localdata === null) {
+        return "";
+    }
+    localdata = JSON.parse(localdata);
+    if (localdata.expiresOn < new Date().getTime()) {
+        return "";
+    }
+    return localdata; //window.localStorage.getItem(dataKey);
 }
+ 
+ 
+ 

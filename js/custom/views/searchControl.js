@@ -31,9 +31,8 @@ function initSearchControls() {
 
 function initMultiselect(key) {
     console.log("initMultiselect");
-
     var localValue = getLocalData(key);
-    var projectItemsData = JSON.parse(localValue);
+    var projectItemsData = localValue; //JSON.parse(localValue);
     var multiselectData = {categories : [], madeUsing: []};
 
     for (var i = 0; i < projectItemsData.projects.length; i++) {
@@ -54,9 +53,7 @@ function initMultiselect(key) {
         var targetData = refinedMultiselectData.categories.map(function (a) { return a.label; }); 
         if ($.inArray(el, targetData) === -1) {
             refinedMultiselectData.categories.push({
-                label: el,
-                title: el,
-                value: el
+                label: el, title: el, value: el
             }); 
         }
     });     
@@ -66,9 +63,7 @@ function initMultiselect(key) {
             var targetData = refinedMultiselectData.madeUsing.map(function (a) { return a.label; });
             if ($.inArray(el, targetData) === -1) {
                 refinedMultiselectData.madeUsing.push({
-                    label: el,
-                    title: el,
-                    value: el
+                    label: el, title: el, value: el
                 });
             }
         });

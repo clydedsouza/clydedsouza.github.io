@@ -2438,8 +2438,8 @@ function loadProjectItems(url, key) {
         });
     }
     else {
-        var data = JSON.parse(localValue); 
-        switchTemplate("projectsRepeaterPartial", data);
+        //var data = JSON.parse(localValue); 
+        switchTemplate("projectsRepeaterPartial", localValue);
         searchControlViewPreSwitchTemplate();
     }    
 }
@@ -2450,6 +2450,9 @@ function getProjectItems(data, key) {
         allProjectData.projects.push(data[Object.keys(data)[i]]); 
     }
     allProjectData.projects = allProjectData.projects.reverse();
+    var newdate = new Date();
+    newdate.setDate(newdate.getDate() + 3 );
+    allProjectData.expiresOn = newdate.getTime();
     storeDataLocally(key, allProjectData); 
     switchTemplate("projectsRepeaterPartial", allProjectData);
 }
@@ -2486,8 +2489,19 @@ function storeDataLocally(dataKey, dataValue) {
 }
 
 function getLocalData(dataKey) {
-    return window.localStorage.getItem(dataKey);
+    var localdata = window.localStorage.getItem(dataKey);
+    if (localdata === "" || localdata === null) {
+        return "";
+    }
+    localdata = JSON.parse(localdata);
+    if (localdata.expiresOn < new Date().getTime()) {
+        return "";
+    }
+    return localdata; //window.localStorage.getItem(dataKey);
 }
+ 
+ 
+ 
 function searchControlViewPageLoad() {
     initSearchControls();
     console.log("searchControlViewPageLoad");
@@ -2521,9 +2535,8 @@ function initSearchControls() {
 
 function initMultiselect(key) {
     console.log("initMultiselect");
-
     var localValue = getLocalData(key);
-    var projectItemsData = JSON.parse(localValue);
+    var projectItemsData = localValue; //JSON.parse(localValue);
     var multiselectData = {categories : [], madeUsing: []};
 
     for (var i = 0; i < projectItemsData.projects.length; i++) {
@@ -2544,9 +2557,7 @@ function initMultiselect(key) {
         var targetData = refinedMultiselectData.categories.map(function (a) { return a.label; }); 
         if ($.inArray(el, targetData) === -1) {
             refinedMultiselectData.categories.push({
-                label: el,
-                title: el,
-                value: el
+                label: el, title: el, value: el
             }); 
         }
     });     
@@ -2556,9 +2567,7 @@ function initMultiselect(key) {
             var targetData = refinedMultiselectData.madeUsing.map(function (a) { return a.label; });
             if ($.inArray(el, targetData) === -1) {
                 refinedMultiselectData.madeUsing.push({
-                    label: el,
-                    title: el,
-                    value: el
+                    label: el, title: el, value: el
                 });
             }
         });
