@@ -11,27 +11,14 @@
         "preSwitchTemplate": function () {
             introViewPreSwitchTemplate();
         }
-    },
-    "pinnedPartial": {
-        "container": "#introPartialTemplateHolder",
-        "contents": "partials/pinned.html #pinnedPartial",
-        "view": "#introPartialView",
-        "cache": "",
-        "initView": function () {
-            pinnedViewPageLoad();
-        },
-        "preSwitchTemplate": function () {
-            //pinnedViewPreSwitchTemplate();
-        }
-    },
+    }, 
     "projectsPartial": {
         "container": "#templateHolder",
         "contents": "partials/projects.html #projectsPartial",
         "view": "#view",
         "cache": "",
         "initView": function () { 
-            activateNavigationMenuItem("projectsPartial");
-            console.log("reach");
+            activateNavigationMenuItem("projectsPartial"); 
             projectViewPageLoad();
         },
         "preSwitchTemplate": function () {

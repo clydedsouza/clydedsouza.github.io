@@ -6,16 +6,15 @@ function pinnedViewPreSwitchTemplate() {
 }
 
 function loadPinnedItems() {
-    $.get("https://api.clydedsouza.net/all-pinned.json", function (data) {
-        getPinnedItems(data);
-    });
-}
-
-function getPinnedItems(data) {
-    var pinnedProjectData = {projects:[]};
-    for (var i = 0; i < Object.keys(data).length; i++) {
-        pinnedProjectData.projects.push(data[Object.keys(data)[i]]);
+    var localValue = getLocalData("pinnedPartial");
+    if (localValue === "" || localValue === null) {
+        $.get("https://api.clydedsouza.net/all-pinned.json", function (data) {
+            getProjectItems(data, "pinnedPartial");
+        });
     }
-    switchTemplate("pinnedPartial", pinnedProjectData);
-}
+    else {
+        switchTemplate("projectsRepeaterPartial", localValue); 
+    }   
+} 
+ 
 

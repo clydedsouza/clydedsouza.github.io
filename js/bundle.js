@@ -2373,22 +2373,20 @@ function pinnedViewPreSwitchTemplate() {
 }
 
 function loadPinnedItems() {
-    $.get("https://api.clydedsouza.net/all-pinned.json", function (data) {
-        getPinnedItems(data);
-    });
-}
-
-function getPinnedItems(data) {
-    var pinnedProjectData = {projects:[]};
-    for (var i = 0; i < Object.keys(data).length; i++) {
-        pinnedProjectData.projects.push(data[Object.keys(data)[i]]);
+    var localValue = getLocalData("pinnedPartial");
+    if (localValue === "" || localValue === null) {
+        $.get("https://api.clydedsouza.net/all-pinned.json", function (data) {
+            getProjectItems(data, "pinnedPartial");
+        });
     }
-    switchTemplate("pinnedPartial", pinnedProjectData);
-}
+    else {
+        switchTemplate("projectsRepeaterPartial", localValue); 
+    }   
+} 
+ 
 
 
-function projectViewPageLoad() {
-    
+function projectViewPageLoad() { 
     projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-projects.json", "projectsPartial");
 }
 
@@ -2616,27 +2614,14 @@ var templates = {
         "preSwitchTemplate": function () {
             introViewPreSwitchTemplate();
         }
-    },
-    "pinnedPartial": {
-        "container": "#introPartialTemplateHolder",
-        "contents": "partials/pinned.html #pinnedPartial",
-        "view": "#introPartialView",
-        "cache": "",
-        "initView": function () {
-            pinnedViewPageLoad();
-        },
-        "preSwitchTemplate": function () {
-            //pinnedViewPreSwitchTemplate();
-        }
-    },
+    }, 
     "projectsPartial": {
         "container": "#templateHolder",
         "contents": "partials/projects.html #projectsPartial",
         "view": "#view",
         "cache": "",
         "initView": function () { 
-            activateNavigationMenuItem("projectsPartial");
-            console.log("reach");
+            activateNavigationMenuItem("projectsPartial"); 
             projectViewPageLoad();
         },
         "preSwitchTemplate": function () {
