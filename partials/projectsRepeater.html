@@ -1,12 +1,12 @@
-﻿<div id="projectsRepeaterPartial">
-    <div id="pinnedProjects"> 
+﻿<script id="projectsRepeaterPartial" type="text/x-mustache">
+    <div id="pinnedProjects">
         <div id="pinnedProjectsList">
             {{#projects}}
-            <section>
+            <section onclick="redirectToProjectDetails('{{basename}}');">
                 <div class="project-header" style="background-image: url('{{image}}');">
                     <div class="project-header-contents">
                         <div>
-                            <label>{{category}}</label> 
+                            <label>{{category}}</label>
                             <label>{{date}}</label>
                         </div>
                     </div>
@@ -40,4 +40,4 @@
             {{/projects}}
         </div>
     </div>
-</div>
+</script>

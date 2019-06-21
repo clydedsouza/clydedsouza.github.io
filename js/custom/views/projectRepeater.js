@@ -75,5 +75,11 @@ function getLocalData(dataKey) {
     return localdata; //window.localStorage.getItem(dataKey);
 }
  
- 
- 
+function redirectToProjectDetails(projectID) {
+    var projectURL = doesProjectIDContainPin(projectID) ? projectID.replace(".pin","") : projectID;
+    window.location.href = "/#/projects/" + projectURL;
+}
+
+function doesProjectIDContainPin(projectID) {
+    return projectID.indexOf(".pin") > 0;
+}
