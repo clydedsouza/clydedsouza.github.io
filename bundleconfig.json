@@ -6,6 +6,9 @@
       "js/vendor/mustache.js",
       "js/vendor/bootstrap.min.js",
       "js/vendor/bootstrap-multiselect.js",
+      "js/vendor/js-yaml.js",
+      "js/vendor/yamlFront.js",
+      "js/vendor/marked.min.js",
       "js/custom/views/intro.js",
       "js/custom/views/pinned.js",
       "js/custom/views/projects.js",
@@ -13,6 +16,7 @@
       "js/custom/views/teaching.js",
       "js/custom/views/projectRepeater.js",
       "js/custom/views/searchControl.js",
+      "js/custom/views/projectDetails.js",
       "js/custom/templateEngine.js",
       "js/custom/urlEngine.js",
       "js/custom/app.js"

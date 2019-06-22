@@ -71,13 +71,17 @@ function getLocalData(dataKey) {
     localdata = JSON.parse(localdata);
     if (localdata.expiresOn < new Date().getTime()) {
         return "";
-    }
-    return localdata; //window.localStorage.getItem(dataKey);
+    } 
+    return localdata;
 }
  
-function redirectToProjectDetails(projectID) {
-    var projectURL = doesProjectIDContainPin(projectID) ? projectID.replace(".pin","") : projectID;
-    window.location.href = "/#/projects/" + projectURL;
+function redirectToProjectDetails(projectID, relativeURL) {
+    var projectURL = doesProjectIDContainPin(projectID) ? projectID.replace(".pin", "") : projectID;
+    var projectDetailsOutput = {
+        data: "https://raw.githubusercontent.com/clydedsouza/clydedsouza-web-api/gh-pages" + relativeURL
+    };
+    switchTemplate("projectDetailsPartial",  projectDetailsOutput );
+    window.location.href = "/#/projects/" + projectURL; 
 }
 
 function doesProjectIDContainPin(projectID) {

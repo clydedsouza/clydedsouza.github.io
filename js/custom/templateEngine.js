@@ -73,6 +73,18 @@
         },
         "preSwitchTemplate": function () { 
         }
+    },
+    "projectDetailsPartial": {
+        "container": "#templateHolder",
+        "contents": "partials/projectDetails.html #projectDetailsPartial",
+        "view": "#view",
+        "cache": "",
+        "initView": function () { 
+            projectDetailsViewPageLoad();
+        },
+        "preSwitchTemplate": function () {
+            projectDetailsViewPreSwitchTemplate(window.location.href);
+        }
     }
 };
 
