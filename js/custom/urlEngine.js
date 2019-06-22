@@ -4,8 +4,8 @@ function isProjectsURL(url) {
     return url.indexOf("#/projects") > 0;
 }
 
-function isProjectDetailsURL(url) {
-    return url.indexOf("#/projects/") > 0;
+function isPortfolioURL(url) {
+    return url.indexOf("#/portfolio/") > 0;
 }
 
 function isSpeakingURL(url) {
@@ -24,7 +24,7 @@ function isAboutURL(url) {
 
 function redirectOldURLs(url) {
     
-    if (isProjectDetailsURL(url)) {
+    if (isPortfolioURL(url)) {
         templates["projectDetailsPartial"].preSwitchTemplate();
     }
     else if (isProjectsURL(url)) {

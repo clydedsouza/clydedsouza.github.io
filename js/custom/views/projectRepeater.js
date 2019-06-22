@@ -81,7 +81,7 @@ function redirectToProjectDetails(projectID, relativeURL) {
         data: "https://raw.githubusercontent.com/clydedsouza/clydedsouza-web-api/gh-pages" + relativeURL
     };
     switchTemplate("projectDetailsPartial",  projectDetailsOutput );
-    window.location.href = "/#/projects/" + projectURL; 
+    window.location.href = "/#/portfolio/" + projectURL; 
 }
 
 function doesProjectIDContainPin(projectID) {

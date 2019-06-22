@@ -6410,7 +6410,7 @@ function redirectToProjectDetails(projectID, relativeURL) {
         data: "https://raw.githubusercontent.com/clydedsouza/clydedsouza-web-api/gh-pages" + relativeURL
     };
     switchTemplate("projectDetailsPartial",  projectDetailsOutput );
-    window.location.href = "/#/projects/" + projectURL; 
+    window.location.href = "/#/portfolio/" + projectURL; 
 }
 
 function doesProjectIDContainPin(projectID) {
@@ -6704,8 +6704,8 @@ function isProjectsURL(url) {
     return url.indexOf("#/projects") > 0;
 }
 
-function isProjectDetailsURL(url) {
-    return url.indexOf("#/projects/") > 0;
+function isPortfolioURL(url) {
+    return url.indexOf("#/portfolio/") > 0;
 }
 
 function isSpeakingURL(url) {
@@ -6724,7 +6724,7 @@ function isAboutURL(url) {
 
 function redirectOldURLs(url) {
     
-    if (isProjectDetailsURL(url)) {
+    if (isPortfolioURL(url)) {
         templates["projectDetailsPartial"].preSwitchTemplate();
     }
     else if (isProjectsURL(url)) {
