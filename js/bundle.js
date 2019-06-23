@@ -6355,9 +6355,7 @@ function getProjectItems(data, key) {
         allProjectData.projects.push(data[Object.keys(data)[i]]); 
     }
     allProjectData.projects = allProjectData.projects.reverse();
-    var newdate = new Date();
-    newdate.setDate(newdate.getDate() + 3 );
-    allProjectData.expiresOn = newdate.getTime();
+    allProjectData.expiresOn = getExpiryTime();
     storeDataLocally(key, allProjectData); 
     switchTemplate("projectsRepeaterPartial", allProjectData);
 }
@@ -6387,23 +6385,6 @@ function applySearchFilter(searchFilter, projectItemData) {
     return allProjectData;
 }
 
-
-function storeDataLocally(dataKey, dataValue) {
-    window.localStorage.setItem(dataKey, JSON.stringify(dataValue));
-}
-
-function getLocalData(dataKey) {
-    var localdata = window.localStorage.getItem(dataKey);
-    if (localdata === "" || localdata === null) {
-        return "";
-    }
-    localdata = JSON.parse(localdata);
-    if (localdata.expiresOn < new Date().getTime()) {
-        return "";
-    } 
-    return localdata;
-}
- 
 function redirectToProjectDetails(projectID, relativeURL) {
     var projectURL = doesProjectIDContainPin(projectID) ? projectID.replace(".pin", "") : projectID;
     var projectDetailsOutput = {
@@ -6548,9 +6529,7 @@ function projectDetailsViewPreSwitchTemplate(url) {
             for (var i = 0; i < Object.keys(data).length; i++) {
                 allProjectData.projects.push(data[Object.keys(data)[i]]);
             }
-            var newdate = new Date();
-            newdate.setDate(newdate.getDate() + 3);
-            allProjectData.expiresOn = newdate.getTime();
+            allProjectData.expiresOn = getExpiryTime();
             storeDataLocally("projectDetailsPartial", allProjectData); 
             findAndProcessPortfolioItems(allProjectData);
         });
@@ -6561,7 +6540,6 @@ function projectDetailsViewPreSwitchTemplate(url) {
 }
 
 function loadProjectDetailsContent(url) {
-    console.log(url);
     $.get(url, function (data) {
         var parsedYaml = yamlFront.loadFront(data);
         var parsedYamlHtml = marked(parsedYaml.__content);
@@ -6607,7 +6585,6 @@ var templates = {
             projectRepeaterViewPageLoad();
         },
         "preSwitchTemplate": function () {
-           // projectViewPreSwitchTemplate();
         }
     },
     "speakingPartial": {
@@ -6653,6 +6630,7 @@ var templates = {
         "view": "#view",
         "cache": "",
         "initView": function () { 
+            deactivateNavigationMenuItem();
             projectDetailsViewPageLoad();
         },
         "preSwitchTemplate": function () {
@@ -6666,8 +6644,12 @@ function getTemplateProperties(templateName) {
 }
 
 function activateNavigationMenuItem(templateName) {
-    $("#display nav a").removeClass('active');
+    deactivateNavigationMenuItem();
     $("#display nav a[data-partialview='" + templateName+"']").addClass('active');
+}
+
+function deactivateNavigationMenuItem() {
+    $("#display nav a").removeClass('active');
 }
 
 function renderTemplateToView(htmlViewID, htmlTemplate, jsData) {
@@ -6739,6 +6721,28 @@ function redirectOldURLs(url) {
     else {
         templates["introPartial"].preSwitchTemplate();  
     }
+}
+
+function storeDataLocally(dataKey, dataValue) {
+    window.localStorage.setItem(dataKey, JSON.stringify(dataValue));
+}
+
+function getLocalData(dataKey) {
+    var localdata = window.localStorage.getItem(dataKey);
+    if (localdata === "" || localdata === null) {
+        return "";
+    }
+    localdata = JSON.parse(localdata);
+    if (localdata.expiresOn < new Date().getTime()) {
+        return "";
+    }
+    return localdata;
+}
+
+function getExpiryTime() {
+    var newdate = new Date();
+    newdate.setDate(newdate.getDate() + 3);
+    return newdate.getTime();
 }
 // Start here
 $(document).ready(function () {

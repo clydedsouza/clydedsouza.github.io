@@ -26,9 +26,7 @@ function getProjectItems(data, key) {
         allProjectData.projects.push(data[Object.keys(data)[i]]); 
     }
     allProjectData.projects = allProjectData.projects.reverse();
-    var newdate = new Date();
-    newdate.setDate(newdate.getDate() + 3 );
-    allProjectData.expiresOn = newdate.getTime();
+    allProjectData.expiresOn = getExpiryTime();
     storeDataLocally(key, allProjectData); 
     switchTemplate("projectsRepeaterPartial", allProjectData);
 }
@@ -58,23 +56,6 @@ function applySearchFilter(searchFilter, projectItemData) {
     return allProjectData;
 }
 
-
-function storeDataLocally(dataKey, dataValue) {
-    window.localStorage.setItem(dataKey, JSON.stringify(dataValue));
-}
-
-function getLocalData(dataKey) {
-    var localdata = window.localStorage.getItem(dataKey);
-    if (localdata === "" || localdata === null) {
-        return "";
-    }
-    localdata = JSON.parse(localdata);
-    if (localdata.expiresOn < new Date().getTime()) {
-        return "";
-    } 
-    return localdata;
-}
- 
 function redirectToProjectDetails(projectID, relativeURL) {
     var projectURL = doesProjectIDContainPin(projectID) ? projectID.replace(".pin", "") : projectID;
     var projectDetailsOutput = {

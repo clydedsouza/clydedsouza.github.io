@@ -26,9 +26,7 @@ function projectDetailsViewPreSwitchTemplate(url) {
             for (var i = 0; i < Object.keys(data).length; i++) {
                 allProjectData.projects.push(data[Object.keys(data)[i]]);
             }
-            var newdate = new Date();
-            newdate.setDate(newdate.getDate() + 3);
-            allProjectData.expiresOn = newdate.getTime();
+            allProjectData.expiresOn = getExpiryTime();
             storeDataLocally("projectDetailsPartial", allProjectData); 
             findAndProcessPortfolioItems(allProjectData);
         });
@@ -39,7 +37,6 @@ function projectDetailsViewPreSwitchTemplate(url) {
 }
 
 function loadProjectDetailsContent(url) {
-    console.log(url);
     $.get(url, function (data) {
         var parsedYaml = yamlFront.loadFront(data);
         var parsedYamlHtml = marked(parsedYaml.__content);

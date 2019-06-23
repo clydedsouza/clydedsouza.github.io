@@ -34,7 +34,6 @@
             projectRepeaterViewPageLoad();
         },
         "preSwitchTemplate": function () {
-           // projectViewPreSwitchTemplate();
         }
     },
     "speakingPartial": {
@@ -80,6 +79,7 @@
         "view": "#view",
         "cache": "",
         "initView": function () { 
+            deactivateNavigationMenuItem();
             projectDetailsViewPageLoad();
         },
         "preSwitchTemplate": function () {
@@ -93,8 +93,12 @@ function getTemplateProperties(templateName) {
 }
 
 function activateNavigationMenuItem(templateName) {
-    $("#display nav a").removeClass('active');
+    deactivateNavigationMenuItem();
     $("#display nav a[data-partialview='" + templateName+"']").addClass('active');
+}
+
+function deactivateNavigationMenuItem() {
+    $("#display nav a").removeClass('active');
 }
 
 function renderTemplateToView(htmlViewID, htmlTemplate, jsData) {
