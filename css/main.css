@@ -5628,7 +5628,6 @@ h1 {
   background: linear-gradient(155deg, rgba(0, 150, 136, 0.878431), rgba(16, 152, 75, 0.941176));
   vertical-align: top; }
   #pinnedProjectsList section:hover {
-    cursor: pointer;
     border: 1px solid transparent;
     box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.06);
     transform: scale(1.03); }
@@ -5685,14 +5684,28 @@ h1 {
       display: inline-block;
       margin: 9px 0 0 0; }
     #pinnedProjectsList section .project-body div:last-child {
-      text-align: right;
       margin-bottom: 9px; }
-      #pinnedProjectsList section .project-body div:last-child a {
-        text-decoration: none; }
-      #pinnedProjectsList section .project-body div:last-child i.material-icons {
-        font-size: 24px;
-        margin-left: 9px;
-        color: white; }
+      #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-left {
+        padding-left: 0; }
+        #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-left a {
+          cursor: pointer;
+          color: white;
+          padding: 6px 16px 6px 0px;
+          border-radius: 6px;
+          display: inline-block;
+          margin: 2px 0 0 0;
+          text-decoration: none; }
+          #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-left a:hover {
+            background-color: #ffffff30;
+            padding: 6px 16px; }
+      #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right {
+        padding-right: 0; }
+        #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right a {
+          text-decoration: none; }
+        #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right i.material-icons {
+          font-size: 24px;
+          margin-left: 9px;
+          color: white; }
     #pinnedProjectsList section .project-body .section_title {
       margin: 1vh 0px;
       word-wrap: break-word; }

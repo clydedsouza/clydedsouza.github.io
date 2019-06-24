@@ -2,7 +2,7 @@
     <div id="pinnedProjects">
         <div id="pinnedProjectsList">
             {{#projects}}
-            <section onclick="redirectToProjectDetails('{{basename}}','{{relativeURL}}');">
+            <section>
                 <div class="project-header" style="background-image: url('{{image}}');">
                     <div class="project-header-contents">
                         <div>
@@ -24,16 +24,22 @@
                         {{/madeUsing}}
                     </p>
                     <div>
-                        {{#hasWebsite}}
-                        <a href="{{website}}">
-                            <i class="mdi mdi-earth material-icons" aria-hidden="true"></i>
-                        </a>
-                        {{/hasWebsite}}
-                        {{#onGithub}}
-                        <a href="{{github}}">
-                            <i class="mdi mdi-github-circle material-icons" aria-hidden="true"></i>
-                        </a>
-                        {{/onGithub}}
+                        <div class="col-xs-6 text-left">
+                            <a onclick="redirectToProjectDetails('{{basename}}','{{relativeURL}}');">Read more →</a>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                            {{#hasWebsite}}
+                            <a href="{{website}}">
+                                <i class="mdi mdi-earth material-icons" aria-hidden="true"></i>
+                            </a>
+                            {{/hasWebsite}}
+                            {{#onGithub}}
+                            <a href="{{github}}">
+                                <i class="mdi mdi-github-circle material-icons" aria-hidden="true"></i>
+                            </a>
+                            {{/onGithub}}
+                        </div>
+                        
                     </div>
                 </div>
             </section>
