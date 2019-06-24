@@ -121,6 +121,9 @@ function switchTemplate(templateName, templateData) {
     }
 
     $(template.container).load(template.contents, function () {
+        if (document.getElementById(templateName) === null) {
+            return;
+        }
         template.cache = document.getElementById(templateName).innerHTML;
         renderTemplateToView(template.view, template.cache, templateData);
         template.initView();
