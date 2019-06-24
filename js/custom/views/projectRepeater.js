@@ -14,7 +14,9 @@ function loadProjectItems(url, key) {
             searchControlViewPreSwitchTemplate();
         });
     }
-    else { 
+    else {
+        var filter = { searchText: "", showInactive: false };
+        localValue = applySearchFilter(filter, localValue);
         switchTemplate("projectsRepeaterPartial", localValue);
         searchControlViewPreSwitchTemplate();
     }    
@@ -49,7 +51,14 @@ function applySearchFilter(searchFilter, projectItemData) {
     for (var i = 0; i < projectItemData.projects.length; i++) {
 
         if (projectItemData.projects[i].title.toLowerCase().indexOf(searchFilter.searchText) > -1) {
-            allProjectData.projects.push(projectItemData.projects[i]);
+            if (searchFilter.showInactive) {
+                allProjectData.projects.push(projectItemData.projects[i]);
+            }
+            else {
+                if (projectItemData.projects[i].status === "active") {
+                    allProjectData.projects.push(projectItemData.projects[i]);
+                }
+            }            
         }
     }
 
