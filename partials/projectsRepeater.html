@@ -8,6 +8,9 @@
                         <div>
                             <label>{{category}}</label>
                             <label>{{date}}</label>
+                            {{^isActive}}
+                            <label>Not maintained</label>
+                            {{/isActive}}
                         </div>
                     </div>
                 </div>
