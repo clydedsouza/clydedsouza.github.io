@@ -6384,7 +6384,7 @@ function applySearchFilter(searchFilter, projectItemData) {
                 allProjectData.projects.push(projectItemData.projects[i]);
             }
             else {
-                if (projectItemData.projects[i].status === "active") {
+                if (projectItemData.projects[i].isActive === undefined || projectItemData.projects[i].isActive) {
                     allProjectData.projects.push(projectItemData.projects[i]);
                 }
             }            
@@ -6422,7 +6422,7 @@ function initSearchControls() {
     initMultiselect(searchControlParentView);
 
     $("#searchBtn").on("click", function () {
-        var filter = { searchText: $("#searchTxt").val() };
+        var filter = { searchText: $("#searchTxt").val(), showInactive: false };
         filterAndDisplayProjectItems(filter, searchControlParentView);
     });
 
@@ -6431,7 +6431,7 @@ function initSearchControls() {
         if (searchInput.length > 0 && searchInput.length < 3) {
             return;
         }
-        var filter = { searchText: searchInput };
+        var filter = { searchText: searchInput, showInactive: false };
         filterAndDisplayProjectItems(filter, searchControlParentView);
     });
 }
@@ -6771,7 +6771,7 @@ $(document).ready(function () {
         // This handles the browser back and forward button.
         // The if..else is because when clicking read more to view project details
         // it seemed to go in a recursive loop maxing out call stack.
-
+        console.log("****************");
         if (browserURL === "") {
             browserURL = window.location.href;
             redirectOldURLs(window.location.href);

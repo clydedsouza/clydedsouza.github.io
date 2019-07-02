@@ -14,7 +14,7 @@ function initSearchControls() {
     initMultiselect(searchControlParentView);
 
     $("#searchBtn").on("click", function () {
-        var filter = { searchText: $("#searchTxt").val() };
+        var filter = { searchText: $("#searchTxt").val(), showInactive: false };
         filterAndDisplayProjectItems(filter, searchControlParentView);
     });
 
@@ -23,7 +23,7 @@ function initSearchControls() {
         if (searchInput.length > 0 && searchInput.length < 3) {
             return;
         }
-        var filter = { searchText: searchInput };
+        var filter = { searchText: searchInput, showInactive: false };
         filterAndDisplayProjectItems(filter, searchControlParentView);
     });
 }

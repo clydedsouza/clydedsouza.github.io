@@ -55,7 +55,7 @@ function applySearchFilter(searchFilter, projectItemData) {
                 allProjectData.projects.push(projectItemData.projects[i]);
             }
             else {
-                if (projectItemData.projects[i].status === "active") {
+                if (projectItemData.projects[i].isActive === undefined || projectItemData.projects[i].isActive) {
                     allProjectData.projects.push(projectItemData.projects[i]);
                 }
             }            
