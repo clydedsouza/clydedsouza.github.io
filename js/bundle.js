@@ -6368,10 +6368,7 @@ function filterAndDisplayProjectItems(filter, searchControlParentView) {
         return;
     }
 
-    if (filter.searchText !== "") {
-        projectItemData = applySearchFilter(filter, projectItemData);
-    }
-     
+    projectItemData = applySearchFilter(filter, projectItemData); 
     switchTemplate("projectsRepeaterPartial", projectItemData);
 }
 
@@ -6421,18 +6418,31 @@ function initSearchControls() {
 
     initMultiselect(searchControlParentView);
 
-    $("#searchBtn").on("click", function () {
-        var filter = { searchText: $("#searchTxt").val(), showInactive: false };
+    $("#searchBtn").on("click", function () { 
+        var filter = {
+            searchText: $("#searchTxt").val(),
+            showInactive: $("#includeInactive").is(":checked")
+        };
         filterAndDisplayProjectItems(filter, searchControlParentView);
     });
 
     $("#searchTxt").on("keyup", function () {
-        var searchInput = $("#searchTxt").val();
+        var searchInput = $("#searchTxt").val(); 
         if (searchInput.length > 0 && searchInput.length < 3) {
             return;
         }
-        var filter = { searchText: searchInput, showInactive: false };
+        var filter = {
+            searchText: searchInput,
+            showInactive: $("#includeInactive").is(":checked")
+        };
         filterAndDisplayProjectItems(filter, searchControlParentView);
+    });
+    $("#includeInactive").change(function () { 
+        var filter = {
+            searchText: $("#searchTxt").val(),
+            showInactive: this.checked
+        }; 
+        filterAndDisplayProjectItems(filter, searchControlParentView); 
     });
 }
 

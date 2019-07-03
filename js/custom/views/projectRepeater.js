@@ -39,10 +39,7 @@ function filterAndDisplayProjectItems(filter, searchControlParentView) {
         return;
     }
 
-    if (filter.searchText !== "") {
-        projectItemData = applySearchFilter(filter, projectItemData);
-    }
-     
+    projectItemData = applySearchFilter(filter, projectItemData); 
     switchTemplate("projectsRepeaterPartial", projectItemData);
 }
 
