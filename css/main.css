@@ -5660,7 +5660,9 @@ h1 {
       margin-bottom: 6px;
       float: left;
       display: block;
-      clear: both; }
+      clear: both;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px; }
     #pinnedProjectsList section .project-header div {
       z-index: 99999; }
   #pinnedProjectsList section .project-header-contents div {
