@@ -6505,6 +6505,10 @@ function initMultiselect(key) {
         $('#techMultiselect').hide();
     }
 
+    if (key === "speakingPartial" || key === "teachingPartial") {
+        $("#includeInactiveContainer").hide();
+    }
+
 
     $('#categoriesMultiselect').multiselect({
         enableFiltering: true,
