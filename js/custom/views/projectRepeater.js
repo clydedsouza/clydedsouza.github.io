@@ -45,17 +45,43 @@ function filterAndDisplayProjectItems(filter, searchControlParentView) {
 
 function applySearchFilter(searchFilter, projectItemData) {
     var allProjectData = { projects: [] };
+
+    var applyCategoryFilter = function (currentProject) {
+        var isTechOptionsEmpty = searchFilter.techOptions === null || searchFilter.techOptions === undefined || searchFilter.techOptions.length === 0;
+        var isCategoryOptionsEmpty = searchFilter.categoryOptions === null || searchFilter.categoryOptions === undefined || searchFilter.categoryOptions.length === 0;
+
+        if (isTechOptionsEmpty && isCategoryOptionsEmpty) {
+            // If the search filters are empty, we want to show the project item
+            return true;
+        }
+
+        var projectMeetsTechOptionsFilter = function () {
+            if (isTechOptionsEmpty) return true;
+            for (var to = 0; to < currentProject.madeUsing.length; to++) {
+                if (searchFilter.techOptions.includes(currentProject.madeUsing[to])) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        var projectMeetsCategoryOptionsFilter = function () {
+            if (isCategoryOptionsEmpty) return true; 
+            return searchFilter.categoryOptions.includes(currentProject.category);
+        }; 
+        return projectMeetsTechOptionsFilter() && projectMeetsCategoryOptionsFilter();
+    };
+
     for (var i = 0; i < projectItemData.projects.length; i++) {
 
         if (projectItemData.projects[i].title.toLowerCase().indexOf(searchFilter.searchText) > -1) {
-            if (searchFilter.showInactive) {
+            var inactiveSearchFilter = searchFilter.showInactive || projectItemData.projects[i].isActive === undefined || projectItemData.projects[i].isActive;
+            
+            if (inactiveSearchFilter) { 
+                if (!applyCategoryFilter(projectItemData.projects[i])) {
+                    continue;
+                } 
                 allProjectData.projects.push(projectItemData.projects[i]);
-            }
-            else {
-                if (projectItemData.projects[i].isActive === undefined || projectItemData.projects[i].isActive) {
-                    allProjectData.projects.push(projectItemData.projects[i]);
-                }
-            }            
+            }      
         }
     }
 

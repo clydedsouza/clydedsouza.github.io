@@ -6374,17 +6374,43 @@ function filterAndDisplayProjectItems(filter, searchControlParentView) {
 
 function applySearchFilter(searchFilter, projectItemData) {
     var allProjectData = { projects: [] };
+
+    var applyCategoryFilter = function (currentProject) {
+        var isTechOptionsEmpty = searchFilter.techOptions === null || searchFilter.techOptions === undefined || searchFilter.techOptions.length === 0;
+        var isCategoryOptionsEmpty = searchFilter.categoryOptions === null || searchFilter.categoryOptions === undefined || searchFilter.categoryOptions.length === 0;
+
+        if (isTechOptionsEmpty && isCategoryOptionsEmpty) {
+            // If the search filters are empty, we want to show the project item
+            return true;
+        }
+
+        var projectMeetsTechOptionsFilter = function () {
+            if (isTechOptionsEmpty) return true;
+            for (var to = 0; to < currentProject.madeUsing.length; to++) {
+                if (searchFilter.techOptions.includes(currentProject.madeUsing[to])) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        var projectMeetsCategoryOptionsFilter = function () {
+            if (isCategoryOptionsEmpty) return true; 
+            return searchFilter.categoryOptions.includes(currentProject.category);
+        }; 
+        return projectMeetsTechOptionsFilter() && projectMeetsCategoryOptionsFilter();
+    };
+
     for (var i = 0; i < projectItemData.projects.length; i++) {
 
         if (projectItemData.projects[i].title.toLowerCase().indexOf(searchFilter.searchText) > -1) {
-            if (searchFilter.showInactive) {
+            var inactiveSearchFilter = searchFilter.showInactive || projectItemData.projects[i].isActive === undefined || projectItemData.projects[i].isActive;
+            
+            if (inactiveSearchFilter) { 
+                if (!applyCategoryFilter(projectItemData.projects[i])) {
+                    continue;
+                } 
                 allProjectData.projects.push(projectItemData.projects[i]);
-            }
-            else {
-                if (projectItemData.projects[i].isActive === undefined || projectItemData.projects[i].isActive) {
-                    allProjectData.projects.push(projectItemData.projects[i]);
-                }
-            }            
+            }      
         }
     }
 
@@ -6469,7 +6495,8 @@ function initMultiselect(key) {
     } 
 
     var refinedMultiselectData = { categories: [], madeUsing: [] };
-    
+    var searchControlParentView = $("#display nav a.active").attr('data-partialview');
+
     $.each(multiselectData.categories, function (i, el) { 
         var targetData = refinedMultiselectData.categories.map(function (a) { return a.label; }); 
         if ($.inArray(el, targetData) === -1) {
@@ -6497,6 +6524,15 @@ function initMultiselect(key) {
             templates: {
                 filter: '<li class="multiselect-item multiselect-filter"><div class="input-group"><span class="input-group-addon"><i class="mdi mdi-magnify material-icons"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
                 filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="mdi mdi-close material-icons"></i></button></span>'
+            },
+            onChange: function (element, checked) {
+                var filter = {
+                    searchText: $("#searchTxt").val(),
+                    showInactive: $("#techMultiselect").is(":checked"),
+                    techOptions: getSearchMultiselectOptions($('#techMultiselect option:selected')),
+                    categoryOptions: getSearchMultiselectOptions($('#categoriesMultiselect option:selected'))
+                }; 
+                filterAndDisplayProjectItems(filter, searchControlParentView);
             }
         });
         $('#techMultiselect').multiselect('dataprovider', refinedMultiselectData.madeUsing);
@@ -6519,9 +6555,26 @@ function initMultiselect(key) {
         templates: {
             filter: '<li class="multiselect-item multiselect-filter"><div class="input-group"><span class="input-group-addon"><i class="mdi mdi-magnify material-icons"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
             filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="mdi mdi-close material-icons"></i></button></span>'
+        },
+        onChange: function (element, checked) {
+            var filter = {
+                searchText: $("#searchTxt").val(),
+                showInactive: $("#techMultiselect").is(":checked"),
+                techOptions: getSearchMultiselectOptions($('#techMultiselect option:selected')),
+                categoryOptions: getSearchMultiselectOptions($('#categoriesMultiselect option:selected'))
+            };
+            filterAndDisplayProjectItems(filter, searchControlParentView);
         }
     });
     $('#categoriesMultiselect').multiselect('dataprovider', refinedMultiselectData.categories);
+}
+
+function getSearchMultiselectOptions(searchMultiselectSelectedOptions) {
+    var selectedOptions = [];
+    for (var so = 0; so < searchMultiselectSelectedOptions.length; so++) {
+        selectedOptions.push(searchMultiselectSelectedOptions[so].label);
+    }
+    return selectedOptions;
 }
 
 function projectDetailsViewPageLoad() {

@@ -64,7 +64,8 @@ function initMultiselect(key) {
     } 
 
     var refinedMultiselectData = { categories: [], madeUsing: [] };
-    
+    var searchControlParentView = $("#display nav a.active").attr('data-partialview');
+
     $.each(multiselectData.categories, function (i, el) { 
         var targetData = refinedMultiselectData.categories.map(function (a) { return a.label; }); 
         if ($.inArray(el, targetData) === -1) {
@@ -92,6 +93,15 @@ function initMultiselect(key) {
             templates: {
                 filter: '<li class="multiselect-item multiselect-filter"><div class="input-group"><span class="input-group-addon"><i class="mdi mdi-magnify material-icons"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
                 filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="mdi mdi-close material-icons"></i></button></span>'
+            },
+            onChange: function (element, checked) {
+                var filter = {
+                    searchText: $("#searchTxt").val(),
+                    showInactive: $("#techMultiselect").is(":checked"),
+                    techOptions: getSearchMultiselectOptions($('#techMultiselect option:selected')),
+                    categoryOptions: getSearchMultiselectOptions($('#categoriesMultiselect option:selected'))
+                }; 
+                filterAndDisplayProjectItems(filter, searchControlParentView);
             }
         });
         $('#techMultiselect').multiselect('dataprovider', refinedMultiselectData.madeUsing);
@@ -114,7 +124,24 @@ function initMultiselect(key) {
         templates: {
             filter: '<li class="multiselect-item multiselect-filter"><div class="input-group"><span class="input-group-addon"><i class="mdi mdi-magnify material-icons"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
             filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="mdi mdi-close material-icons"></i></button></span>'
+        },
+        onChange: function (element, checked) {
+            var filter = {
+                searchText: $("#searchTxt").val(),
+                showInactive: $("#techMultiselect").is(":checked"),
+                techOptions: getSearchMultiselectOptions($('#techMultiselect option:selected')),
+                categoryOptions: getSearchMultiselectOptions($('#categoriesMultiselect option:selected'))
+            };
+            filterAndDisplayProjectItems(filter, searchControlParentView);
         }
     });
     $('#categoriesMultiselect').multiselect('dataprovider', refinedMultiselectData.categories);
+}
+
+function getSearchMultiselectOptions(searchMultiselectSelectedOptions) {
+    var selectedOptions = [];
+    for (var so = 0; so < searchMultiselectSelectedOptions.length; so++) {
+        selectedOptions.push(searchMultiselectSelectedOptions[so].label);
+    }
+    return selectedOptions;
 }
