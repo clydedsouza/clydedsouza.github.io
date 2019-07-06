@@ -5891,8 +5891,9 @@ nav {
     margin-left: 18px;
     padding: 9px 18px;
     border-radius: 30px;
-    cursor: pointer; }
-    nav a:hover {
-      background-color: #ffff00; }
-    nav a.active {
-      background-color: #ffff00; }
+    cursor: pointer;
+    background-color: #f9f9f9; }
+    nav a:hover, nav a.active {
+      background-color: #ffff00;
+      text-decoration: none;
+      color: #009688; }
