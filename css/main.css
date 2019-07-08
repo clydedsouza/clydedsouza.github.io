@@ -5651,7 +5651,7 @@ h1 {
       top: 7px; }
     #pinnedProjectsList section .project-header label {
       background-color: #ffff00;
-      padding: 3px 6px;
+      padding: 3px 7px;
       color: #009688;
       text-transform: uppercase;
       font-size: x-small;
@@ -5661,8 +5661,10 @@ h1 {
       float: left;
       display: block;
       clear: both;
-      border-top-right-radius: 8px;
-      border-bottom-right-radius: 8px; }
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px; }
+      #pinnedProjectsList section .project-header label:hover {
+        padding: 3px 18px 3px 9px; }
     #pinnedProjectsList section .project-header div {
       z-index: 99999; }
   #pinnedProjectsList section .project-header-contents div {
@@ -5847,6 +5849,9 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px); }
+
+#includeInactiveContainer {
+  display: inline-block; }
 
 /* Rounded sliders */
 .slider.round {

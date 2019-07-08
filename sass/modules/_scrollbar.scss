@@ -78,6 +78,10 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
+#includeInactiveContainer{
+    display:inline-block;
+}
+
 /* Rounded sliders */
 .slider.round {
     border-radius: 34px;
