@@ -5593,7 +5593,7 @@ h1 {
 
 @media (max-width: 800px) {
   #display {
-    width: 90vw;
+    width: 100vw;
     padding: 4vh 5vw;
     height: auto;
     display: inline-block;
@@ -5719,7 +5719,13 @@ h1 {
       font-weight: bold;
       word-wrap: break-word; }
 
-@media (max-width: 800px) {
+@media (min-width: 632px) and (max-width: 800px) {
+  #pinnedProjects {
+    margin: 0px; }
+  #pinnedProjectsList section {
+    width: 48%; } }
+
+@media (max-width: 631px) {
   #pinnedProjects {
     margin: 0px; }
   #pinnedProjectsList {
@@ -5774,15 +5780,18 @@ h1 {
           margin-left: 0; }
   @media (max-width: 800px) {
     #sidebar {
-      width: 90vw;
+      width: 100vw;
       padding: 4vh 5vw;
-      height: 60vh;
+      height: 64vh;
       text-align: center;
       position: relative; }
     #sidebar .sidebar-background {
       width: 120px;
       height: 120px;
-      margin: 0px auto !important; } }
+      margin: 0px auto !important;
+      border: 4px solid #ffff00; }
+    #sidebar .sidebar-icons span i {
+      margin: 0 1.5vw; } }
 
 ::-webkit-scrollbar {
   width: 5px;

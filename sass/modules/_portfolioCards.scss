@@ -164,18 +164,31 @@
         }
     }
 }
- 
- 
-@media (max-width: 800px) {
+
+
+@media (min-width: 632px) and (max-width: 800px) {
     #pinnedProjects {
         margin: 0px;
     }
-    
+
+    #pinnedProjectsList {
+        section {
+            width: 48%;
+        }
+    }
+}
+
+
+@media (max-width: 631px) {
+    #pinnedProjects {
+        margin: 0px;
+    }
+
     #pinnedProjectsList {
         columns: 1;
 
         section {
             width: 98%;
         }
-    } 
+    }
 }
