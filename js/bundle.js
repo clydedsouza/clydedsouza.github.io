@@ -6517,7 +6517,6 @@ function initMultiselect(key) {
         });
         $('#techMultiselect').multiselect({
             enableFiltering: true,
-            includeSelectAllOption: true,
             maxHeight: 200,
             nonSelectedText: 'Filter by tech',
             enableCaseInsensitiveFiltering: true,
@@ -6548,7 +6547,6 @@ function initMultiselect(key) {
 
     $('#categoriesMultiselect').multiselect({
         enableFiltering: true,
-        includeSelectAllOption: true,
         maxHeight: 200,
         nonSelectedText: 'Filter by category',
         enableCaseInsensitiveFiltering: true,
