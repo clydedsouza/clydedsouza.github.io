@@ -5796,13 +5796,24 @@ h1 {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px; }
+  width: 42px;
+  height: 14px;
+  left: -73px;
+  top: 2px; }
 
 .switch input {
   opacity: 0;
   width: 0;
   height: 0; }
+
+.switch-label {
+  font-size: smaller;
+  font-weight: normal;
+  position: relative;
+  top: -12px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  margin-left: 4px; }
 
 .slider {
   position: absolute;
@@ -5818,19 +5829,19 @@ h1 {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 1px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s; }
 
 input:checked + .slider {
-  background-color: #2196F3; }
+  background-color: #009688; }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3; }
+  box-shadow: 0 0 1px #009688; }
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);

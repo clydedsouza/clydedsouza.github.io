@@ -1,12 +1,15 @@
 ﻿<div id="searchControlPartial">
     <div>
-        <input type="search" id="searchTxt" />
-        <button type="button" id="searchBtn">Search</button>
-        <select id="techMultiselect" multiple="multiple"></select>
-        <select id="categoriesMultiselect" multiple="multiple"></select>
-        <label class="switch" id="includeInactiveContainer">
-            <input type="checkbox" id="includeInactive">
-            <span class="slider round"></span>
-        </label>
+        <form class="form-inline">
+            <input type="search" id="searchTxt" class="form-control" />
+            <!--<button type="button" id="searchBtn">Search</button>-->
+            <select id="techMultiselect" multiple="multiple"></select>
+            <select id="categoriesMultiselect" multiple="multiple"></select>
+            <label class="switch-label">Show inactive</label>
+            <label class="switch" id="includeInactiveContainer">
+                <input type="checkbox" id="includeInactive">
+                <span class="slider round"></span>
+            </label>
+        </form>
     </div>
 </div>
