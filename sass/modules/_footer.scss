@@ -16,3 +16,21 @@ footer {
     }
 }
 
+.fb-msg-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    a {
+        background-color: $primary-accent;
+        padding: 19px 13px 17px 13px;
+        border-radius: 120px;
+
+        i {
+            color: white;
+            font-size: 29px;
+            vertical-align: sub;
+        }
+    }
+}
+

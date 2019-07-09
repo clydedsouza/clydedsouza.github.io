@@ -5879,6 +5879,19 @@ footer {
     font-family: 'Questrial', sans-serif;
     font-weight: bold; }
 
+.fb-msg-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; }
+  .fb-msg-button a {
+    background-color: #009688;
+    padding: 19px 13px 17px 13px;
+    border-radius: 120px; }
+    .fb-msg-button a i {
+      color: white;
+      font-size: 29px;
+      vertical-align: sub; }
+
 #loading {
   width: 100vw;
   height: 100vh;
