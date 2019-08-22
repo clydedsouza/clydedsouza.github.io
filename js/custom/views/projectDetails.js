@@ -45,14 +45,18 @@ function loadProjectDetailsContent(url) {
         storeDataLocally("loadProjectDetailsContent", true); 
         $.get(url, function (data) { 
             var parsedYaml = yamlFront.loadFront(data);
-            var parsedYamlHtml = marked(parsedYaml.__content);
-            storeDataLocally(url, parsedYamlHtml); 
+            var parsedYamlHtml = marked(parsedYaml.__content); 
+            var projectDetailsObject = {
+                projectDetails: parsedYamlHtml,
+                expiresOn: getExpiryTime()
+            };
+            storeDataLocally(url, projectDetailsObject); 
             $("#projectDetailsContainer").html(parsedYamlHtml);
             storeDataLocally("loadProjectDetailsContent", false); 
         });  
     }
     else {
-        $("#projectDetailsContainer").html(localValue);
+        $("#projectDetailsContainer").html(localValue.projectDetails);
         storeDataLocally("loadProjectDetailsContent", false); 
     }
     
