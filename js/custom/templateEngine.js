@@ -1,7 +1,11 @@
-﻿var templates = {
+﻿function getCacheInvalidationDate() {
+    return "?v=" + appVersion;
+}
+
+var templates = {
     "introPartial": {
         "container": "#templateHolder",
-        "contents": "partials/intro.html #introPartial",
+        "contents": "partials/intro.html" + getCacheInvalidationDate() + " #introPartial",
         "view": "#view",
         "cache": "",
         "initView": function () {
@@ -14,7 +18,7 @@
     }, 
     "projectsPartial": {
         "container": "#templateHolder",
-        "contents": "partials/projects.html #projectsPartial",
+        "contents": "partials/projects.html" + getCacheInvalidationDate() + " #projectsPartial",
         "view": "#view",
         "cache": "",
         "initView": function () { 
@@ -27,7 +31,7 @@
     },
     "projectsRepeaterPartial": {
         "container": "#projectsPartialTemplateHolder",
-        "contents": "partials/projectsRepeater.html #projectsRepeaterPartial",
+        "contents": "partials/projectsRepeater.html" + getCacheInvalidationDate() + " #projectsRepeaterPartial",
         "view": "#projectsPartialView",
         "cache": "",
         "initView": function () {
@@ -38,7 +42,7 @@
     },
     "speakingPartial": {
         "container": "#templateHolder",
-        "contents": "partials/speaking.html #speakingPartial",
+        "contents": "partials/speaking.html" + getCacheInvalidationDate() + " #speakingPartial",
         "view": "#view",
         "cache": "",
         "initView": function () {
@@ -51,7 +55,7 @@
     },
     "teachingPartial": {
         "container": "#templateHolder",
-        "contents": "partials/teaching.html #teachingPartial",
+        "contents": "partials/teaching.html" + getCacheInvalidationDate() + " #teachingPartial",
         "view": "#view",
         "cache": "",
         "initView": function () {
@@ -64,7 +68,7 @@
     },
     "searchControlPartial": {
         "container": "#searchControlPartialTemplateHolder",
-        "contents": "partials/searchControl.html #searchControlPartial",
+        "contents": "partials/searchControl.html" + getCacheInvalidationDate() + " #searchControlPartial",
         "view": "#searchControlPartialView",
         "cache": "",
         "initView": function () { 
@@ -75,7 +79,7 @@
     },
     "projectDetailsPartial": {
         "container": "#templateHolder",
-        "contents": "partials/projectDetails.html #projectDetailsPartial",
+        "contents": "partials/projectDetails.html" + getCacheInvalidationDate() + " #projectDetailsPartial",
         "view": "#view",
         "cache": "",
         "initView": function () { 

@@ -37,11 +37,25 @@ function projectDetailsViewPreSwitchTemplate(url) {
 }
 
 function loadProjectDetailsContent(url) {
-    $.get(url, function (data) {
-        var parsedYaml = yamlFront.loadFront(data);
-        var parsedYamlHtml = marked(parsedYaml.__content);
-        $("#projectDetailsContainer").html(parsedYamlHtml);
-    });  
+    var localValue = getLocalData(url);
+    var isLocalValueEmpty = localValue === "" || localValue === null;
+    var projectDetailsLoadingInProgress = getLocalData("loadProjectDetailsContent");
+
+    if (isLocalValueEmpty && !projectDetailsLoadingInProgress) {
+        storeDataLocally("loadProjectDetailsContent", true); 
+        $.get(url, function (data) { 
+            var parsedYaml = yamlFront.loadFront(data);
+            var parsedYamlHtml = marked(parsedYaml.__content);
+            storeDataLocally(url, parsedYamlHtml); 
+            $("#projectDetailsContainer").html(parsedYamlHtml);
+            storeDataLocally("loadProjectDetailsContent", false); 
+        });  
+    }
+    else {
+        $("#projectDetailsContainer").html(localValue);
+        storeDataLocally("loadProjectDetailsContent", false); 
+    }
+    
 } 
  
 

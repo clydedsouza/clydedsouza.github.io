@@ -6614,19 +6614,66 @@ function projectDetailsViewPreSwitchTemplate(url) {
 }
 
 function loadProjectDetailsContent(url) {
-    $.get(url, function (data) {
-        var parsedYaml = yamlFront.loadFront(data);
-        var parsedYamlHtml = marked(parsedYaml.__content);
-        $("#projectDetailsContainer").html(parsedYamlHtml);
-    });  
+    var localValue = getLocalData(url);
+    var isLocalValueEmpty = localValue === "" || localValue === null;
+    var projectDetailsLoadingInProgress = getLocalData("loadProjectDetailsContent");
+
+    if (isLocalValueEmpty && !projectDetailsLoadingInProgress) {
+        storeDataLocally("loadProjectDetailsContent", true); 
+        $.get(url, function (data) { 
+            var parsedYaml = yamlFront.loadFront(data);
+            var parsedYamlHtml = marked(parsedYaml.__content);
+            storeDataLocally(url, parsedYamlHtml); 
+            $("#projectDetailsContainer").html(parsedYamlHtml);
+            storeDataLocally("loadProjectDetailsContent", false); 
+        });  
+    }
+    else {
+        $("#projectDetailsContainer").html(localValue);
+        storeDataLocally("loadProjectDetailsContent", false); 
+    }
+    
 } 
  
 
 
+var appVersion = 0.1;
+
+// Start here
+$(document).ready(function () {
+    redirectOldURLs(window.location.href);
+    
+    $("#display nav a").on('click', function () {  
+        $("#display nav a").removeClass('active');
+        $(this).addClass('active');
+        templates[$(this).attr('data-partialview')].preSwitchTemplate(); 
+    }); 
+
+    var browserURL = "";
+    $(window).on('popstate', function (event) {
+        // This handles the browser back and forward button.
+        // The if..else is because when clicking read more to view project details
+        // it seemed to go in a recursive loop maxing out call stack.
+        if (browserURL === "") {
+            browserURL = window.location.href;
+            redirectOldURLs(window.location.href);
+        }
+        else {
+            if (browserURL !== window.location.href) {
+                browserURL = window.location.href;
+                redirectOldURLs(window.location.href);
+            }
+        } 
+    });
+});
+function getCacheInvalidationDate() {
+    return "?v=" + appVersion;
+}
+
 var templates = {
     "introPartial": {
         "container": "#templateHolder",
-        "contents": "partials/intro.html #introPartial",
+        "contents": "partials/intro.html" + getCacheInvalidationDate() + " #introPartial",
         "view": "#view",
         "cache": "",
         "initView": function () {
@@ -6639,7 +6686,7 @@ var templates = {
     }, 
     "projectsPartial": {
         "container": "#templateHolder",
-        "contents": "partials/projects.html #projectsPartial",
+        "contents": "partials/projects.html" + getCacheInvalidationDate() + " #projectsPartial",
         "view": "#view",
         "cache": "",
         "initView": function () { 
@@ -6652,7 +6699,7 @@ var templates = {
     },
     "projectsRepeaterPartial": {
         "container": "#projectsPartialTemplateHolder",
-        "contents": "partials/projectsRepeater.html #projectsRepeaterPartial",
+        "contents": "partials/projectsRepeater.html" + getCacheInvalidationDate() + " #projectsRepeaterPartial",
         "view": "#projectsPartialView",
         "cache": "",
         "initView": function () {
@@ -6663,7 +6710,7 @@ var templates = {
     },
     "speakingPartial": {
         "container": "#templateHolder",
-        "contents": "partials/speaking.html #speakingPartial",
+        "contents": "partials/speaking.html" + getCacheInvalidationDate() + " #speakingPartial",
         "view": "#view",
         "cache": "",
         "initView": function () {
@@ -6676,7 +6723,7 @@ var templates = {
     },
     "teachingPartial": {
         "container": "#templateHolder",
-        "contents": "partials/teaching.html #teachingPartial",
+        "contents": "partials/teaching.html" + getCacheInvalidationDate() + " #teachingPartial",
         "view": "#view",
         "cache": "",
         "initView": function () {
@@ -6689,7 +6736,7 @@ var templates = {
     },
     "searchControlPartial": {
         "container": "#searchControlPartialTemplateHolder",
-        "contents": "partials/searchControl.html #searchControlPartial",
+        "contents": "partials/searchControl.html" + getCacheInvalidationDate() + " #searchControlPartial",
         "view": "#searchControlPartialView",
         "cache": "",
         "initView": function () { 
@@ -6700,7 +6747,7 @@ var templates = {
     },
     "projectDetailsPartial": {
         "container": "#templateHolder",
-        "contents": "partials/projectDetails.html #projectDetailsPartial",
+        "contents": "partials/projectDetails.html" + getCacheInvalidationDate() + " #projectDetailsPartial",
         "view": "#view",
         "cache": "",
         "initView": function () { 
@@ -6821,31 +6868,3 @@ function getExpiryTime() {
     newdate.setDate(newdate.getDate() + 3);
     return newdate.getTime();
 }
-// Start here
-$(document).ready(function () {
-    redirectOldURLs(window.location.href);
-    
-    $("#display nav a").on('click', function () {  
-        $("#display nav a").removeClass('active');
-        $(this).addClass('active');
-        templates[$(this).attr('data-partialview')].preSwitchTemplate(); 
-    }); 
-
-    var browserURL = "";
-    $(window).on('popstate', function (event) {
-        // This handles the browser back and forward button.
-        // The if..else is because when clicking read more to view project details
-        // it seemed to go in a recursive loop maxing out call stack.
-        console.log("****************");
-        if (browserURL === "") {
-            browserURL = window.location.href;
-            redirectOldURLs(window.location.href);
-        }
-        else {
-            if (browserURL !== window.location.href) {
-                browserURL = window.location.href;
-                redirectOldURLs(window.location.href);
-            }
-        } 
-    });
-});

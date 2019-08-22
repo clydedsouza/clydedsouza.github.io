@@ -1,4 +1,6 @@
-﻿// Start here
+﻿var appVersion = 0.1;
+
+// Start here
 $(document).ready(function () {
     redirectOldURLs(window.location.href);
     
@@ -13,7 +15,6 @@ $(document).ready(function () {
         // This handles the browser back and forward button.
         // The if..else is because when clicking read more to view project details
         // it seemed to go in a recursive loop maxing out call stack.
-        console.log("****************");
         if (browserURL === "") {
             browserURL = window.location.href;
             redirectOldURLs(window.location.href);
