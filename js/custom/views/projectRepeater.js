@@ -88,10 +88,11 @@ function applySearchFilter(searchFilter, projectItemData) {
     return allProjectData;
 }
 
-function redirectToProjectDetails(projectID, relativeURL) {
+function redirectToProjectDetails(projectID, relativeURL, projectTitle) {
     var projectURL = doesProjectIDContainPin(projectID) ? projectID.replace(".pin", "") : projectID;
     var projectDetailsOutput = {
-        data: "https://raw.githubusercontent.com/clydedsouza/clydedsouza-web-api/gh-pages" + relativeURL
+        data: "https://raw.githubusercontent.com/clydedsouza/clydedsouza-web-api/gh-pages" + relativeURL,
+        projectTitle: projectTitle
     };
     switchTemplate("projectDetailsPartial",  projectDetailsOutput );
     window.location.href = "/#/portfolio/" + projectURL; 

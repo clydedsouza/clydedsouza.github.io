@@ -12,8 +12,8 @@ function projectDetailsViewPreSwitchTemplate(url) {
     var findAndProcessPortfolioItems = function (portfolioItems) {
         for (var i = 0; i < portfolioItems.projects.length; i++) {
             var basename = portfolioItems.projects[i].basename.toString().replace(".pin", ""); 
-            if (projectID === basename) { 
-                redirectToProjectDetails(projectID, portfolioItems.projects[i].relativeURL);
+            if (projectID === basename) {
+                redirectToProjectDetails(projectID, portfolioItems.projects[i].relativeURL, portfolioItems.projects[i].title);
                 break;
             } 
         }

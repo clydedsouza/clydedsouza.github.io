@@ -6417,10 +6417,11 @@ function applySearchFilter(searchFilter, projectItemData) {
     return allProjectData;
 }
 
-function redirectToProjectDetails(projectID, relativeURL) {
+function redirectToProjectDetails(projectID, relativeURL, projectTitle) {
     var projectURL = doesProjectIDContainPin(projectID) ? projectID.replace(".pin", "") : projectID;
     var projectDetailsOutput = {
-        data: "https://raw.githubusercontent.com/clydedsouza/clydedsouza-web-api/gh-pages" + relativeURL
+        data: "https://raw.githubusercontent.com/clydedsouza/clydedsouza-web-api/gh-pages" + relativeURL,
+        projectTitle: projectTitle
     };
     switchTemplate("projectDetailsPartial",  projectDetailsOutput );
     window.location.href = "/#/portfolio/" + projectURL; 
@@ -6589,8 +6590,8 @@ function projectDetailsViewPreSwitchTemplate(url) {
     var findAndProcessPortfolioItems = function (portfolioItems) {
         for (var i = 0; i < portfolioItems.projects.length; i++) {
             var basename = portfolioItems.projects[i].basename.toString().replace(".pin", ""); 
-            if (projectID === basename) { 
-                redirectToProjectDetails(projectID, portfolioItems.projects[i].relativeURL);
+            if (projectID === basename) {
+                redirectToProjectDetails(projectID, portfolioItems.projects[i].relativeURL, portfolioItems.projects[i].title);
                 break;
             } 
         }
