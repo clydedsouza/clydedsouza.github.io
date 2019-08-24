@@ -5620,16 +5620,16 @@ h1 {
   border-radius: 5px;
   color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0px 0px 0px transparent;
   transition: 0.4s ease-in-out;
   transform: scale(1);
   padding: 0px;
   margin: 2vh 1.5vw 2vh 0;
   background: linear-gradient(155deg, rgba(0, 150, 136, 0.878431), rgba(16, 152, 75, 0.941176));
-  vertical-align: top; }
+  vertical-align: top;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
   #pinnedProjectsList section:hover {
     border: 1px solid transparent;
-    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     transform: scale(1.03); }
   #pinnedProjectsList section img.cover {
     width: 100%;

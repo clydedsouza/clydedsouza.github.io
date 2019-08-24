@@ -13,18 +13,18 @@
         border-radius: 5px;
         color: $bg-color;
         border: 1px solid rgba(0, 0, 0, 0.04);
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
         transition: 0.4s ease-in-out;
         transform: scale(1);
         padding: 0px;
         margin: 2vh 1.5vw 2vh 0;
         background: $background-gradient;
         vertical-align: top;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
 
         &:hover {
             border: 1px solid rgba(0, 0, 0, 0);
-            box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
             transform: scale(1.03);
         }
 
@@ -109,7 +109,7 @@
                 border-radius: 10px;
                 display: inline-block;
                 margin: 9px 0 0 0;
-                font-weight:100;
+                font-weight: 100;
             }
 
             div:last-child {
