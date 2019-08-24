@@ -185,7 +185,11 @@
         columns: 1;
 
         section {
-            width: 98%;
+            width: 99%;
+
+            .project-header {
+                width: 100.6%;
+            } 
         }
     }
 }
