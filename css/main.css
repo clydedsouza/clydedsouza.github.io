@@ -5922,14 +5922,22 @@ footer {
     transform: rotate(360deg); } }
 
 nav {
-  text-align: center; }
+  text-align: center;
+  padding: 9px 2px;
+  padding-left: 30.5vw; }
+  @media (max-width: 800px) {
+    nav {
+      padding-left: 2px; } }
   nav a {
     color: #009688;
-    margin-left: 18px;
-    padding: 9px 18px;
+    margin-left: 6px;
+    padding: 9px 29px;
     border-radius: 30px;
     cursor: pointer;
-    background-color: #f9f9f9; }
+    background-color: #f9f9f9;
+    display: inline-block;
+    width: auto;
+    margin-top: 10px; }
     nav a:hover, nav a.active {
       background-color: #ffff00;
       text-decoration: none;
