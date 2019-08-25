@@ -9,7 +9,7 @@ function searchControlViewPreSwitchTemplate() {
 
 
 function initSearchControls() {
-    var searchControlParentView = $("#display nav a.active").attr('data-partialview');
+    var searchControlParentView = $("nav a.active").attr('data-partialview');
 
     initMultiselect(searchControlParentView);
 
@@ -64,7 +64,7 @@ function initMultiselect(key) {
     } 
 
     var refinedMultiselectData = { categories: [], madeUsing: [] };
-    var searchControlParentView = $("#display nav a.active").attr('data-partialview');
+    var searchControlParentView = $("nav a.active").attr('data-partialview');
 
     $.each(multiselectData.categories, function (i, el) { 
         var targetData = refinedMultiselectData.categories.map(function (a) { return a.label; }); 

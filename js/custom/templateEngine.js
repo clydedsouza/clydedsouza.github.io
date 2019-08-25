@@ -98,11 +98,11 @@ function getTemplateProperties(templateName) {
 
 function activateNavigationMenuItem(templateName) {
     deactivateNavigationMenuItem();
-    $("#display nav a[data-partialview='" + templateName+"']").addClass('active');
+    $("nav a[data-partialview='" + templateName+"']").addClass('active');
 }
 
 function deactivateNavigationMenuItem() {
-    $("#display nav a").removeClass('active');
+    $("nav a").removeClass('active');
 }
 
 function renderTemplateToView(htmlViewID, htmlTemplate, jsData) {

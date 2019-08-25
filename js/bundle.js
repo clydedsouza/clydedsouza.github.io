@@ -6441,7 +6441,7 @@ function searchControlViewPreSwitchTemplate() {
 
 
 function initSearchControls() {
-    var searchControlParentView = $("#display nav a.active").attr('data-partialview');
+    var searchControlParentView = $("nav a.active").attr('data-partialview');
 
     initMultiselect(searchControlParentView);
 
@@ -6496,7 +6496,7 @@ function initMultiselect(key) {
     } 
 
     var refinedMultiselectData = { categories: [], madeUsing: [] };
-    var searchControlParentView = $("#display nav a.active").attr('data-partialview');
+    var searchControlParentView = $("nav a.active").attr('data-partialview');
 
     $.each(multiselectData.categories, function (i, el) { 
         var targetData = refinedMultiselectData.categories.map(function (a) { return a.label; }); 
@@ -6648,8 +6648,8 @@ var appVersion = 0.1;
 $(document).ready(function () {
     redirectOldURLs(window.location.href);
     
-    $("#display nav a").on('click', function () {  
-        $("#display nav a").removeClass('active');
+    $("nav a").on('click', function () {  
+        $("nav a").removeClass('active');
         $(this).addClass('active');
         templates[$(this).attr('data-partialview')].preSwitchTemplate(); 
     }); 
@@ -6771,11 +6771,11 @@ function getTemplateProperties(templateName) {
 
 function activateNavigationMenuItem(templateName) {
     deactivateNavigationMenuItem();
-    $("#display nav a[data-partialview='" + templateName+"']").addClass('active');
+    $("nav a[data-partialview='" + templateName+"']").addClass('active');
 }
 
 function deactivateNavigationMenuItem() {
-    $("#display nav a").removeClass('active');
+    $("nav a").removeClass('active');
 }
 
 function renderTemplateToView(htmlViewID, htmlTemplate, jsData) {
