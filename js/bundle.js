@@ -6579,7 +6579,8 @@ function projectDetailsViewPageLoad() {
 }
 
 function projectDetailsViewPreSwitchTemplate(url) { 
-    if (url[url.length - 1] === "/") {
+    var doesURLEndWithSlash = url[url.length - 1] === "/";
+    if (doesURLEndWithSlash) {
         url = url.substring(0, url.length - 1);
     }
     var projectID = url.substr(url.lastIndexOf('/') + 1);
@@ -6595,20 +6596,20 @@ function projectDetailsViewPreSwitchTemplate(url) {
     };
 
     var localValue = getLocalData("projectDetailsPartial");
-    if (localValue === "" || localValue === null) {
-        $.get("https://api.clydedsouza.net/complete-portfolio.json", function (data) {
-            var allProjectData = { projects: [] };
-            for (var i = 0; i < Object.keys(data).length; i++) {
-                allProjectData.projects.push(data[Object.keys(data)[i]]);
-            }
-            allProjectData.expiresOn = getExpiryTime();
-            storeDataLocally("projectDetailsPartial", allProjectData); 
-            findAndProcessPortfolioItems(allProjectData);
-        });
+    if (localValue !== "" && localValue !== null) {
+        findAndProcessPortfolioItems(localValue);
+        return;
     }
-    else {
-        findAndProcessPortfolioItems(localValue); 
-    }
+
+    $.get("https://api.clydedsouza.net/complete-portfolio.json", function (data) {
+        var allProjectData = { projects: [] };
+        for (var i = 0; i < Object.keys(data).length; i++) {
+            allProjectData.projects.push(data[Object.keys(data)[i]]);
+        }
+        allProjectData.expiresOn = getExpiryTime();
+        storeDataLocally("projectDetailsPartial", allProjectData);
+        findAndProcessPortfolioItems(allProjectData);
+    });
 }
 
 function loadProjectDetailsContent(url) {
