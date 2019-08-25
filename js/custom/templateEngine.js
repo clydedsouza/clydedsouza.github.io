@@ -2,6 +2,8 @@
     return "?v=" + appVersion;
 }
 
+// A collection of valid templates with its views, its content source, and
+// load and preload methods.
 var templates = {
     "introPartial": {
         "container": "#templateHolder",
@@ -83,7 +85,7 @@ var templates = {
         "view": "#view",
         "cache": "",
         "initView": function () { 
-            deactivateNavigationMenuItem();
+            deactivateAllNavigationMenuItems();
             projectDetailsViewPageLoad();
         },
         "preSwitchTemplate": function () {
@@ -97,11 +99,11 @@ function getTemplateProperties(templateName) {
 }
 
 function activateNavigationMenuItem(templateName) {
-    deactivateNavigationMenuItem();
+    deactivateAllNavigationMenuItems();
     $("nav a[data-partialview='" + templateName+"']").addClass('active');
 }
 
-function deactivateNavigationMenuItem() {
+function deactivateAllNavigationMenuItems() {
     $("nav a").removeClass('active');
 }
 
