@@ -1,5 +1,4 @@
-﻿// Views
-
+﻿
 function isProjectsURL(url) {
     return url.indexOf("#/projects") > 0;
 }
@@ -20,9 +19,7 @@ function isAboutURL(url) {
     return url.indexOf("#/") > 0;
 }
 
-// Manage website routes
-
-function redirectOldURLs(url) {
+function manageWebsiteRouting(url) {
     
     if (isPortfolioURL(url)) {
         templates["projectDetailsPartial"].preSwitchTemplate();

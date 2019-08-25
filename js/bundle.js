@@ -6646,7 +6646,7 @@ var appVersion = 0.1;
 
 // Start here
 $(document).ready(function () {
-    redirectOldURLs(window.location.href);
+    manageWebsiteRouting(window.location.href);
     
     $("nav a").on('click', function () {  
         $("nav a").removeClass('active');
@@ -6661,12 +6661,12 @@ $(document).ready(function () {
         // it seemed to go in a recursive loop maxing out call stack.
         if (browserURL === "") {
             browserURL = window.location.href;
-            redirectOldURLs(window.location.href);
+            manageWebsiteRouting(window.location.href);
         }
         else {
             if (browserURL !== window.location.href) {
                 browserURL = window.location.href;
-                redirectOldURLs(window.location.href);
+                manageWebsiteRouting(window.location.href);
             }
         } 
     });
@@ -6809,7 +6809,6 @@ function switchTemplate(templateName, templateData) {
 
 
  
-// Views
 
 function isProjectsURL(url) {
     return url.indexOf("#/projects") > 0;
@@ -6831,9 +6830,7 @@ function isAboutURL(url) {
     return url.indexOf("#/") > 0;
 }
 
-// Manage website routes
-
-function redirectOldURLs(url) {
+function manageWebsiteRouting(url) {
     
     if (isPortfolioURL(url)) {
         templates["projectDetailsPartial"].preSwitchTemplate();

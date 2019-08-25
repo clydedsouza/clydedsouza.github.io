@@ -2,7 +2,7 @@
 
 // Start here
 $(document).ready(function () {
-    redirectOldURLs(window.location.href);
+    manageWebsiteRouting(window.location.href);
     
     $("nav a").on('click', function () {  
         $("nav a").removeClass('active');
@@ -17,12 +17,12 @@ $(document).ready(function () {
         // it seemed to go in a recursive loop maxing out call stack.
         if (browserURL === "") {
             browserURL = window.location.href;
-            redirectOldURLs(window.location.href);
+            manageWebsiteRouting(window.location.href);
         }
         else {
             if (browserURL !== window.location.href) {
                 browserURL = window.location.href;
-                redirectOldURLs(window.location.href);
+                manageWebsiteRouting(window.location.href);
             }
         } 
     });
