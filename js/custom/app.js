@@ -5,8 +5,7 @@ $(document).ready(function () {
     manageWebsiteRouting(window.location.href);
     
     $("nav a").on('click', function () {  
-        $("nav a").removeClass('active');
-        $(this).addClass('active');
+        activateNavigationMenuItem($(this).attr('data-partialview'));
         templates[$(this).attr('data-partialview')].preSwitchTemplate(); 
     }); 
 
