@@ -13,8 +13,42 @@ $background-background: linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 
 $height: 50vh;
 $primary-accent-transparent: rgba(0, 150, 136, 0.5);
 
+$body-font: 'Roboto', sans-serif;
+$heading-font: 'Dosis','Roboto',sans-serif;
+
 @media (max-width: 800px) {
     :root {
         $background-image: linear-gradient(90deg, rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 1)), url("../images/clydedsouza-blur.jpg");
     }
 }
+
+
+
+$screen-tablets-up: 768px;
+$screen-desktop-up: 992px;
+$screen-large-desktop-up: 1200px;
+
+@mixin for-mobiles-down {
+    @media (max-width: ($screen-tablets-up)-1) {
+        @content;
+    }
+}
+
+@mixin for-tablets-up {
+    @media (min-width: $screen-tablets-up) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: $screen-desktop-up) {
+        @content;
+    }
+}
+
+@mixin for-large-desktop-up {
+    @media (min-width: $screen-large-desktop-up) {
+        @content;
+    }
+} 
+
