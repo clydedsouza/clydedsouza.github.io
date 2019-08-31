@@ -21,7 +21,6 @@
         vertical-align: top;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
-
         &:hover {
             border: 1px solid rgba(0, 0, 0, 0);
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -36,7 +35,6 @@
         .project-header-contents, .project-body {
             position: relative;
         }
-
 
         .project-header {
             background-color: $primary-accent;
@@ -76,7 +74,6 @@
         }
 
         .project-header-contents {
-
             div {
                 font-size: 20px;
                 margin: 10px;
@@ -144,20 +141,7 @@
                         color: white;
                     }
                 }
-            }
-
-
-            .section_title {
-                margin: 1vh 0px;
-                word-wrap: break-word;
-            }
-
-            .about_section {
-                font-size: 18px;
-                margin: 2vh 0px;
-                font-weight: bold;
-                word-wrap: break-word;
-            }
+            } 
         }
     }
 }

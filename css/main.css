@@ -5653,14 +5653,6 @@ main {
           font-size: 24px;
           margin-left: 9px;
           color: white; }
-    #pinnedProjectsList section .project-body .section_title {
-      margin: 1vh 0px;
-      word-wrap: break-word; }
-    #pinnedProjectsList section .project-body .about_section {
-      font-size: 18px;
-      margin: 2vh 0px;
-      font-weight: bold;
-      word-wrap: break-word; }
 
 @media (min-width: 632px) and (max-width: 800px) {
   #pinnedProjects {
