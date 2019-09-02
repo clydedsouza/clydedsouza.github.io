@@ -146,21 +146,7 @@
     }
 }
 
-
-@media (min-width: 632px) and (max-width: 800px) {
-    #pinnedProjects {
-        margin: 0px;
-    }
-
-    #pinnedProjectsList {
-        section {
-            width: 48%;
-        }
-    }
-}
-
-
-@media (max-width: 631px) {
+@include for-mobiles-down {
     #pinnedProjects {
         margin: 0px;
     }
@@ -173,7 +159,29 @@
 
             .project-header {
                 width: 100.6%;
-            } 
+            }
         }
     }
 }
+
+
+@include for-tablets-up {
+    #pinnedProjects {
+        margin: 0px;
+    }
+
+    #pinnedProjectsList {
+        section {
+            width: 46%;
+        }
+    }
+}
+
+/*@media (min-width: 632px) and (max-width: 800px) {
+    
+}*/
+
+
+/*@media (max-width: 631px) {
+    
+}*/

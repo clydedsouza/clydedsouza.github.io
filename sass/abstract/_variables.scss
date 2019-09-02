@@ -24,24 +24,37 @@ $heading-font: 'Dosis','Roboto',sans-serif;
 
 
 
-$screen-tablets-up: 768px;
-$screen-desktop-up: 992px;
+
+$screen-tablets-up: 631px;
+$screen-desktop-up: 800px;
 $screen-large-desktop-up: 1200px;
 
+/*@mixin for-legacy-mobiles-down {
+    @media (max-width: (($screen-tablets-up)/2)-1) {
+        @content;
+    }
+}*/
+
 @mixin for-mobiles-down {
-    @media (max-width: ($screen-tablets-up)-1) {
+    @media  (max-width: ($screen-tablets-up)-1) {
         @content;
     }
 }
 
 @mixin for-tablets-up {
-    @media (min-width: $screen-tablets-up) {
+    @media (min-width: $screen-tablets-up) and (max-width: ($screen-desktop-up)-1) {
+        @content;
+    }
+}
+
+@mixin for-tablets-down {
+    @media (max-width: ($screen-desktop-up)-1) {
         @content;
     }
 }
 
 @mixin for-desktop-up {
-    @media (min-width: $screen-desktop-up) {
+    @media (min-width: $screen-desktop-up) and (max-width: ($screen-large-desktop-up)-1) {
         @content;
     }
 }

@@ -5522,6 +5522,11 @@ span.multiselect-native-select select {
   margin-left: -20px;
   margin-right: 0; }
 
+/*@mixin for-legacy-mobiles-down {
+    @media (max-width: (($screen-tablets-up)/2)-1) {
+        @content;
+    }
+}*/
 ::selection {
   color: #fff;
   background: rgba(10, 10, 10, 0.6); }
@@ -5543,17 +5548,24 @@ h1, h2, h3 {
   font-family: "Roboto", sans-serif; }
 
 main {
-  width: 101vw;
+  width: 100vw;
   padding: 16px 35px;
   display: inline-block;
-  padding-left: 380px; }
-  @media (max-width: 767px) {
+  padding-left: 35%; }
+  @media (max-width: 799px) {
     main {
-      width: 100vw;
       padding: 16px;
       height: auto;
       display: inline-block; } }
+  @media (max-width: 799px) {
+    main {
+      padding-left: 21px; } }
 
+/*@mixin for-legacy-mobiles-down {
+    @media (max-width: (($screen-tablets-up)/2)-1) {
+        @content;
+    }
+}*/
 #pinnedProjects {
   margin: 2vh 0px;
   padding: 2vh 0px !important; }
@@ -5654,13 +5666,7 @@ main {
           margin-left: 9px;
           color: white; }
 
-@media (min-width: 632px) and (max-width: 800px) {
-  #pinnedProjects {
-    margin: 0px; }
-  #pinnedProjectsList section {
-    width: 48%; } }
-
-@media (max-width: 631px) {
+@media (max-width: 630px) {
   #pinnedProjects {
     margin: 0px; }
   #pinnedProjectsList {
@@ -5670,8 +5676,25 @@ main {
       #pinnedProjectsList section .project-header {
         width: 100.6%; } }
 
+@media (min-width: 631px) and (max-width: 799px) {
+  #pinnedProjects {
+    margin: 0px; }
+  #pinnedProjectsList section {
+    width: 46%; } }
+
+/*@media (min-width: 632px) and (max-width: 800px) {
+    
+}*/
+/*@media (max-width: 631px) {
+    
+}*/
+/*@mixin for-legacy-mobiles-down {
+    @media (max-width: (($screen-tablets-up)/2)-1) {
+        @content;
+    }
+}*/
 #sidebar {
-  width: 24vw;
+  width: 30%;
   padding: 4vh 3vw;
   height: 100vh;
   display: flex;
@@ -5684,7 +5707,7 @@ main {
   position: fixed;
   color: #fff !important;
   margin-left: 0; }
-  @media (max-width: 767px) {
+  @media (max-width: 799px) {
     #sidebar {
       width: 100vw;
       padding: 4vh 5vw;
@@ -5697,7 +5720,7 @@ main {
     border-radius: 120px;
     background-size: cover !important;
     border: 6px solid #ffff00; }
-    @media (max-width: 767px) {
+    @media (max-width: 799px) {
       #sidebar .sidebar-background {
         width: 120px;
         height: 120px;
@@ -5726,12 +5749,17 @@ main {
     #sidebar .sidebar-icons span i {
       font-size: 24px;
       margin: 0 0.5vw; }
-      @media (max-width: 767px) {
+      @media (max-width: 799px) {
         #sidebar .sidebar-icons span i {
           margin: 0 1.5vw; } }
       #sidebar .sidebar-icons span i:first-child {
         margin-left: 0; }
 
+/*@mixin for-legacy-mobiles-down {
+    @media (max-width: (($screen-tablets-up)/2)-1) {
+        @content;
+    }
+}*/
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px; }
@@ -5742,6 +5770,11 @@ main {
 ::-webkit-scrollbar-thumb {
   background: rgba(10, 10, 10, 0.6); }
 
+/*@mixin for-legacy-mobiles-down {
+    @media (max-width: (($screen-tablets-up)/2)-1) {
+        @content;
+    }
+}*/
 #includeInactiveContainer {
   display: inline-block; }
 
@@ -5798,6 +5831,11 @@ main {
   text-transform: lowercase;
   margin-left: 4px; }
 
+/*@mixin for-legacy-mobiles-down {
+    @media (max-width: (($screen-tablets-up)/2)-1) {
+        @content;
+    }
+}*/
 footer {
   width: 100%;
   padding: 18px 0;
@@ -5821,6 +5859,11 @@ footer {
       font-size: 29px;
       vertical-align: sub; }
 
+/*@mixin for-legacy-mobiles-down {
+    @media (max-width: (($screen-tablets-up)/2)-1) {
+        @content;
+    }
+}*/
 #loading {
   width: 100vw;
   height: 100vh;
@@ -5851,11 +5894,16 @@ footer {
   100% {
     transform: rotate(360deg); } }
 
+/*@mixin for-legacy-mobiles-down {
+    @media (max-width: (($screen-tablets-up)/2)-1) {
+        @content;
+    }
+}*/
 nav {
   text-align: center;
   padding: 9px 2px;
   padding-left: 30.5vw; }
-  @media (max-width: 767px) {
+  @media (max-width: 630px) {
     nav {
       padding-left: 2px; } }
   nav a {
