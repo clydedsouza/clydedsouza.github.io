@@ -23,7 +23,11 @@ footer {
     right: 20px;
 
     a {
-        background-color: $primary-accent;
+        background: $background-gradient {
+            size: cover;
+            repeat: no-repeat;
+        }
+
         padding: 19px 13px 17px 13px;
         border-radius: 120px;
 

@@ -5875,7 +5875,9 @@ footer {
   bottom: 20px;
   right: 20px; }
   .fb-msg-button a {
-    background-color: #009688;
+    background: linear-gradient(155deg, rgba(0, 150, 136, 0.878431), rgba(16, 152, 75, 0.941176));
+      background-size: cover;
+      background-repeat: no-repeat;
     padding: 19px 13px 17px 13px;
     border-radius: 120px; }
     .fb-msg-button a i {
