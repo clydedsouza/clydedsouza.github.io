@@ -39,6 +39,11 @@
             margin: 0px auto !important;
             border: 4px solid $contrast-accent;
         }
+
+        @include for-large-desktop-up {
+            width: 220px;
+            height: 220px;
+        }
     }
 
     h1 {
@@ -49,6 +54,10 @@
 
         @include for-tablets-down {
             margin: 21px 0 9px 0;
+        }
+
+        @include for-large-desktop-up {
+            font-size: 46px;
         }
     }
 
@@ -66,6 +75,10 @@
                 font-family: $heading-font;
                 width: 100%;
                 margin: 9px 0;
+
+                @include for-large-desktop-up {
+                    font-size: 30px;
+                }
 
                 small {
                     padding: 9px 0;
@@ -88,6 +101,10 @@
 
                 @include for-tablets-down {
                     margin: 0 1.5vw;
+                }
+
+                @include for-large-desktop-up {
+                    font-size: 30px;
                 }
 
                 &:first-child {
