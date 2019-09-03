@@ -5544,6 +5544,9 @@ body {
   letter-spacing: 0.5px; }
 
 h1, h2, h3 {
+  background: linear-gradient(155deg, rgba(0, 150, 136, 0.878431), rgba(16, 152, 75, 0.941176));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   color: #009688;
   font-family: "Roboto", sans-serif; }
 
@@ -5633,6 +5636,7 @@ main {
     padding: 0 9px; }
     #pinnedProjectsList section .project-body h3 {
       color: white;
+      -webkit-text-fill-color: #fff;
       font-size: 22px;
       font-weight: normal;
       margin: 9px 0;
@@ -5687,12 +5691,15 @@ main {
   #pinnedProjectsList section {
     width: 46%; } }
 
-/*@media (min-width: 632px) and (max-width: 800px) {
-    
+/*@mixin for-legacy-mobiles-down {
+    @media (max-width: (($screen-tablets-up)/2)-1) {
+        @content;
+    }
 }*/
-/*@media (max-width: 631px) {
-    
-}*/
+.project-details-view h2 i {
+  -webkit-text-fill-color: #009688;
+  color: #009688; }
+
 /*@mixin for-legacy-mobiles-down {
     @media (max-width: (($screen-tablets-up)/2)-1) {
         @content;
@@ -5710,7 +5717,7 @@ main {
     background-size: cover !important;
     background-repeat: no-repeat;
   position: fixed;
-  color: #fff !important;
+  color: #fff;
   margin-left: 0; }
   @media (max-width: 799px) {
     #sidebar {
@@ -5737,6 +5744,7 @@ main {
         height: 220px; } }
   #sidebar h1 {
     color: white;
+    -webkit-text-fill-color: #fff;
     margin: 4px 0;
     font-weight: bold;
     font-family: "Dosis", "Roboto", sans-serif; }

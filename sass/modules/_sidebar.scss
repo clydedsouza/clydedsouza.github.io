@@ -15,7 +15,7 @@
     }
 
     position: fixed;
-    color: #fff !important;
+    color: #fff;
     margin-left: 0;
 
     @include for-tablets-down {
@@ -48,6 +48,7 @@
 
     h1 {
         color: white;
+        -webkit-text-fill-color: #fff;
         margin: 4px 0;
         font-weight: bold;
         font-family: $heading-font;

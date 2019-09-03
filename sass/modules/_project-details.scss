@@ -1,0 +1,10 @@
+﻿@import "../abstract/variables";
+
+.project-details-view {
+	h2 {
+		i {
+			-webkit-text-fill-color: $primary-accent;
+			color: $primary-accent;
+		}
+	}
+}

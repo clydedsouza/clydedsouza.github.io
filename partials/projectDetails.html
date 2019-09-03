@@ -1,8 +1,9 @@
 ﻿<script id="projectDetailsPartial" type="text/x-mustache"> 
-    <br /><br />
-    <div>
-        <h2><span onclick="window.history.back();"><i class="mdi mdi-arrow-left-circle material-icons" aria-hidden="true"></i></span>{{projectTitle}}</h2>
+    <div class="project-details-view">
+        <div>
+            <h2><span onclick="window.history.back();"><i class="mdi mdi-arrow-left-circle material-icons" aria-hidden="true"></i></span>{{projectTitle}}</h2>
+        </div>
+        <div id="projectDetailsContainer" data-project-url="{{data}}">
+        </div>
     </div>
-    <div id="projectDetailsContainer" data-project-url="{{data}}">
-    </div> 
 </script>

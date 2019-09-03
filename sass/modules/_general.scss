@@ -19,6 +19,9 @@ body {
 }
 
 h1, h2, h3 {
+    background: $background-gradient;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     color: $primary-accent;
     font-family: $body-font;
 }
