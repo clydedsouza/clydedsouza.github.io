@@ -5710,8 +5710,8 @@ main {
   @media (max-width: 799px) {
     #sidebar {
       width: 100vw;
-      padding: 4vh 5vw;
-      height: 64vh;
+      padding: 0 5vw;
+      height: 400px;
       text-align: center;
       position: relative; } }
   #sidebar .sidebar-background {
@@ -5731,9 +5731,15 @@ main {
     margin: 4px 0;
     font-weight: bold;
     font-family: "Dosis", "Roboto", sans-serif; }
+    @media (max-width: 799px) {
+      #sidebar h1 {
+        margin: 21px 0 9px 0; } }
   #sidebar div {
     font-weight: bold;
     margin: 2vh 0px; }
+    @media (max-width: 799px) {
+      #sidebar div {
+        margin: 4px 0; } }
     #sidebar div.sidebar-tagline p {
       font-size: 24px;
       font-family: "Dosis", "Roboto", sans-serif;

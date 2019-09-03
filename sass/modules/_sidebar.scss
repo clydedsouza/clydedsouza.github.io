@@ -20,8 +20,8 @@
 
     @include for-tablets-down {
         width: 100vw;
-        padding: 4vh 5vw;
-        height: 64vh;
+        padding: 0 5vw;
+        height: 400px;
         text-align: center;
         position: relative;
     }
@@ -46,11 +46,19 @@
         margin: 4px 0;
         font-weight: bold;
         font-family: $heading-font;
+
+        @include for-tablets-down {
+            margin: 21px 0 9px 0;
+        }
     }
 
     div {
         font-weight: bold;
         margin: 2vh 0px;
+
+        @include for-tablets-down {
+            margin: 4px 0;
+        }
 
         &.sidebar-tagline {
             p {
