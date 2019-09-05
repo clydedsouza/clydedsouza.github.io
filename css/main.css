@@ -5780,7 +5780,8 @@ main {
     margin: 1vh 0px; }
     #sidebar .sidebar-icons span i {
       font-size: 24px;
-      margin: 0 0.5vw; }
+      margin: 0 0.5vw;
+      color: white; }
       @media (max-width: 799px) {
         #sidebar .sidebar-icons span i {
           margin: 0 1.5vw; } }
