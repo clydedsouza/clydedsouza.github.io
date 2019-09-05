@@ -5572,6 +5572,16 @@ main {
 #pinnedProjects {
   margin: 2vh 0px;
   padding: 2vh 0px !important; }
+  @media (max-width: 630px) {
+    #pinnedProjects {
+      margin: 0px; } }
+  @media (min-width: 631px) and (max-width: 799px) {
+    #pinnedProjects {
+      margin: 0px; } }
+
+@media (max-width: 630px) {
+  #pinnedProjectsList {
+    columns: 1; } }
 
 #pinnedProjectsList section {
   width: 45%;
@@ -5586,6 +5596,12 @@ main {
   background: linear-gradient(155deg, rgba(0, 150, 136, 0.878431), rgba(16, 152, 75, 0.941176));
   vertical-align: top;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+  @media (max-width: 630px) {
+    #pinnedProjectsList section {
+      width: 99%; } }
+  @media (min-width: 631px) and (max-width: 799px) {
+    #pinnedProjectsList section {
+      width: 46%; } }
   #pinnedProjectsList section:hover {
     border: 1px solid transparent;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -5606,6 +5622,9 @@ main {
     margin-top: -11px;
     width: 100.50%;
     margin-left: -1px; }
+    @media (max-width: 630px) {
+      #pinnedProjectsList section .project-header {
+        width: 100.6%; } }
     @media (min-width: 800px) and (max-width: 1199px) {
       #pinnedProjectsList section .project-header {
         min-height: 140px; } }
@@ -5674,22 +5693,6 @@ main {
           font-size: 24px;
           margin-left: 9px;
           color: white; }
-
-@media (max-width: 630px) {
-  #pinnedProjects {
-    margin: 0px; }
-  #pinnedProjectsList {
-    columns: 1; }
-    #pinnedProjectsList section {
-      width: 99%; }
-      #pinnedProjectsList section .project-header {
-        width: 100.6%; } }
-
-@media (min-width: 631px) and (max-width: 799px) {
-  #pinnedProjects {
-    margin: 0px; }
-  #pinnedProjectsList section {
-    width: 46%; } }
 
 /*@mixin for-legacy-mobiles-down {
     @media (max-width: (($screen-tablets-up)/2)-1) {

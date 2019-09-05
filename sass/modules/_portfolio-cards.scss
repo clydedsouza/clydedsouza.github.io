@@ -3,10 +3,22 @@
 #pinnedProjects {
     margin: 2vh 0px;
     padding: 2vh 0px !important;
+
+    @include for-mobiles-down {
+        margin: 0px;
+    }
+
+    @include for-tablets-up {
+        margin: 0px;
+    }
 }
 
 
 #pinnedProjectsList {
+    @include for-mobiles-down {
+        columns: 1;
+    }
+
     section {
         width: 45%;
         display: inline-block;
@@ -20,6 +32,15 @@
         background: $background-gradient;
         vertical-align: top;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+
+        @include for-mobiles-down {
+            width: 99%;
+        }
+
+        @include for-tablets-up {
+            width: 46%;
+        }
 
         &:hover {
             border: 1px solid rgba(0, 0, 0, 0);
@@ -47,6 +68,10 @@
             margin-top: -11px;
             width: 100.50%;
             margin-left: -1px;
+
+            @include for-mobiles-down {
+                width: 100.6%;
+            }
 
             @include for-desktop-up {
                 min-height: 140px;
@@ -153,34 +178,4 @@
     }
 }
 
-@include for-mobiles-down {
-    #pinnedProjects {
-        margin: 0px;
-    }
-
-    #pinnedProjectsList {
-        columns: 1;
-
-        section {
-            width: 99%;
-
-            .project-header {
-                width: 100.6%;
-            }
-        }
-    }
-}
-
-
-@include for-tablets-up {
-    #pinnedProjects {
-        margin: 0px;
-    }
-
-    #pinnedProjectsList {
-        section {
-            width: 46%;
-        }
-    }
-}
 
