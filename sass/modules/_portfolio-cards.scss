@@ -151,9 +151,10 @@
                         margin: 2px 0 0 0;
                         text-decoration: none;
 
-                        &:hover {
+                        &:hover, &:focus {
                             background-color: #ffffff30;
                             padding: 6px 16px;
+                            border-bottom: none;
                         }
                     }
                 }
@@ -164,6 +165,10 @@
 
                     a {
                         text-decoration: none;
+                        
+                        &:hover, &:focus {
+                            border-bottom: none;
+                        }
                     }
 
                     i.material-icons {

@@ -96,6 +96,12 @@
         span {
             margin: 1vh 0px;
 
+            a {
+                &:hover, &:focus {
+                    border-bottom: none;
+                }
+            }
+
             i {
                 font-size: 24px;
                 margin: 0 0.5vw;

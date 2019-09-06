@@ -5550,6 +5550,13 @@ h1, h2, h3 {
   color: #009688;
   font-family: "Roboto", sans-serif; }
 
+a {
+  color: #009688; }
+  a:hover, a:focus {
+    color: #007d71;
+    text-decoration: none;
+    border-bottom: 1px solid #ffff00; }
+
 main {
   width: 100vw;
   padding: 16px 35px;
@@ -5681,13 +5688,16 @@ main {
           display: inline-block;
           margin: 2px 0 0 0;
           text-decoration: none; }
-          #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-left a:hover {
+          #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-left a:hover, #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-left a:focus {
             background-color: #ffffff30;
-            padding: 6px 16px; }
+            padding: 6px 16px;
+            border-bottom: none; }
       #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right {
         padding-right: 0; }
         #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right a {
           text-decoration: none; }
+          #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right a:hover, #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right a:focus {
+            border-bottom: none; }
         #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right i.material-icons {
           font-size: 24px;
           margin-left: 9px;
@@ -5777,6 +5787,8 @@ main {
   font-size: 18px; }
   #sidebar .sidebar-icons span {
     margin: 1vh 0px; }
+    #sidebar .sidebar-icons span a:hover, #sidebar .sidebar-icons span a:focus {
+      border-bottom: none; }
     #sidebar .sidebar-icons span i {
       font-size: 24px;
       margin: 0 0.5vw;
