@@ -74,3 +74,61 @@
     text-transform: lowercase;
     margin-left: 4px;    
 }
+
+.form-control:focus {
+    border-color: $primary-accent;
+    -webkit-box-shadow: lighten($primary-accent, 80%);
+    box-shadow: inset 0 1px 1px lighten($primary-accent, 80%), 0 0 8px lighten($primary-accent, 80%);
+}
+
+.dropdown-menu {
+    li {
+        a {
+            &:hover, &:focus {
+                border-bottom: none;
+                background-color: lighten($contrast-accent, 20%);
+            }
+        }
+    }
+
+    & > .active > a, & > .active > a:hover {
+        background-color: $primary-accent;
+    }
+}
+
+.multiselect-container {
+    li a label.checkbox input[type=checkbox] {
+        position: relative;
+        top: 0;
+        left: -8px;
+
+        &:after {
+            border: 1px solid black;
+            content: "";
+            width: 10px;
+            display: block;
+            opacity: 1;
+            height: 10px;
+            background-color: $primary-accent;
+            float: left;
+            height: 15px;
+            width: 15px;
+            margin-bottom: 15px;
+            border: 0;
+            clear: both;
+            position: relative;
+            left: -1px;
+            top: -1px;
+            transition: all 450ms;
+            border-radius: 3px;
+        }
+    }
+
+    li a label.checkbox input[type=checkbox]:checked {
+        &:after {
+            background-color: $contrast-accent;
+            border-radius: 30px;
+            transition: all 450ms;
+        }
+    }
+}
