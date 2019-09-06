@@ -1,8 +1,8 @@
 ﻿@import "../abstract/variables";
 
 #pinnedProjects {
-    margin: 2vh 0px;
-    padding: 2vh 0px !important;
+    margin: 9px 0;
+    padding: 2px 0;
 
     @include for-mobiles-down {
         margin: 0px;
