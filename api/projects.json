@@ -284,7 +284,7 @@
     "date": "1st July 2017",
     "description": "Profile Sticker is a web app that allows a user to add a sticker from different themes to their profile picture. The user can choose to upload a picture from and download to a computer or Facebook.",
     "hasWebsite": true,
-    "website": "https://profilesticker.net",
+    "website": "https://profilesticker.github.io/",
     "onGithub": true,
     "github": "https://github.com/profilesticker/profilesticker.github.io/",
     "languages": [ "HTML", "CSS", "SCSS", "JavaScript", "Mustache.js" ],
