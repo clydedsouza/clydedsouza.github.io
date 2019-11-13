@@ -6,12 +6,6 @@
     ]
   },
   {
-    "outputFileName": "css/theme.min.css",
-    "inputFiles": [
-      "css/theme.css"
-    ]
-  },
-  {
     "outputFileName": "content/angular-material.min.min.css",
     "inputFiles": [
       "content/angular-material.min.css"
@@ -21,7 +15,7 @@
     "outputFileName": "css/primarycss-v1.min.css",
     "inputFiles": [
       "css/angular-material.min.css",
-      "css/theme.min.css"
+      "css/theme.css"
     ]
   },
   {
