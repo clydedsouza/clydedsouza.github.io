@@ -1,6 +1,5 @@
 ﻿/*!
  * Author: Clyde D'Souza
- * Email: clyde@clydedsouza.net
  * https://github.com/clydedz
  */
 
