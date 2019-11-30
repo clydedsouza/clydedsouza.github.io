@@ -6285,8 +6285,8 @@ function loadPinnedItems() {
         switchTemplate("projectsRepeaterPartial", localValue);
         return; 
     }
-    $.get("https://api.clydedsouza.net/all-pinned.json", function (data) {
-        getProjectItems(data, "pinnedPartial");
+    $.get("https://api.clydedsouza.net/allpinned.json", function (data) {
+        getProjectItems(data.fileMap, "pinnedPartial");
     });  
 } 
  
@@ -6415,7 +6415,7 @@ function applySearchFilter(searchFilter, projectItemData) {
 }
 
 function redirectToProjectDetails(projectID, relativeURL, projectTitle) {
-    var projectURL = doesProjectIDContainPin(projectID) ? projectID.replace(".pin", "") : projectID;
+    var projectURL = doesProjectIDContainPin(projectID) ? projectID.replace(".pin.md", "") : projectID.replace(".md", "");
     var projectDetailsOutput = {
         data: "https://raw.githubusercontent.com/clydedsouza/clydedsouza-web-api/gh-pages" + relativeURL,
         projectTitle: projectTitle

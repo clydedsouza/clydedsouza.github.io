@@ -11,8 +11,8 @@ function loadPinnedItems() {
         switchTemplate("projectsRepeaterPartial", localValue);
         return; 
     }
-    $.get("https://api.clydedsouza.net/all-pinned.json", function (data) {
-        getProjectItems(data, "pinnedPartial");
+    $.get("https://api.clydedsouza.net/allpinned.json", function (data) {
+        getProjectItems(data.fileMap, "pinnedPartial");
     });  
 } 
  
