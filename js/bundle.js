@@ -6587,7 +6587,8 @@ function projectDetailsViewPreSwitchTemplate(url) {
 
     var findAndProcessPortfolioItems = function (portfolioItems) {
         for (var i = 0; i < portfolioItems.projects.length; i++) {
-            var basename = portfolioItems.projects[i].basename.toString().replace(".pin", ""); 
+            var sourceBase = portfolioItems.projects[i].sourceBase; 
+            var basename = doesProjectIDContainPin(sourceBase) ? sourceBase.replace(".pin.md", "") : sourceBase.replace(".md", "");
             if (projectID === basename) {
                 redirectToProjectDetails(projectID, portfolioItems.projects[i].relativeURL, portfolioItems.projects[i].title);
                 break;
@@ -6601,10 +6602,10 @@ function projectDetailsViewPreSwitchTemplate(url) {
         return;
     }
 
-    $.get("https://api.clydedsouza.net/complete-portfolio.json", function (data) {
+    $.get("https://api.clydedsouza.net/allportfolio.json", function (data) {
         var allProjectData = { projects: [] };
-        for (var i = 0; i < Object.keys(data).length; i++) {
-            allProjectData.projects.push(data[Object.keys(data)[i]]);
+        for (var i = 0; i < Object.keys(data.fileMap).length; i++) {
+            allProjectData.projects.push(data.fileMap[Object.keys(data.fileMap)[i]]);
         }
         allProjectData.expiresOn = getExpiryTime();
         storeDataLocally("projectDetailsPartial", allProjectData);
@@ -6619,7 +6620,7 @@ function loadProjectDetailsContent(url) {
 
     if (isLocalValueEmpty && !projectDetailsLoadingInProgress) {
         storeDataLocally("loadProjectDetailsContent", true); 
-        $.get(url, function (data) { 
+        $.get(url, function (data) {
             var parsedYaml = yamlFront.loadFront(data);
             var parsedYamlHtml = marked(parsedYaml.__content); 
             var projectDetailsObject = {
