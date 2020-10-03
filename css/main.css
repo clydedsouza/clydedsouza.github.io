@@ -5753,7 +5753,8 @@ main {
     @media (min-width: 1200px) {
       #sidebar .sidebar-background {
         width: 220px;
-        height: 220px; } }
+        height: 220px;
+        min-height: 220px; } }
   #sidebar h1 {
     color: white;
     -webkit-text-fill-color: #fff;

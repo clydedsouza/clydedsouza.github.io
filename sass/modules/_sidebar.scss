@@ -43,6 +43,7 @@
         @include for-large-desktop-up {
             width: 220px;
             height: 220px;
+            min-height: 220px;
         }
     }
 
