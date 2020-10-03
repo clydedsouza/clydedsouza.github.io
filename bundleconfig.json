@@ -14,6 +14,7 @@
       "js/custom/views/projects.js",
       "js/custom/views/speaking.js",
       "js/custom/views/teaching.js",
+      "js/custom/views/books.js",
       "js/custom/views/projectRepeater.js",
       "js/custom/views/searchControl.js",
       "js/custom/views/projectDetails.js",

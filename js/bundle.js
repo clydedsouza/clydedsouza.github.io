@@ -6324,6 +6324,17 @@ function teachingViewPreSwitchTemplate() {
 }
 
 
+function booksViewPageLoad() {
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-teaching.json", "booksPartial");
+    searchControlViewPreSwitchTemplate();
+}
+
+
+function booksViewPreSwitchTemplate() {
+    switchTemplate("booksPartial", {});
+}
+
+
 function projectRepeaterViewPageLoad() {
 }
 
@@ -6748,6 +6759,19 @@ var templates = {
         },
         "preSwitchTemplate": function () {
             teachingViewPreSwitchTemplate();
+        }
+    },
+    "booksPartial": {
+        "container": "#templateHolder",
+        "contents": "partials/books.html" + getCacheInvalidationDate() + " #booksPartial",
+        "view": "#view",
+        "cache": "",
+        "initView": function () {
+            activateNavigationMenuItem("booksPartial");
+            booksViewPageLoad();
+        },
+        "preSwitchTemplate": function () {
+            booksViewPreSwitchTemplate();
         }
     },
     "searchControlPartial": {

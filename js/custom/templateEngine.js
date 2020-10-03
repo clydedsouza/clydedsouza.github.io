@@ -68,6 +68,19 @@ var templates = {
             teachingViewPreSwitchTemplate();
         }
     },
+    "booksPartial": {
+        "container": "#templateHolder",
+        "contents": "partials/books.html" + getCacheInvalidationDate() + " #booksPartial",
+        "view": "#view",
+        "cache": "",
+        "initView": function () {
+            activateNavigationMenuItem("booksPartial");
+            booksViewPageLoad();
+        },
+        "preSwitchTemplate": function () {
+            booksViewPreSwitchTemplate();
+        }
+    },
     "searchControlPartial": {
         "container": "#searchControlPartialTemplateHolder",
         "contents": "partials/searchControl.html" + getCacheInvalidationDate() + " #searchControlPartial",
