@@ -6293,7 +6293,7 @@ function loadPinnedItems() {
 
 
 function projectViewPageLoad() { 
-    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-projects.json", "projectsPartial");
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/allprojects.json", "projectsPartial");
 }
 
 
@@ -6303,7 +6303,7 @@ function projectViewPreSwitchTemplate() {
 
 
 function speakingViewPageLoad() {
-    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-speaking.json", "speakingPartial");
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/allspeaking.json", "speakingPartial");
     searchControlViewPreSwitchTemplate();
 }
 
@@ -6314,7 +6314,7 @@ function speakingViewPreSwitchTemplate() {
 
 
 function teachingViewPageLoad() {
-    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-teaching.json", "teachingPartial");
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/allteaching.json", "teachingPartial");
     searchControlViewPreSwitchTemplate();
 }
 
@@ -6325,7 +6325,7 @@ function teachingViewPreSwitchTemplate() {
 
 
 function booksViewPageLoad() {
-    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-teaching.json", "booksPartial");
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/allbooks.json", "booksPartial");
     searchControlViewPreSwitchTemplate();
 }
 
@@ -6346,8 +6346,8 @@ function projectRepeaterViewPreSwitchTemplate(url, key) {
 function loadProjectItems(url, key) {
     var localValue = getLocalData(key); 
     if (localValue === "" || localValue === null) {
-        $.get(url, function (data) { 
-            getProjectItems(data, key);
+        $.get(url, function (data) {
+            getProjectItems(data.fileMap, key);
             searchControlViewPreSwitchTemplate();
         });
     }

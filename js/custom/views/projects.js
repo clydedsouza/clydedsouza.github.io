@@ -1,5 +1,5 @@
 ﻿function projectViewPageLoad() { 
-    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-projects.json", "projectsPartial");
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/allprojects.json", "projectsPartial");
 }
 
 

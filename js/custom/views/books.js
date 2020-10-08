@@ -1,5 +1,5 @@
 ﻿function booksViewPageLoad() {
-    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/all-teaching.json", "booksPartial");
+    projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/allbooks.json", "booksPartial");
     searchControlViewPreSwitchTemplate();
 }
 
