@@ -28,17 +28,17 @@
                     </p>
                     <div>
                         <div class="col-xs-6 text-left">
-                            <a onclick="redirectToProjectDetails('{{sourceBase}}','{{relativeURL}}', '{{title}}');">Read more <span><i class="mdi mdi-arrow-right material-icons" aria-hidden="true"></i></span></a>
+                            <a onclick="redirectToProjectDetails('{{sourceBase}}','{{relativeURL}}', '{{title}}');">Read more <span><i class="fas fa-arrow-right"></i></span></a>
                         </div>
                         <div class="col-xs-6 text-right">
                             {{#hasWebsite}}
                             <a href="{{website}}">
-                                <i class="mdi mdi-earth material-icons" aria-hidden="true"></i>
+                                <i class="fas fa-globe"></i>
                             </a>
                             {{/hasWebsite}}
                             {{#onGithub}}
                             <a href="{{github}}">
-                                <i class="mdi mdi-github-circle material-icons" aria-hidden="true"></i>
+                                <i class="fab fa-github"></i>
                             </a>
                             {{/onGithub}}
                         </div>
