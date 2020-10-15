@@ -5,7 +5,7 @@ nav {
     padding: 9px 2px;
     padding-left: 30.5vw;
 
-    @include for-mobiles-down {
+    @include for-tablets-down {
         padding-left: 2px;
     }
 
