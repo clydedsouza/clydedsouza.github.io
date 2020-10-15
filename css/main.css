@@ -5789,7 +5789,8 @@ main {
         padding: 9px 0; }
 
 #sidebar .sidebar-icons {
-  font-size: 18px; }
+  font-size: 18px;
+  font-weight: 100; }
   #sidebar .sidebar-icons span {
     margin: 1vh 0px; }
     #sidebar .sidebar-icons span a:hover, #sidebar .sidebar-icons span a:focus {
@@ -5801,9 +5802,6 @@ main {
       @media (max-width: 799px) {
         #sidebar .sidebar-icons span i {
           margin: 0 1.5vw; } }
-      @media (min-width: 1200px) {
-        #sidebar .sidebar-icons span i {
-          font-size: 30px; } }
       #sidebar .sidebar-icons span i:first-child {
         margin-left: 0; }
 

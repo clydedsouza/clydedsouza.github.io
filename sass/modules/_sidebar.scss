@@ -93,6 +93,7 @@
 #sidebar {
     .sidebar-icons {
         font-size: 18px;
+        font-weight: 100;
 
         span {
             margin: 1vh 0px;
@@ -110,10 +111,6 @@
 
                 @include for-tablets-down {
                     margin: 0 1.5vw;
-                }
-
-                @include for-large-desktop-up {
-                    font-size: 30px;
                 }
 
                 &:first-child {
