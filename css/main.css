@@ -5800,7 +5800,7 @@ main {
       color: white; }
       @media (max-width: 799px) {
         #sidebar .sidebar-icons span i {
-          margin: 0 1.5vw; } }
+          margin: 0 3vw; } }
       #sidebar .sidebar-icons span i:first-child {
         margin-left: 0; }
 
