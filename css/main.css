@@ -5772,7 +5772,6 @@ main {
       #sidebar h1 {
         font-size: 46px; } }
   #sidebar div {
-    font-weight: bold;
     margin: 2vh 0px; }
     @media (max-width: 799px) {
       #sidebar div {
