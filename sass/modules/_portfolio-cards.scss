@@ -137,7 +137,7 @@
             }
 
             div:last-child {
-                margin-bottom: 9px;
+                margin: 9px 0 18px 0;
 
                 div.col-xs-6.text-left {
                     padding-left: 0;
@@ -145,7 +145,7 @@
                     a {
                         cursor: pointer;
                         color: white;
-                        padding: 6px 16px 6px 0px;
+                        padding: 9px 16px 6px 1px;
                         border-radius: 6px;
                         display: inline-block;
                         margin: 2px 0 0 0;
@@ -154,7 +154,7 @@
 
                         &:hover, &:focus {
                             background-color: #ffffff30;
-                            padding: 6px 16px;
+                            padding: 9px 16px 6px 16px;
                             border-bottom: none;
                         }
                     }
@@ -172,10 +172,15 @@
                         }
                     }
 
-                    i.material-icons {
+                    i.fas, i.fab {
                         font-size: 24px;
                         margin-left: 9px;
                         color: white;
+                        transition: all 0.2s linear 0.2s;
+
+                        &:hover, &:focus {
+                            opacity: 0.8;
+                        }
                     }
                 }
             }

@@ -5677,13 +5677,13 @@ main {
       margin: 9px 0 0 0;
       font-weight: 100; }
     #pinnedProjectsList section .project-body div:last-child {
-      margin-bottom: 9px; }
+      margin: 9px 0 18px 0; }
       #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-left {
         padding-left: 0; }
         #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-left a {
           cursor: pointer;
           color: white;
-          padding: 6px 16px 6px 0px;
+          padding: 9px 16px 6px 1px;
           border-radius: 6px;
           display: inline-block;
           margin: 2px 0 0 0;
@@ -5691,7 +5691,7 @@ main {
           transition: all 0.2s linear 0.2s; }
           #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-left a:hover, #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-left a:focus {
             background-color: #ffffff30;
-            padding: 6px 16px;
+            padding: 9px 16px 6px 16px;
             border-bottom: none; }
       #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right {
         padding-right: 0; }
@@ -5699,10 +5699,13 @@ main {
           text-decoration: none; }
           #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right a:hover, #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right a:focus {
             border-bottom: none; }
-        #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right i.material-icons {
+        #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right i.fas, #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right i.fab {
           font-size: 24px;
           margin-left: 9px;
-          color: white; }
+          color: white;
+          transition: all 0.2s linear 0.2s; }
+          #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right i.fas:hover, #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right i.fas:focus, #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right i.fab:hover, #pinnedProjectsList section .project-body div:last-child div.col-xs-6.text-right i.fab:focus {
+            opacity: 0.8; }
 
 /*@mixin for-legacy-mobiles-down {
     @media (max-width: (($screen-tablets-up)/2)-1) {
