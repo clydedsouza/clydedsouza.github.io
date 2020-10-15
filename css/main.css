@@ -5723,7 +5723,7 @@ main {
 }*/
 #sidebar {
   width: 30%;
-  padding: 4vh 3vw;
+  padding: 0 3vw 4vh 3vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
