@@ -6047,8 +6047,10 @@ nav {
     background-color: #f9f9f9;
     display: inline-block;
     width: auto;
-    margin-top: 10px; }
+    margin-top: 10px;
+    transition: all 0.2s linear 0.2s; }
     nav a:hover, nav a.active {
       background-color: #ffff00;
       text-decoration: none;
-      color: #009688; }
+      color: #009688;
+      border-bottom: 0; }

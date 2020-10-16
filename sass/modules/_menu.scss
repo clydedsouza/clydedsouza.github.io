@@ -19,11 +19,13 @@ nav {
         display: inline-block;
         width: auto;
         margin-top: 10px;
+        transition: all 0.2s linear 0.2s;
 
         &:hover, &.active {
             background-color: $contrast-accent;
             text-decoration: none;
             color: $primary-accent;
+            border-bottom: 0;
         }
     }
 }
