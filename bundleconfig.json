@@ -21,7 +21,8 @@
       "js/custom/app.js",
       "js/custom/templateEngine.js",
       "js/custom/urlEngine.js",
-      "js/custom/localStorage.js"
+      "js/custom/localStorage.js",
+      "js/custom/highlights.js"
     ]
   }
 ]

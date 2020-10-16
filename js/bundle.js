@@ -6551,7 +6551,8 @@ var appVersion = 0.1;
 // Start here
 $(document).ready(function () {
     manageWebsiteRouting(window.location.href);
-    
+    loadRandomHighlight();
+
     $("nav a").on('click', function () {  
         activateNavigationMenuItem($(this).attr('data-partialview'));
         templates[$(this).attr('data-partialview')].preSwitchTemplate(); 
@@ -6798,4 +6799,14 @@ function getExpiryTime() {
     var newdate = new Date();
     newdate.setDate(newdate.getDate() + 3);
     return newdate.getTime();
+}
+function loadRandomHighlight() {
+    $.get("https://api.clydedsouza.net/allhighlights.json", function (data) {
+        var jsonData = data.fileMap;
+        var randomSelection = Math.floor(Math.random() * (Object.keys(jsonData).length + 1));
+        var highlightData = jsonData[Object.keys(jsonData)[randomSelection]];
+        $(".footer-highlights a, .sidebar-highlights a")
+            .attr("href", highlightData.website)
+            .text(highlightData.text);        
+    });  
 }
