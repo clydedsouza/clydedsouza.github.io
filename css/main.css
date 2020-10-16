@@ -5945,13 +5945,29 @@ main {
 }*/
 footer {
   width: 100%;
-  padding: 18px 0;
+  padding: 9px 0 18px 0;
   text-align: center; }
   footer a {
     color: rgba(10, 10, 10, 0.6) !important;
     text-decoration: none;
     font-family: 'Questrial', sans-serif;
     font-weight: bold; }
+  footer .footer-highlights {
+    background-color: rgba(255, 255, 0, 0.1);
+    border-radius: 6px;
+    padding: 9px 6px 3px 13px;
+    display: none;
+    margin: 0 0 9px 0; }
+    footer .footer-highlights a {
+      text-decoration: none;
+      transition: all 0.2s linear 0.2s;
+      border-bottom: 0; }
+      footer .footer-highlights a:hover, footer .footer-highlights a:focus {
+        opacity: 0.8;
+        border-bottom: 1px dashed rgba(10, 10, 10, 0.6); }
+    @media (max-width: 799px) {
+      footer .footer-highlights {
+        display: block; } }
 
 .fb-msg-button {
   position: fixed;
