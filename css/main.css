@@ -5712,9 +5712,16 @@ main {
         @content;
     }
 }*/
-.project-details-view h2 i {
-  -webkit-text-fill-color: #009688;
-  color: #009688; }
+.project-details-view {
+  padding-bottom: 18px; }
+  .project-details-view i {
+    -webkit-text-fill-color: #009688;
+    color: #009688;
+    margin-right: 9px;
+    font-size: smaller;
+    transition: all 0.2s linear 0.2s; }
+    .project-details-view i:hover, .project-details-view i:focus {
+      opacity: 0.8; }
 
 /*@mixin for-legacy-mobiles-down {
     @media (max-width: (($screen-tablets-up)/2)-1) {

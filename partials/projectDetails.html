@@ -1,9 +1,10 @@
 ﻿<script id="projectDetailsPartial" type="text/x-mustache"> 
     <div class="project-details-view">
-        <div>
-            <h2><span onclick="window.history.back();"><i class="fas fa-arrow-left"></i></span>{{projectTitle}}</h2>
-        </div>
+        <h2>{{projectTitle}}</h2>
         <div id="projectDetailsContainer" data-project-url="{{data}}">
+        </div>
+        <div>
+            <a onclick="window.history.back();" href="#"><i class="fas fa-arrow-left"></i>Go back</a>
         </div>
     </div>
 </script>

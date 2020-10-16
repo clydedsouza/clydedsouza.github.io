@@ -1,10 +1,17 @@
 ﻿@import "../abstract/variables";
 
 .project-details-view {
-	h2 {
-		i {
-			-webkit-text-fill-color: $primary-accent;
-			color: $primary-accent;
+	padding-bottom: 18px;
+
+	i {
+		-webkit-text-fill-color: $primary-accent;
+		color: $primary-accent;
+		margin-right: 9px;
+		font-size: smaller;
+		transition: all 0.2s linear 0.2s;
+
+		&:hover, &:focus {
+			opacity: 0.8;
 		}
 	}
 }
