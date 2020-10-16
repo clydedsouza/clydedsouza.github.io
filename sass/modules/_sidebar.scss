@@ -120,3 +120,22 @@
     }
 }
 
+#sidebar {
+    .sidebar-highlights {
+        background-color: rgba($contrast-accent, 0.1);
+        border-radius: 6px;
+        padding: 9px 6px 3px 13px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.2s linear 0.2s;
+            border-bottom: 0;
+
+            &:hover, &:focus {
+                opacity: 0.8;
+                border-bottom: 1px dashed white;
+            }
+        }
+    }
+}
