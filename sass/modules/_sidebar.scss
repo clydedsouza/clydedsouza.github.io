@@ -138,5 +138,9 @@
                 border-bottom: 1px dashed white;
             }
         }
+
+        @include for-tablets-down {
+            display:none;
+        }
     }
 }

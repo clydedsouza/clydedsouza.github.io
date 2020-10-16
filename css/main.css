@@ -5817,6 +5817,9 @@ main {
     #sidebar .sidebar-highlights a:hover, #sidebar .sidebar-highlights a:focus {
       opacity: 0.8;
       border-bottom: 1px dashed white; }
+  @media (max-width: 799px) {
+    #sidebar .sidebar-highlights {
+      display: none; } }
 
 /*@mixin for-legacy-mobiles-down {
     @media (max-width: (($screen-tablets-up)/2)-1) {
