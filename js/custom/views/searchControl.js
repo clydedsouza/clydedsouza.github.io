@@ -6,25 +6,29 @@ function searchControlViewPreSwitchTemplate() {
     switchTemplate("searchControlPartial", {});
 }
 
+function getSearchFilter() {
+    var searchText = $("#searchTxt").val() == undefined || $("#searchTxt").val() == null ? "" : $("#searchTxt").val();
+    return {
+        searchText: searchText,
+        showInactive: $("#includeInactive") ? $("#includeInactive").is(":checked") : true
+    }; 
+}
+
+function isSearchTextFilterInvalid() {
+    var searchInput = $("#searchTxt").val();
+    if (searchInput == "") return false;
+    return searchInput ? searchInput.length > 0 && searchInput.length < 3 : true;        
+}
+
 function initSearchControls() {
     var searchControlParentView = $("nav a.active").attr('data-partialview');
-
     $("#searchTxt").on("keyup", function () {
-        var searchInput = $("#searchTxt").val(); 
-        if (searchInput.length > 0 && searchInput.length < 3) {
-            return;
-        }
-        var filter = {
-            searchText: searchInput,
-            showInactive: $("#includeInactive").is(":checked")
-        };
+        if (isSearchTextFilterInvalid()) return;
+        var filter = getSearchFilter();
         filterAndDisplayProjectItems(filter, searchControlParentView);
     });
     $("#includeInactive").change(function () { 
-        var filter = {
-            searchText: $("#searchTxt").val(),
-            showInactive: this.checked
-        }; 
+        var filter = getSearchFilter();
         filterAndDisplayProjectItems(filter, searchControlParentView); 
     });
 }

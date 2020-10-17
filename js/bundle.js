@@ -6297,7 +6297,6 @@ function projectViewPageLoad() {
     projectRepeaterViewPreSwitchTemplate("https://api.clydedsouza.net/allprojects.json", "projectsPartial");
 }
 
-
 function projectViewPreSwitchTemplate() {
     switchTemplate("projectsPartial", {});
 }
@@ -6368,7 +6367,9 @@ function getProjectItems(data, key) {
     allProjectData.projects = allProjectData.projects.reverse();
     allProjectData.expiresOn = getExpiryTime();
     storeDataLocally(key, allProjectData); 
-    switchTemplate("projectsRepeaterPartial", allProjectData);
+
+    var filteredProjectItemData = applySearchFilter(getSearchFilter(), allProjectData); 
+    switchTemplate("projectsRepeaterPartial", filteredProjectItemData);
 }
 
 function filterAndDisplayProjectItems(filter, searchControlParentView) {
@@ -6384,43 +6385,18 @@ function filterAndDisplayProjectItems(filter, searchControlParentView) {
 function applySearchFilter(searchFilter, projectItemData) {
     var allProjectData = { projects: [] };
 
-    var applyCategoryFilter = function (currentProject) {
-        var isTechOptionsEmpty = searchFilter.techOptions === null || searchFilter.techOptions === undefined || searchFilter.techOptions.length === 0;
-        var isCategoryOptionsEmpty = searchFilter.categoryOptions === null || searchFilter.categoryOptions === undefined || searchFilter.categoryOptions.length === 0;
-
-        if (isTechOptionsEmpty && isCategoryOptionsEmpty) {
-            // If the search filters are empty, we want to show the project item
-            return true;
-        }
-
-        var projectMeetsTechOptionsFilter = function () {
-            if (isTechOptionsEmpty) return true;
-            for (var to = 0; to < currentProject.madeUsing.length; to++) {
-                if (searchFilter.techOptions.includes(currentProject.madeUsing[to])) {
-                    return true;
-                }
-            }
-            return false;
-        };
-        var projectMeetsCategoryOptionsFilter = function () {
-            if (isCategoryOptionsEmpty) return true; 
-            return searchFilter.categoryOptions.includes(currentProject.category);
-        }; 
-        return projectMeetsTechOptionsFilter() && projectMeetsCategoryOptionsFilter();
-    };
-
     for (var i = 0; i < projectItemData.projects.length; i++) {
+        var currentProject = projectItemData.projects[i];
+        var applyInactiveSearchFilter = searchFilter.showInactive
+            || currentProject.isActive === undefined || currentProject.isActive;
+        var applySearchTextFilter = isSearchTextFilterInvalid()
+            || currentProject.title.toLowerCase().indexOf(searchFilter.searchText) > -1;
 
-        if (projectItemData.projects[i].title.toLowerCase().indexOf(searchFilter.searchText) > -1) {
-            var inactiveSearchFilter = searchFilter.showInactive || projectItemData.projects[i].isActive === undefined || projectItemData.projects[i].isActive;
-            
-            if (inactiveSearchFilter) { 
-                if (!applyCategoryFilter(projectItemData.projects[i])) {
-                    continue;
-                } 
-                allProjectData.projects.push(projectItemData.projects[i]);
-            }      
-        }
+        //console.log(isSearchTextFilterInvalid(), applySearchTextFilter);
+
+        if (applyInactiveSearchFilter && applySearchTextFilter) { 
+            allProjectData.projects.push(projectItemData.projects[i]);
+        } 
     }
 
     return allProjectData;
@@ -6447,25 +6423,29 @@ function searchControlViewPreSwitchTemplate() {
     switchTemplate("searchControlPartial", {});
 }
 
+function getSearchFilter() {
+    var searchText = $("#searchTxt").val() == undefined || $("#searchTxt").val() == null ? "" : $("#searchTxt").val();
+    return {
+        searchText: searchText,
+        showInactive: $("#includeInactive") ? $("#includeInactive").is(":checked") : true
+    }; 
+}
+
+function isSearchTextFilterInvalid() {
+    var searchInput = $("#searchTxt").val();
+    if (searchInput == "") return false;
+    return searchInput ? searchInput.length > 0 && searchInput.length < 3 : true;        
+}
+
 function initSearchControls() {
     var searchControlParentView = $("nav a.active").attr('data-partialview');
-
     $("#searchTxt").on("keyup", function () {
-        var searchInput = $("#searchTxt").val(); 
-        if (searchInput.length > 0 && searchInput.length < 3) {
-            return;
-        }
-        var filter = {
-            searchText: searchInput,
-            showInactive: $("#includeInactive").is(":checked")
-        };
+        if (isSearchTextFilterInvalid()) return;
+        var filter = getSearchFilter();
         filterAndDisplayProjectItems(filter, searchControlParentView);
     });
     $("#includeInactive").change(function () { 
-        var filter = {
-            searchText: $("#searchTxt").val(),
-            showInactive: this.checked
-        }; 
+        var filter = getSearchFilter();
         filterAndDisplayProjectItems(filter, searchControlParentView); 
     });
 }
