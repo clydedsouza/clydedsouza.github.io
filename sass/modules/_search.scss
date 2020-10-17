@@ -1,15 +1,19 @@
 ﻿@import "../abstract/variables";
 
 #searchTxt {
-    width: 49.7vw;
+    width: 55vw;
     display: inline-block;
+
+    @media (orientation: portrait) {
+        width: 60.5vw;
+    }
 
     .noinactive + & {
         width: 99%;
     }
 
     @include for-mobiles-down {
-        width: 55vw;
+        width: 60.5vw;
     }
 
     @include for-desktop-up {
@@ -19,6 +23,7 @@
 
 #includeInactiveContainer {
     display: inline-block;
+    max-width: 84px;
 }
 
 .switch {
@@ -26,7 +31,7 @@
     display: inline-block;
     width: 42px;
     height: 14px;
-    left: -73px;
+    left: 5px;
     top: 2px;
 
     input {
@@ -86,7 +91,7 @@
     font-size: smaller;
     font-weight: normal;
     position: relative;
-    top: -12px;
+    top: 0;
     font-variant: small-caps;
     text-transform: lowercase;
     margin-left: 4px;    

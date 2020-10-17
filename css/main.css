@@ -5853,26 +5853,30 @@ main {
     }
 }*/
 #searchTxt {
-  width: 49.7vw;
+  width: 55vw;
   display: inline-block; }
+  @media (orientation: portrait) {
+    #searchTxt {
+      width: 60.5vw; } }
   .noinactive + #searchTxt {
     width: 99%; }
   @media (max-width: 630px) {
     #searchTxt {
-      width: 55vw; } }
+      width: 60.5vw; } }
   @media (min-width: 800px) and (max-width: 1199px) {
     #searchTxt {
       width: 46.9vw; } }
 
 #includeInactiveContainer {
-  display: inline-block; }
+  display: inline-block;
+  max-width: 84px; }
 
 .switch {
   position: relative;
   display: inline-block;
   width: 42px;
   height: 14px;
-  left: -73px;
+  left: 5px;
   top: 2px; }
   .switch input {
     opacity: 0;
@@ -5915,7 +5919,7 @@ main {
   font-size: smaller;
   font-weight: normal;
   position: relative;
-  top: -12px;
+  top: 0;
   font-variant: small-caps;
   text-transform: lowercase;
   margin-left: 4px; }
