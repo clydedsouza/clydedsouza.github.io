@@ -5591,7 +5591,7 @@ main {
     columns: 1; } }
 
 #pinnedProjectsList section {
-  width: 45%;
+  width: 29vw;
   display: inline-block;
   border-radius: 5px;
   color: #fff;
@@ -5599,16 +5599,20 @@ main {
   transition: 0.4s ease-in-out;
   transform: scale(1);
   padding: 0px;
-  margin: 2vh 1.5vw 2vh 0;
+  margin: 2vh 1.09vw 2vh 0;
   background: linear-gradient(155deg, rgba(0, 150, 136, 0.878431), rgba(16, 152, 75, 0.941176));
   vertical-align: top;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+  @media (orientation: portrait) {
+    #pinnedProjectsList section {
+      width: 47.8%;
+      margin: 2vh 1.09vw 0.5vh 0; } }
   @media (max-width: 630px) {
     #pinnedProjectsList section {
       width: 99%; } }
   @media (min-width: 631px) and (max-width: 799px) {
     #pinnedProjectsList section {
-      width: 46%; } }
+      width: 48.5%; } }
   #pinnedProjectsList section:hover {
     border: 1px solid transparent;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -5849,7 +5853,14 @@ main {
     }
 }*/
 #searchTxt {
-  width: 85%; }
+  width: 49.7vw;
+  display: inline-block; }
+  @media (max-width: 630px) {
+    #searchTxt {
+      width: 55vw; } }
+  @media (min-width: 800px) and (max-width: 1199px) {
+    #searchTxt {
+      width: 46.9vw; } }
   .noinactive + #searchTxt {
     width: 99%; }
 

@@ -1,7 +1,16 @@
 ﻿@import "../abstract/variables";
 
 #searchTxt {
-    width: 85%;
+    width: 49.7vw;
+    display: inline-block;
+
+    @include for-mobiles-down {
+        width: 55vw;
+    }
+
+    @include for-desktop-up {
+        width: 46.9vw;
+    }
 
     .noinactive + & {
         width: 99%;
