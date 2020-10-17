@@ -4,16 +4,16 @@
     width: 49.7vw;
     display: inline-block;
 
+    .noinactive + & {
+        width: 99%;
+    }
+
     @include for-mobiles-down {
         width: 55vw;
     }
 
     @include for-desktop-up {
         width: 46.9vw;
-    }
-
-    .noinactive + & {
-        width: 99%;
     }
 }
 

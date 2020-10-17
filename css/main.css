@@ -5591,7 +5591,7 @@ main {
     columns: 1; } }
 
 #pinnedProjectsList section {
-  width: 29vw;
+  width: 29.89vw;
   display: inline-block;
   border-radius: 5px;
   color: #fff;
@@ -5855,14 +5855,14 @@ main {
 #searchTxt {
   width: 49.7vw;
   display: inline-block; }
+  .noinactive + #searchTxt {
+    width: 99%; }
   @media (max-width: 630px) {
     #searchTxt {
       width: 55vw; } }
   @media (min-width: 800px) and (max-width: 1199px) {
     #searchTxt {
       width: 46.9vw; } }
-  .noinactive + #searchTxt {
-    width: 99%; }
 
 #includeInactiveContainer {
   display: inline-block; }
