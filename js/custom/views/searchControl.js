@@ -2,8 +2,8 @@
     initSearchControls(); 
 }
 
-function searchControlViewPreSwitchTemplate() {
-    switchTemplate("searchControlPartial", {});
+function searchControlViewPreSwitchTemplate(searchControls) {
+    switchTemplate("searchControlPartial", searchControls);
 }
 
 function getSearchFilter() {

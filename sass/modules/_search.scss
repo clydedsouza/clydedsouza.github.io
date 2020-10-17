@@ -1,5 +1,13 @@
 ﻿@import "../abstract/variables";
 
+#searchTxt {
+    width: 85%;
+
+    .noinactive + & {
+        width: 99%;
+    }
+}
+
 #includeInactiveContainer {
     display: inline-block;
 }

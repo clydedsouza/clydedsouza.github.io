@@ -1,7 +1,11 @@
 ﻿<div id="searchControlPartial">
     <div>
         <form class="form-inline">
-            <input type="search" id="searchTxt" class="form-control" placeholder="Search..."/>
+            {{^showInactive}}
+            <div class="noinactive hidden" />
+            {{/showInactive}}
+            <input type="search" id="searchTxt" class="form-control" placeholder="Search..." />
+            {{#showInactive}}
             <div id="includeInactiveContainer">
                 <label class="switch-label">Show inactive</label>
                 <label class="switch">
@@ -9,6 +13,7 @@
                     <span class="slider round"></span>
                 </label>
             </div>
+            {{/showInactive}}
         </form>
     </div>
 </div>

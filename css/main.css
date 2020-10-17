@@ -5848,6 +5848,11 @@ main {
         @content;
     }
 }*/
+#searchTxt {
+  width: 85%; }
+  .noinactive + #searchTxt {
+    width: 99%; }
+
 #includeInactiveContainer {
   display: inline-block; }
 

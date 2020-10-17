@@ -11,14 +11,14 @@ function loadProjectItems(url, key) {
     if (localValue === "" || localValue === null) {
         $.get(url, function (data) {
             getProjectItems(data.fileMap, key);
-            searchControlViewPreSwitchTemplate();
+            searchControlViewPreSwitchTemplate({ showInactive: true });
         });
     }
     else {
         var filter = { searchText: "", showInactive: false };
         localValue = applySearchFilter(filter, localValue);
         switchTemplate("projectsRepeaterPartial", localValue);
-        searchControlViewPreSwitchTemplate();
+        searchControlViewPreSwitchTemplate({ showInactive: true });
     }    
 }
 
