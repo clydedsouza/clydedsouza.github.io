@@ -32,9 +32,11 @@
                         </div>
                         <div class="col-xs-4 text-right">
                             {{#hasWebsite}}
+                            {{#isActive}}
                             <a href="{{website}}">
                                 <i class="fas fa-globe"></i>
                             </a>
+                            {{/isActive}}
                             {{/hasWebsite}}
                             {{#onGithub}}
                             <a href="{{github}}">
