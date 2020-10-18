@@ -69,9 +69,9 @@ function redirectToProjectDetails(projectID, relativeURL, projectTitle) {
     var projectURL = doesProjectIDContainPin(projectID) ? projectID.replace(".pin.md", "") : projectID.replace(".md", "");
     var projectDetailsOutput = {
         data: "https://raw.githubusercontent.com/clydedsouza/clydedsouza-web-api/gh-pages" + relativeURL,
-        projectTitle: projectTitle
+        projectTitle: decodeURI(projectTitle)
     };
-    switchTemplate("projectDetailsPartial",  projectDetailsOutput );
+    switchTemplate("projectDetailsPartial", projectDetailsOutput);
     window.location.href = "/#/portfolio/" + projectURL; 
 }
 
