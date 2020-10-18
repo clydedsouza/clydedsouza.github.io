@@ -5934,6 +5934,22 @@ main {
         @content;
     }
 }*/
+.cookie-notice {
+  padding: 10px 6px 0 6px;
+  color: white;
+  background: linear-gradient(155deg, rgba(0, 150, 136, 0.878431), rgba(16, 152, 75, 0.941176));
+  background-color: #009688;
+  position: -webkit-sticky;
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+  .cookie-notice a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer; }
+
 footer {
   width: 100%;
   padding: 9px 0 18px 0;
