@@ -11,6 +11,7 @@
     left: 0;
     width: 100%;
     text-align: center;
+    z-index: 2000000001!important;
 
     a {
         color: white;
@@ -57,26 +58,3 @@ footer {
         }
     }
 }
-
-.fb-msg-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-
-    a {
-        background: $background-gradient {
-            size: cover;
-            repeat: no-repeat;
-        }
-
-        padding: 19px 13px 17px 13px;
-        border-radius: 120px;
-
-        i {
-            color: white;
-            font-size: 29px;
-            vertical-align: sub;
-        }
-    }
-}
-

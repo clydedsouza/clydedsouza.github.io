@@ -5944,7 +5944,8 @@ main {
   bottom: 5px;
   left: 0;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  z-index: 2000000001 !important; }
   .cookie-notice a {
     color: white;
     text-decoration: none;
@@ -5975,21 +5976,6 @@ footer {
     @media (max-width: 799px) {
       footer .footer-highlights {
         display: block; } }
-
-.fb-msg-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px; }
-  .fb-msg-button a {
-    background: linear-gradient(155deg, rgba(0, 150, 136, 0.878431), rgba(16, 152, 75, 0.941176));
-      background-size: cover;
-      background-repeat: no-repeat;
-    padding: 19px 13px 17px 13px;
-    border-radius: 120px; }
-    .fb-msg-button a i {
-      color: white;
-      font-size: 29px;
-      vertical-align: sub; }
 
 /*@mixin for-legacy-mobiles-down {
     @media (max-width: (($screen-tablets-up)/2)-1) {
