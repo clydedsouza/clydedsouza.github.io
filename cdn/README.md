@@ -1,3 +1,0 @@
-# Clyde D'Souza
-## CDN
-  
