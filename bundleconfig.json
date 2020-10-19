@@ -5,7 +5,6 @@
       "js/vendor/jquery-3.4.1.min.js",
       "js/vendor/mustache.js",
       "js/vendor/bootstrap.min.js",
-      "js/vendor/bootstrap-multiselect.js",
       "js/vendor/js-yaml.js",
       "js/vendor/yamlFront.js",
       "js/vendor/marked.min.js",
