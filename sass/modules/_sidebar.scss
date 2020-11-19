@@ -33,6 +33,7 @@
         border-radius: 120px;
         background-size: cover !important;
         border: 6px solid $contrast-accent;
+        cursor: pointer;
 
         @include for-tablets-down {
             width: 120px;
