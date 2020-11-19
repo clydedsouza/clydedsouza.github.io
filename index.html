@@ -36,12 +36,20 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/device-icons/apple-touch-icon-180x180.png">
     <meta name="msapplication-TileColor" content="#009688">
     <meta name="msapplication-TileImage" content="images/device-icons/apple-touch-icon-180x180.png">
-       
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.min.css">
 
-    <!-- TODO: Add Google Analytics -->
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70046087-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-70046087-2');
+    </script>
+
 </head>
 <body>
     <!-- Loading animation -->
