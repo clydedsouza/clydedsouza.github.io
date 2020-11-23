@@ -1,2 +1,6 @@
 ﻿[
+  {
+    "outputFile": "css/main.css",
+    "inputFile": "sass/main.scss"
+  }
 ]

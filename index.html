@@ -1,22 +1,18 @@
-﻿<!-- (c) Clyde D'Souza / Version 1.0.2 -->
-<html lang="en" ng-app="clyde" ng-controller="GlobalController">
+﻿<!-- Clyde D'Souza -->
+<html lang="en">
 <head>
-    <title ng-cloak ng-bind="globalConfig.pageTitle">Clyde D'Souza - A full-stack software developer</title>
+    <title>Clyde D'Souza – A Full-Stack Software Developer</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
     <base href="/">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="author" href="https://plus.google.com/u/0/+ClydeDsouzaPlus">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="msvalidate.01" content="8ABC4E1B7DBE4391CF265948730B9299" />
-    <meta name="Keywords" content="Clyde D'Souza, @ClydeDz, full-stack software developer, passionate front end developer, eye for ui, ux, Auckland, New Zealand, NZ, author, Mama tell me a story" />
+    <meta name="Keywords" content="Clyde D'Souza, @ClydeDz, full-stack software developer, passionate front end developer, eye for ui, ux, Auckland, New Zealand, NZ" />
     <meta name="author" content="Clyde D'Souza">
     <meta name="description" content="Know more about Clyde D'Souza - a full-stack software developer. Clyde is currently living in Auckland, New Zealand but is originally from Mumbai, India. Feel free to send him a tweet @ClydeDz">
-    <!---Basic styling--->
-    <style>
-        body{overflow-y:hidden}.website-body{display:none;transition:all .25s;-moz-transition:all.25s;-webkit-transition:all .25s;opacity:0}.website-loading{overflow:hidden;transition:background .25s ease-in-out;-moz-transition:background .25s ease-in-out;-webkit-transition:background .25s ease-in-out}.spinner{width:40px;height:40px}.double-bounce1,.double-bounce2{width:100%;height:100%;border-radius:50%;background-color:#fff;opacity:.6;position:absolute;top:0;left:0;-webkit-animation:sk-bounce 2s infinite ease-in-out;animation:sk-bounce 2s infinite ease-in-out}.double-bounce2{-webkit-animation-delay:-1s;animation-delay:-1s}@-webkit-keyframes sk-bounce{0%,100%{-webkit-transform:scale(0)}50%{-webkit-transform:scale(1)}}@keyframes sk-bounce{0%,100%{transform:scale(0);-webkit-transform:scale(0)}50%{transform:scale(1);-webkit-transform:scale(1)}}
-    </style>
-    <!-----OpenGraph settings for social sharing------>
+
+    <!-- OpenGraph settings for social sharing -->
     <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="Clyde D'Souza - A full-stack software developer" />
+    <meta property="og:title" content="Clyde D'Souza – A Full-Stack Software Developer" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://clydedsouza.net/" />
     <meta property="og:image" content="https://clydedsouza.net/images/clydedsouza-share.jpg" />
@@ -28,149 +24,106 @@
     <link rel="canonical" href="https://clydedsouza.net/">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="https://clydedsouza.net/sitemap.xml">
     <meta name="theme-color" content="#009688">
-    <link rel="icon" sizes="192x192" href="images/clydedsouza-face-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/clydedsouza-face-icon.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/clydedsouza-face-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/clydedsouza-face-icon.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/clydedsouza-face-icon.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/clydedsouza-face-icon.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/clydedsouza-face-icon.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/clydedsouza-face-icon.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/clydedsouza-face-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/clydedsouza-face-icon.png">
+    <link rel="icon" sizes="192x192" href="images/device-icons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/device-icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/device-icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/device-icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/device-icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/device-icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/device-icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/device-icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/device-icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/device-icons/apple-touch-icon-180x180.png">
     <meta name="msapplication-TileColor" content="#009688">
-    <meta name="msapplication-TileImage" content="images/clydedsouza-face-icon.png">
-</head>
-<body ng-cloak>
-    <!-- Google Tag Manager -->
+    <meta name="msapplication-TileImage" content="images/device-icons/apple-touch-icon-180x180.png">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.min.css">
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70046087-2"></script>
     <script>
-        (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = !0; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f) })(window, document, 'script', 'dataLayer', 'GTM-K5RC8T');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-70046087-2');
     </script>
-    <!-- End Google Tag Manager -->
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5RC8T"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Loading panel -->
-    <div class="website-loading" style="background-color:#009688;height:100vh;width:100%;">
-        <div style="position:absolute;top:50%;left:50%;">
-            <div class="spinner">
-                <div class="double-bounce1"></div>
-                <div class="double-bounce2"></div>
-            </div>
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3whakvt9ta");
+    </script>
+</head>
+<body>
+    <!-- Loading animation -->
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+
+    <!-- Static profile sidebar -->
+    <div id="sidebar">
+        <div class="sidebar-background" style="background: url(images/clydedsouza-2019-animated.gif) center;"  onclick="location.href='/#/'"></div>
+        <h1>Clyde D'Souza</h1>
+        <div class="sidebar-tagline">
+            <p>Software developer</p>
+            <p><small>Auckland, New Zealand</small></p>
+        </div>
+        <div class="sidebar-icons">
+            <span><a href="https://linkedin.com/in/clydedz/" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+            <span><a href="mailto:clyde@clydedsouza.net?Subject=Hi%20Clyde%21&Body=Hi%20Clyde,%20%0D%0DI%20wanted%20to%20get%20in%20touch%20with%20you.%0D%0DThanks,%20%0D%0DSent%20from%20https%3A%2F%2Fclydedsouza.net" target="_blank"><i class="fas fa-envelope"></i></a></span>
+            <span><a href="https://twitter.com/clydedz" target="_blank"><i class="fab fa-twitter"></i></a></span>
+            <span><a href="https://github.com/ClydeDz/" target="_blank"><i class="fab fa-github"></i></a></span>
+            <span><a href="https://www.youtube.com/channel/UCM-rrJnAhIc8EY2Aj34Wnfg" target="_blank"><i class="fab fa-youtube"></i></a></span>
+            <span><a href="https://medium.com/@clydedz" target="_blank"><i class="fab fa-medium"></i></a></span>
+        </div>
+        <div class="sidebar-highlights">
+            <p><a href="#" target="_blank">Purchase my book Mama, tell me a story from these platforms.</a></p>
         </div>
     </div>
 
-    <!-- Website content -->
-    <div ng-controller="IndexController" class="website-body">
-        <md-content>
-            <md-toolbar class="md-primary gradients">
-                <div class="md-toolbar-tools">
-                    <img src="images/clydedsouza-2019-animated.gif" class="md-avatar user-avatar" height="65" width="65" alt="Clyde D'Souza photo" onclick="sendGoogleTrackingEvent(websiteCategory.pageNavigation, websiteEvent.click, 'Animated profile picture');" />
-                    <h1>
-                        <span>Clyde D'Souza</span>
-                    </h1>
-                    <span flex></span>
-                    <md-menu md-position-mode="target-right target" ng-cloak>
-                        <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)" onclick="sendGoogleTrackingEvent(websiteCategory.share, websiteEvent.click, 'Share button');">
-                            <md-tooltip md-direction="left">Share this site</md-tooltip>
-                            <md-icon class="mdi mdi-share"></md-icon>
-                        </md-button>
-                        <md-menu-content width="1" class="md-whiteframe-z3" ng-cloak>
-                            <md-menu-item>
-                                <md-button aria-label="Share on twitter" ng-click="share('tweet')">
-                                    <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="mdi mdi-twitter"></md-icon>  </div>
-                                </md-button>
-                            </md-menu-item>
-                            <md-menu-item>
-                                <md-button aria-label="Share on twitter" ng-click="share('fb')">
-                                    <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="mdi mdi-facebook"></md-icon>   </div>
-                                </md-button>
-                            </md-menu-item>
-                            <md-menu-item>
-                                <md-button aria-label="Share on twitter" ng-click="share('linkedin')">
-                                    <div layout="row" layout-align="center center"> <md-icon md-menu-origin class="mdi mdi-linkedin"></md-icon></div>
-                                </md-button>
-                            </md-menu-item>
-                        </md-menu-content>
-                    </md-menu>
-                </div>
-                <div flex></div>
-                <md-tabs md-selected="globalConfig.tabIndex==0?0:1" md-dynamic-height ng-cloak>
-                    <md-tab ng-click="goTo('about')">
-                        <div style="min-width:50px">About</div>
-                    </md-tab>
-                    <md-tab ng-click="goTo('projects')">
-                        <div style="min-width:50px">Projects</div>
-                    </md-tab>
-                </md-tabs>
-            </md-toolbar>
-        </md-content>
-        <div ng-view style="min-height:100px"></div>
-        <md-content class="body-bg">
-            <div layout="row" layout-align="center center">
-                <md-button aria-label="Email Clyde" href="mailto:clyde@clydedsouza.net?Subject=Hi%20Clyde%21&amp;Body=Greetings%20Clyde,%20%0D%0DI%20want%20to%20get%20in%20touch%20with%20you.%0D%0DThanks,%20%0D%0DSent%20from%20http%3A%2F%2Fclydedsouza.net" target="_blank" class="md-icon-button launch" onclick="sendGoogleTrackingEvent(websiteCategory.contact, websiteEvent.click, 'Email me');">
-                    <md-tooltip md-direction="top">Email Clyde</md-tooltip>
-                    <md-icon class="mdi mdi-email"></md-icon>
-                </md-button>
-                <md-button aria-label="Follow Clyde on LinkedIn" href="https://nz.linkedin.com/in/clydedz" target="_blank" class="md-icon-button launch" onclick="sendGoogleTrackingEvent(websiteCategory.contact, websiteEvent.click, 'View LinkedIn profile');">
-                    <md-tooltip md-direction="top">Follow Clyde on LinkedIn</md-tooltip>
-                    <md-icon class="mdi mdi-linkedin"></md-icon>
-                </md-button>
-                <md-button aria-label="Follow Clyde on Twitter" href="https://www.twitter.com/ClydeDz" target="_blank" class="md-icon-button launch" onclick="sendGoogleTrackingEvent(websiteCategory.contact, websiteEvent.click, 'View Twitter profile');">
-                    <md-tooltip md-direction="top">Follow Clyde on Twitter</md-tooltip>
-                    <md-icon class="mdi mdi-twitter"></md-icon>
-                </md-button>
-                <md-button aria-label="Follow me on GitHub" href="https://www.github.com/ClydeDz" target="_blank" class="md-icon-button launch" onclick="sendGoogleTrackingEvent(websiteCategory.contact, websiteEvent.click, 'View GitHub profile');">
-                    <md-tooltip md-direction="top">Follow me on GitHub</md-tooltip>
-                    <md-icon class="mdi mdi-github-circle"></md-icon>
-                </md-button>
-                <md-button aria-label="Follow Clyde on Goodreads" href="http://bit.ly/ClydeDSouzaGoodreads" target="_blank" class="md-icon-button launch" onclick="sendGoogleTrackingEvent(websiteCategory.contact, websiteEvent.click, 'View Goodreads profile');">
-                    <md-tooltip md-direction="top">Follow Clyde on Goodreads</md-tooltip>
-                    <md-icon class="mdi mdi-goodreads"></md-icon>
-                </md-button>
-            </div>
-            <div layout="row" layout-align="center center">
-                <p>Website crafted by Clyde D'Souza</p>
-            </div>
-            <div class="fb-msg-button bounceIn" style="display:none;">
-                <md-button aria-label="Send Clyde a message on Facebook" href="https://m.me/clydedz" target="_blank" class="md-fab md-primary" onclick="sendGoogleTrackingEvent(websiteCategory.contact, websiteEvent.click, 'Send a message on Facebook');">
-                    <md-tooltip md-direction="left">Send Clyde a message</md-tooltip>
-                    <md-icon class="mdi mdi-facebook-messenger"></md-icon>
-                </md-button>
-            </div>
-            <div class="footer-block gradients"></div>
-        </md-content>
-    </div>
+    <nav>
+        <a href="/#/" data-partialview="introPartial" class="active">About</a>
+        <a href="/#/projects" data-partialview="projectsPartial">Projects</a>
+        <a href="/#/speaking" data-partialview="speakingPartial">Speaking</a>
+        <a href="/#/teaching" data-partialview="teachingPartial">Teaching</a>
+        <a href="/#/books" data-partialview="booksPartial">Books</a>
+    </nav>
 
-    <!-- Remaining scripts and styling -->
-    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.5.95/css/materialdesignicons.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Dosis|Roboto" rel="stylesheet" />
-    <link href="https://static.clydedsouza.net/css/primarycss-v1.min.css?v=20191114" rel="stylesheet" />
-    <!-- Angular Material requires Angular.js Libraries -->
-    <script src="https://static.clydedsouza.net/js/angularmaterial-bundle.js?v=20190401"></script>
-    <script src="https://static.clydedsouza.net/js/primaryjs-v2.min.js?v=20190401"></script>
-    <script>
-        window.onload = (function () { return function () { document.getElementsByClassName('website-body')[0].style.display = 'block'; setTimeout(function () { document.getElementsByClassName('website-loading')[0].style.display = 'none'; document.getElementsByClassName('fb-msg-button')[0].style.display = 'block'; document.getElementsByTagName('body')[0].style.overflowY = 'auto'; setTimeout(loadBody, 500) }, 2000) } })(window.onload);
-    </script>
+    <!-- Main body -->
+    <main>
+
+        <!-- Dynamic content -->
+        <div>
+            <div id="view"></div>
+            <div id="templateHolder" style="display:none !important;"></div>
+        </div>
+
+        <footer>
+            <div class="footer-highlights">
+                <p><a href="#" target="_blank">Purchase my book Mama, tell me a story from these platforms.</a></p>
+            </div>
+            <p>Website crafted by Clyde D'Souza</p> 
+        </footer>
+
+        <div class="cookie-notice">
+            <p>This website uses cookies to ensure you get the best experience on the website. <a>Dismiss</a> or <a href="http://cookiesandyou.com/" target="_blank">learn more</a>.</p>
+        </div>
+    </main>
+
+    <script src="js/bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
     <!-- Schema.org -->
     <script type="application/ld+json">
         {
         "@context": "http://schema.org",
         "@type": "Person",
-        "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Auckland CBD",
-        "addressRegion": "Auckland",
-        "addressCountry": "New Zealand"
-        },
         "givenName":"Clyde D'Souza",
         "gender":"Male",
         "email": "clyde@clydedsouza.net",
-        "image": "https://clydedsouza.net/images/clydedsouza-icon-2019.jpg",
-        "jobTitle": "Software developer at Xero",
+        "image": "https://files.clydedsouza.net/images/clyde-dsouza-2019.jpg",
         "alumniOf":"AUT University",
         "worksFor":"Xero",
         "jobTitle":"Software Developer",
@@ -182,27 +135,55 @@
         "url":"https://clydedsouza.net"
         },
         "name": "Clyde D'Souza",
-        "url": "https://clydedsouza.net"
+        "url": "https://clydedsouza.net",
+        "sameAs": [
+        "https://linkedin.com/in/clydedz/",
+        "https://twitter.com/clydedz",
+        "https://github.com/ClydeDz/",
+        "https://www.youtube.com/channel/UCM-rrJnAhIc8EY2Aj34Wnfg",
+        "https://medium.com/@clydedz",
+        "https://www.skillshare.com/r/user/clydedsouza",
+        "https://www.instagram.com/insta_clyde/",
+        "https://stackoverflow.com/users/11480716/clyde-dsouza",
+        "https://www.goodreads.com/clydedz",
+        "https://ko-fi.com/clydedsouza",
+        "https://www.twitch.tv/clydedsouzatv",
+        "https://www.facebook.com/ClydeDz/"
+        ],
+        "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Auckland CBD",
+        "addressRegion": "Auckland",
+        "addressCountry": "New Zealand"
+        },
+        "subjectOf":{
+        "@type": "CreativeWork",
+        "about": "Mama, tell me a story - A collection of twelve short bedtime stories for kids",
+        "thumbnailUrl": "https://files.clydedsouza.net/images/projects/mama-tell-me-a-story.png",
+        "sameAs": [
+        "https://www.amazon.com/dp/B0819H55PD/ref=cm_sw_su_dp",
+        "https://play.google.com/store/books/details?id=M229DwAAQBAJ",
+        "https://magicblox.com/books/2699-mama-tell-me-a-story-a-collection-of-short-bedtime-stories#.X46IEtAzbtR",
+        "https://www.kobo.com/us/en/ebook/mama-tell-me-a-story",
+        "https://leanpub.com/mama-tell-me-a-story",
+        "https://www.barnesandnoble.com/w/mama-tell-me-a-story-clyde-dsouza/1135265538?ean=2940163107247",
+        "https://gumroad.com/l/mtmas",
+        "https://www.goodreads.com/book/show/48756914-mama-tell-me-a-story",
+        "https://www.instagram.com/mamatellmeastorybook/"
+        ]
+        }
         }
     </script>
-    <script type="application/ld+json">
-        {
-        "@context": "http://schema.org",
-        "@type": "WebSite",
-        "url": "https://clydedsouza.net/",
-        "name" : "Clyde D'Souza",
-        "alternateName" : "clydedsouza.net",
-        "about":{
-        "@type":"Thing",
-        "description":"This is Clyde's personal website."
-        },
-        "author":{
-        "@type":"Person",
-        "givenName":"Clyde D'Souza",
-        "gender":"Male",
-        "email": "clyde@clydedsouza.net"
-        }
-        }
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5f8abef7f91e4b431ec53ec7/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
     </script>
 </body>
 </html>

@@ -1,0 +1,19 @@
+﻿<div id="searchControlPartial">
+    <div>
+        <form class="form-inline">
+            {{^showInactive}}
+            <div class="noinactive hidden" />
+            {{/showInactive}}
+            <input type="search" id="searchTxt" class="form-control" placeholder="Search..." />
+            {{#showInactive}}
+            <div id="includeInactiveContainer">
+                <label class="switch-label">Show inactive</label>
+                <label class="switch">
+                    <input type="checkbox" id="includeInactive">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            {{/showInactive}}
+        </form>
+    </div>
+</div>
