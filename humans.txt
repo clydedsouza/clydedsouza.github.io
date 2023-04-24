@@ -4,3 +4,5 @@ Email: clyde [at] clydedsouza [dot] net
 Twitter: ClydeDz
 Auckland, New Zealand
 
+/* Other credits */
+Favicons generated using https://iconifier.net/
