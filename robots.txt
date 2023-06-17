@@ -1,4 +1,4 @@
-﻿# robots.txt for https://clydedsouza.net
+# robots.txt for https://clydedsouza.net
 
 User-agent: *
 Allow: /

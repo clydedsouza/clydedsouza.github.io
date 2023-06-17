@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0fcf2c2c.css",
+    "main.js": "/static/js/main.12625d7d.js",
+    "static/media/clyde2023.jpg": "/static/media/clyde2023.6961f217d5c2de294a5e.jpg",
+    "index.html": "/index.html",
+    "main.0fcf2c2c.css.map": "/static/css/main.0fcf2c2c.css.map",
+    "main.12625d7d.js.map": "/static/js/main.12625d7d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fcf2c2c.css",
+    "static/js/main.12625d7d.js"
+  ]
+}
