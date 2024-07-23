@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.0fcf2c2c.css",
-    "main.js": "/static/js/main.48a8b5ac.js",
-    "static/media/clyde2023.jpg": "/static/media/clyde2023.6961f217d5c2de294a5e.jpg",
+    "main.css": "/static/css/main.1de07866.css",
+    "main.js": "/static/js/main.ba61c018.js",
+    "static/media/clyde2024.jpg": "/static/media/clyde2024.55acd366160b83de91dc.jpg",
     "index.html": "/index.html",
-    "main.0fcf2c2c.css.map": "/static/css/main.0fcf2c2c.css.map",
-    "main.48a8b5ac.js.map": "/static/js/main.48a8b5ac.js.map"
+    "main.1de07866.css.map": "/static/css/main.1de07866.css.map",
+    "main.ba61c018.js.map": "/static/js/main.ba61c018.js.map"
   },
   "entrypoints": [
-    "static/css/main.0fcf2c2c.css",
-    "static/js/main.48a8b5ac.js"
+    "static/css/main.1de07866.css",
+    "static/js/main.ba61c018.js"
   ]
 }
