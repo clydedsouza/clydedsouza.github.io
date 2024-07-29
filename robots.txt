@@ -1,7 +1,9 @@
-# robots.txt for https://clydedsouza.net
-
+# *
 User-agent: *
 Allow: /
 
-# sitemap file
+# Host
+Host: https://clydedsouza.net
+
+# Sitemaps
 Sitemap: https://clydedsouza.net/sitemap.xml
